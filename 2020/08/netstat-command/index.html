@@ -10,7 +10,7 @@
   "headline": "netstat command",
   
   "datePublished": "2020-08-18T00:00:00Z",
-  "dateModified": "2020-08-18T00:00:00Z",
+  "dateModified": "2022-01-29T12:55:02+09:00",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="netstat command description">
@@ -61,7 +61,7 @@
     <meta property="article:published_time" content="2020-08-18T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-08-18T00:00:00">
+    <meta property="article:modified_time" content="2022-01-29T12:55:02">
   
   
   
@@ -263,18 +263,18 @@ if (!doNotTrack) {
               <p>linux의 <code>netstat</code> 명령어를 통해 현재 연결된 네트워크 상태, 라우팅 테이블,
 인터페이스 상태, IP Masquerade, 멀티캐스트 멤버쉽 등을 확인 할 수 있습니다.</p>
 <h2 id="기본-사용법">기본 사용법</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; netstat
-Active Internet connections <span style="color:#f92672">(</span>w/o servers<span style="color:#f92672">)</span>
-Proto Recv-Q Send-Q Local Address           Foreign Address         State
-tcp        <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span> 192.168.0.50:38608      nrt20s21-in-f10.1:https ESTABLISHED
-...
-Active UNIX domain sockets <span style="color:#f92672">(</span>w/o servers<span style="color:#f92672">)</span>
-Proto RefCnt Flags       Type       State         I-Node   Path
-unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">34946</span>    /run/user/1000/systemd/notify
-unix  <span style="color:#ae81ff">3</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">19785</span>    /run/systemd/notify
-unix  <span style="color:#ae81ff">3</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         SEQPACKET  CONNECTED     <span style="color:#ae81ff">238454</span>   @0002d
-...
-</code></pre></div><p>출력된 정보는 다음과 같습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; netstat
+</span></span><span style="display:flex;"><span>Active Internet connections <span style="color:#f92672">(</span>w/o servers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Proto Recv-Q Send-Q Local Address           Foreign Address         State
+</span></span><span style="display:flex;"><span>tcp        <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span> 192.168.0.50:38608      nrt20s21-in-f10.1:https ESTABLISHED
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Active UNIX domain sockets <span style="color:#f92672">(</span>w/o servers<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Proto RefCnt Flags       Type       State         I-Node   Path
+</span></span><span style="display:flex;"><span>unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">34946</span>    /run/user/1000/systemd/notify
+</span></span><span style="display:flex;"><span>unix  <span style="color:#ae81ff">3</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">19785</span>    /run/systemd/notify
+</span></span><span style="display:flex;"><span>unix  <span style="color:#ae81ff">3</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         SEQPACKET  CONNECTED     <span style="color:#ae81ff">238454</span>   @0002d
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>출력된 정보는 다음과 같습니다.</p>
 <ul>
 <li><code>Active Internet Connections</code> : TCP, UDP, RAW로 연결된 목록
 <ul>
@@ -342,84 +342,84 @@ unix  <span style="color:#ae81ff">3</span>      <span style="color:#f92672">[</s
 </li>
 </ul>
 <h2 id="tldr">TLDR</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; tldr netstat
-
-  netstat
-
-  Displays network-related information such as open connections, open socket ports, etc.
-
-  - List all ports:
-    netstat -a
-
-  - List all listening ports:
-    netstat -l
-
-  - List listening TCP ports:
-    netstat -t
-
-  - Display PID and program names:
-    netstat -p
-
-  - List information continuously:
-    netstat -c
-
-  - List routes and <span style="color:#66d9ef">do</span> not resolve IP to hostname:
-    netstat -rn
-
-  - List listening TCP and UDP ports <span style="color:#f92672">(</span>+ user and process <span style="color:#66d9ef">if</span> you<span style="color:#960050;background-color:#1e0010">&#39;</span>re root<span style="color:#f92672">)</span>:
-    netstat -lepunt
-
-  - Print the routing table:
-    netstat -nr
-</code></pre></div><h2 id="활용">활용</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; netstat -anp
-<span style="color:#f92672">(</span>Not all processes could be identified, non-owned process info
- will not be shown, you would have to be root to see it all.<span style="color:#f92672">)</span>
-Active Internet connections <span style="color:#f92672">(</span>servers and established<span style="color:#f92672">)</span>
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span> 0.0.0.0:8009            0.0.0.0:*               LISTEN      25272/java
-...
-Active UNIX domain sockets <span style="color:#f92672">(</span>servers and established<span style="color:#f92672">)</span>
-Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path
-unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">34946</span>    2800/systemd        /run/user/1000/systemd/notify
-unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> ACC <span style="color:#f92672">]</span>     STREAM     LISTENING     <span style="color:#ae81ff">34947</span>    2800/systemd        /run/user/1000/systemd/private
-...
-</code></pre></div><h2 id="help">Help</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; netstat --help
-usage: netstat <span style="color:#f92672">[</span>-vWeenNcCF<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>&lt;Af&gt;<span style="color:#f92672">]</span> -r         netstat <span style="color:#f92672">{</span>-V|--version|-h|--help<span style="color:#f92672">}</span>
-       netstat <span style="color:#f92672">[</span>-vWnNcaeol<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>&lt;Socket&gt; ...<span style="color:#f92672">]</span>
-       netstat <span style="color:#f92672">{</span> <span style="color:#f92672">[</span>-vWeenNac<span style="color:#f92672">]</span> -i | <span style="color:#f92672">[</span>-cWnNe<span style="color:#f92672">]</span> -M | -s <span style="color:#f92672">}</span>
-
-        -r, --route              display routing table
-        -i, --interfaces         display interface table
-        -g, --groups             display multicast group memberships
-        -s, --statistics         display networking statistics <span style="color:#f92672">(</span>like SNMP<span style="color:#f92672">)</span>
-        -M, --masquerade         display masqueraded connections
-
-        -v, --verbose            be verbose
-        -W, --wide               don<span style="color:#e6db74">&#39;t truncate IP addresses
-</span><span style="color:#e6db74">        -n, --numeric            don&#39;</span>t resolve names
-        --numeric-hosts          don<span style="color:#e6db74">&#39;t resolve host names
-</span><span style="color:#e6db74">        --numeric-ports          don&#39;</span>t resolve port names
-        --numeric-users          don<span style="color:#e6db74">&#39;t resolve user names
-</span><span style="color:#e6db74">        -N, --symbolic           resolve hardware names
-</span><span style="color:#e6db74">        -e, --extend             display other/more information
-</span><span style="color:#e6db74">        -p, --programs           display PID/Program name for sockets
-</span><span style="color:#e6db74">        -c, --continuous         continuous listing
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">        -l, --listening          display listening server sockets
-</span><span style="color:#e6db74">        -a, --all, --listening   display all sockets (default: connected)
-</span><span style="color:#e6db74">        -o, --timers             display timers
-</span><span style="color:#e6db74">        -F, --fib                display Forwarding Information Base (default)
-</span><span style="color:#e6db74">        -C, --cache              display routing cache instead of FIB
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">  &lt;Socket&gt;={-t|--tcp} {-u|--udp} {-w|--raw} {-x|--unix} --ax25 --ipx --netrom
-</span><span style="color:#e6db74">  &lt;AF&gt;=Use &#39;</span>-6|-4<span style="color:#e6db74">&#39; or &#39;</span>-A &lt;af&gt;<span style="color:#e6db74">&#39; or &#39;</span>--&lt;af&gt;<span style="color:#960050;background-color:#1e0010">&#39;</span>; default: inet
-  List of possible address families <span style="color:#f92672">(</span>which support routing<span style="color:#f92672">)</span>:
-    inet <span style="color:#f92672">(</span>DARPA Internet<span style="color:#f92672">)</span> inet6 <span style="color:#f92672">(</span>IPv6<span style="color:#f92672">)</span> ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> 
-    netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> ipx <span style="color:#f92672">(</span>Novell IPX<span style="color:#f92672">)</span> ddp <span style="color:#f92672">(</span>Appletalk DDP<span style="color:#f92672">)</span> 
-    x25 <span style="color:#f92672">(</span>CCITT X.25<span style="color:#f92672">)</span> 
-</code></pre></div><h2 id="참고">참고</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tldr netstat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  netstat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Displays network-related information such as open connections, open socket ports, etc.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List all ports:
+</span></span><span style="display:flex;"><span>    netstat -a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List all listening ports:
+</span></span><span style="display:flex;"><span>    netstat -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List listening TCP ports:
+</span></span><span style="display:flex;"><span>    netstat -t
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Display PID and program names:
+</span></span><span style="display:flex;"><span>    netstat -p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List information continuously:
+</span></span><span style="display:flex;"><span>    netstat -c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List routes and <span style="color:#66d9ef">do</span> not resolve IP to hostname:
+</span></span><span style="display:flex;"><span>    netstat -rn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - List listening TCP and UDP ports <span style="color:#f92672">(</span>+ user and process <span style="color:#66d9ef">if</span> you<span style="color:#960050;background-color:#1e0010">&#39;</span>re root<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>    netstat -lepunt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Print the routing table:
+</span></span><span style="display:flex;"><span>    netstat -nr
+</span></span></code></pre></div><h2 id="활용">활용</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; netstat -anp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>Not all processes could be identified, non-owned process info
+</span></span><span style="display:flex;"><span> will not be shown, you would have to be root to see it all.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Active Internet connections <span style="color:#f92672">(</span>servers and established<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+</span></span><span style="display:flex;"><span>tcp        <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">0</span> 0.0.0.0:8009            0.0.0.0:*               LISTEN      25272/java
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Active UNIX domain sockets <span style="color:#f92672">(</span>servers and established<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path
+</span></span><span style="display:flex;"><span>unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> <span style="color:#f92672">]</span>         DGRAM                    <span style="color:#ae81ff">34946</span>    2800/systemd        /run/user/1000/systemd/notify
+</span></span><span style="display:flex;"><span>unix  <span style="color:#ae81ff">2</span>      <span style="color:#f92672">[</span> ACC <span style="color:#f92672">]</span>     STREAM     LISTENING     <span style="color:#ae81ff">34947</span>    2800/systemd        /run/user/1000/systemd/private
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="help">Help</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; netstat --help
+</span></span><span style="display:flex;"><span>usage: netstat <span style="color:#f92672">[</span>-vWeenNcCF<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>&lt;Af&gt;<span style="color:#f92672">]</span> -r         netstat <span style="color:#f92672">{</span>-V|--version|-h|--help<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>       netstat <span style="color:#f92672">[</span>-vWnNcaeol<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>&lt;Socket&gt; ...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>       netstat <span style="color:#f92672">{</span> <span style="color:#f92672">[</span>-vWeenNac<span style="color:#f92672">]</span> -i | <span style="color:#f92672">[</span>-cWnNe<span style="color:#f92672">]</span> -M | -s <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        -r, --route              display routing table
+</span></span><span style="display:flex;"><span>        -i, --interfaces         display interface table
+</span></span><span style="display:flex;"><span>        -g, --groups             display multicast group memberships
+</span></span><span style="display:flex;"><span>        -s, --statistics         display networking statistics <span style="color:#f92672">(</span>like SNMP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        -M, --masquerade         display masqueraded connections
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        -v, --verbose            be verbose
+</span></span><span style="display:flex;"><span>        -W, --wide               don<span style="color:#e6db74">&#39;t truncate IP addresses
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -n, --numeric            don&#39;</span>t resolve names
+</span></span><span style="display:flex;"><span>        --numeric-hosts          don<span style="color:#e6db74">&#39;t resolve host names
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        --numeric-ports          don&#39;</span>t resolve port names
+</span></span><span style="display:flex;"><span>        --numeric-users          don<span style="color:#e6db74">&#39;t resolve user names
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -N, --symbolic           resolve hardware names
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -e, --extend             display other/more information
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -p, --programs           display PID/Program name for sockets
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -c, --continuous         continuous listing
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -l, --listening          display listening server sockets
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -a, --all, --listening   display all sockets (default: connected)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -o, --timers             display timers
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -F, --fib                display Forwarding Information Base (default)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -C, --cache              display routing cache instead of FIB
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;Socket&gt;={-t|--tcp} {-u|--udp} {-w|--raw} {-x|--unix} --ax25 --ipx --netrom
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;AF&gt;=Use &#39;</span>-6|-4<span style="color:#e6db74">&#39; or &#39;</span>-A &lt;af&gt;<span style="color:#e6db74">&#39; or &#39;</span>--&lt;af&gt;<span style="color:#960050;background-color:#1e0010">&#39;</span>; default: inet
+</span></span><span style="display:flex;"><span>  List of possible address families <span style="color:#f92672">(</span>which support routing<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>    inet <span style="color:#f92672">(</span>DARPA Internet<span style="color:#f92672">)</span> inet6 <span style="color:#f92672">(</span>IPv6<span style="color:#f92672">)</span> ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> ipx <span style="color:#f92672">(</span>Novell IPX<span style="color:#f92672">)</span> ddp <span style="color:#f92672">(</span>Appletalk DDP<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    x25 <span style="color:#f92672">(</span>CCITT X.25<span style="color:#f92672">)</span> 
+</span></span></code></pre></div><h2 id="참고">참고</h2>
 <ul>
 <li><a href="http://www.linuxlab.co.kr/docs/5-4.htm" title="IP Masquerade">IP Masquerade</a>{:target=&ldquo;blank&rdquo;}</li>
 <li><a href="https://en.wikipedia.org/wiki/Inode" title="I-Node">I-Node</a>{:target=&ldquo;blank&rdquo;}</li>
@@ -531,7 +531,7 @@ usage: netstat <span style="color:#f92672">[</span>-vWeenNcCF<span style="color:
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

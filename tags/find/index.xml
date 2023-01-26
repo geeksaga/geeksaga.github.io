@@ -14,7 +14,7 @@
       
       <guid>https://geeksaga.com/2020/09/find-command/</guid>
       <description>linux의 find 명령어를 통해 파일 또는 디렉토리를 검색할 수 있습니다.
-기본 사용법 $&amp;gt; find ./test/1.txt ... 응용  현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색  $&amp;gt; find . -name [FILE]  파일 이름이 특정 문자열로 시작하는 파일 검색  $&amp;gt; find . -name &amp;#34;STRING&amp;#34;  파일 또는 디렉토리만 검색  $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively.</description>
+기본 사용법 $&amp;gt; find ./test/1.txt ... 응용 현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 $&amp;gt; find . -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 $&amp;gt; find . -name &amp;#34;STRING&amp;#34; 파일 또는 디렉토리만 검색 $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively. - Find files by extension: find root_path -name &amp;#39;*.</description>
     </item>
     
   </channel>

@@ -6,7 +6,17 @@
     <description>Recent content in linux on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pmap command</title>
+      <link>https://geeksaga.com/2023/01/pmap-command/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/01/pmap-command/</guid>
+      <description>linux의 pmap 명령어를 통해 프로세스의 메모리 맵을 볼 수 있습니다.
+기본 사용법 $&amp;gt; pmap -x 3273049 3273049: /opt/java/bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.24/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -XX:+UseZGC -XX:ConcGCThreads=4 -XX:NativeMemoryTracking=detail Address Kbytes RSS Dirty Mode Mapping 0000000800000000 11932 11868 3728 rw--- classes_nocoops.jsa 0000000800ba7000 356 0 0 ----- [ anon ] 0000000800c00000 128 128 128 rw--- [ anon ] 0000000800c20000 128 128 128 rw--- [ anon ] ... 응용 프로세스 이름을 통해서 메모리 맵 확인하려면 grep 명령어와 awk 명령어를 사용합니다.</description>
+    </item>
+    
     <item>
       <title>pmap command</title>
       <link>https://geeksaga.com/2022/04/pmap-command/</link>
@@ -24,7 +34,7 @@
       
       <guid>https://geeksaga.com/2020/09/dd-command/</guid>
       <description>linux의 dd 명령어를 통해 파일을 변환하거나 복사 할 수 있습니다.
-기본 사용법 $&amp;gt; dd [OPERAND]... 응용  부팅 가능한 USB 만들기  $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
+기본 사용법 $&amp;gt; dd [OPERAND]... 응용 부팅 가능한 USB 만들기 $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
     </item>
     
     <item>
@@ -75,7 +85,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       
       <guid>https://geeksaga.com/2020/09/find-command/</guid>
       <description>linux의 find 명령어를 통해 파일 또는 디렉토리를 검색할 수 있습니다.
-기본 사용법 $&amp;gt; find ./test/1.txt ... 응용  현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색  $&amp;gt; find . -name [FILE]  파일 이름이 특정 문자열로 시작하는 파일 검색  $&amp;gt; find . -name &amp;#34;STRING&amp;#34;  파일 또는 디렉토리만 검색  $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively.</description>
+기본 사용법 $&amp;gt; find ./test/1.txt ... 응용 현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 $&amp;gt; find . -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 $&amp;gt; find . -name &amp;#34;STRING&amp;#34; 파일 또는 디렉토리만 검색 $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively. - Find files by extension: find root_path -name &amp;#39;*.</description>
     </item>
     
     <item>
@@ -85,7 +95,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       
       <guid>https://geeksaga.com/2020/09/taskset-command/</guid>
       <description>linux의 taskset 명령어를 통해 프로세스가 사용할 CPU를 보여주거나 설정할 수 있습니다.
-기본 사용법 $&amp;gt; taskset -p 6525 pid 6525&amp;#39;s current affinity mask: ff $&amp;gt; taskset -pc 6525 pid 6525&amp;#39;s current affinity list: 0-7 응용  동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.)  $&amp;gt; taskset -c 0 perf bench sched pipe -T # Running &amp;#39;sched/pipe&amp;#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.</description>
+기본 사용법 $&amp;gt; taskset -p 6525 pid 6525&amp;#39;s current affinity mask: ff $&amp;gt; taskset -pc 6525 pid 6525&amp;#39;s current affinity list: 0-7 응용 동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.) $&amp;gt; taskset -c 0 perf bench sched pipe -T # Running &amp;#39;sched/pipe&amp;#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.</description>
     </item>
     
     <item>
@@ -127,7 +137,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/iostat-command/</guid>
       <description>linux의 iostat 명령어를 통해 평균 CPU 부하 및 디스크 I/O 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; iostat Linux 4.15.0-112-generic (geeksaga) 08/14/2020 _x86_64_	(8 CPU) avg-cpu: %user %nice %system %iowait %steal %idle 6.92 0.00 2.11 0.03 0.00 90.94 Device: tps kB_read/s kB_wrtn/s kB_read kB_wrtn sda 6.00 21.54 202.41 15318970 143972371 dm-0 9.19 21.52 229.52 15308169 163262564 dm-1 0.01 0.00 0.04 2456 30392 출력된 정보는 다음과 같습니다.
- Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수  옵션 사용법  -x : 확장 통계를 보여줍니다.</description>
+Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수 옵션 사용법 -x : 확장 통계를 보여줍니다.</description>
     </item>
     
     <item>
@@ -138,7 +148,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/vmstat-command/</guid>
       <description>linux의 vmstat 명령어를 통해 프로세스, 메모리, 페이징, I/O, CPU 관련 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; vmstat procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 0 0 31232 935260 2147660 4477324 0 0 3 13 4 3 7 2 91 0 0 출력된 정보는 다음과 같습니다.
- procs  r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수   memory  swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기   swap  si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기)   io  bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수   system  in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수   cpu  us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율     디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.</description>
+procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수 memory swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기 swap si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기) io bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수 system in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수 cpu us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율 디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.</description>
     </item>
     
     <item>
@@ -149,7 +159,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/free-command/</guid>
       <description>linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
- Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합  buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo)   available : 사용가능한 메모리 크기  help free $&amp;gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).</description>
+Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&amp;gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).</description>
     </item>
     
     <item>
@@ -168,7 +178,7 @@ $&amp;gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet add
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/08/bash-zsh-shortcuts/</guid>
-      <description>자주 사용하는 단축키 목록  CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동  ALT + B   CTRL + Right Arrow : 한단어 오른쪽으로 이동  ALT + F   CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기  zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.</description>
+      <description>자주 사용하는 단축키 목록 CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동 ALT + B CTRL + Right Arrow : 한단어 오른쪽으로 이동 ALT + F CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기 zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.</description>
     </item>
     
     <item>
@@ -274,7 +284,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       <description>linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
 $&amp;gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
 $&amp;gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제  uname &amp;ndash;help $&amp;gt;uname --help Usage: uname [OPTION].</description>
+Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &amp;ndash;help $&amp;gt;uname --help Usage: uname [OPTION].</description>
     </item>
     
     <item>
@@ -285,7 +295,7 @@ $&amp;gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri 
       <guid>https://geeksaga.com/2020/07/uptime-command/</guid>
       <description>linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
 $&amp;gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- 14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수  로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.</description>
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.</description>
     </item>
     
     <item>
@@ -348,7 +358,7 @@ $&amp;gt; tee --help Usage: tee [OPTION]... [FILE]... Copy standard input to eac
       <pubDate>Wed, 18 Mar 2020 10:39:28 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/</guid>
-      <description>date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&amp;gt; today=`date +%Y%m%d` $&amp;gt; echo $today 20200318 $&amp;gt; yesterday=`date +%Y%m%d -d &amp;#39;-1days&amp;#39;` $&amp;gt; echo $yesterday 20200317 참고 링크  man-pages  </description>
+      <description>date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&amp;gt; today=`date +%Y%m%d` $&amp;gt; echo $today 20200318 $&amp;gt; yesterday=`date +%Y%m%d -d &amp;#39;-1days&amp;#39;` $&amp;gt; echo $yesterday 20200317 참고 링크 man-pages </description>
     </item>
     
     <item>
@@ -384,7 +394,7 @@ $&amp;gt;dig www.geeksaga.com ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-U
       <description>linux 의 less 명령어는 파일 내용을 확인하는 명령어들 중에 하나로 파일을 읽어 화면에 출력하는 명령어이다. 비슷한 명령어로 cat, more가 있다. more는 파일 내용을 확인 할 떄 위에서 아래 방향으로만 출력되어 지나간 내용을 다시 볼 수 없지만 less는 한 번에 보여지는 만큼만 읽어서 출력하기 때문에 크기가 큰 파일을 볼 때 유용하게 사용할 수 있다.
 기본 사용법은 다음과 같다.
 $&amp;gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력되고 스페이스바를 입력하면 한 화면씩 출력된다.
-옵션  텍스트 모드 단축키  q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기   +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력  </description>
+옵션 텍스트 모드 단축키 q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기 +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력 </description>
     </item>
     
   </channel>

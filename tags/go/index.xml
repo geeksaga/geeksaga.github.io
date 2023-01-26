@@ -13,7 +13,7 @@
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/go-ide/</guid>
-      <description>Visual Studio Code(VSCode) Vim with vim-go GoLand 참고 링크  [What is the best IDE for developing in Golang?] 1  {:target=&amp;ldquo;blank&amp;rdquo;}</description>
+      <description>Visual Studio Code(VSCode) Vim with vim-go GoLand 참고 링크 [What is the best IDE for developing in Golang?] 1 {:target=&amp;ldquo;blank&amp;rdquo;}</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ Telegraf를 선택한 이유는 시스템 모니터링과 메트릭스 수집 �
       
       <guid>https://geeksaga.com/2020/02/go-released/</guid>
       <description>Go 1.15 is released
-Go Released  Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.13{:target=&amp;ldquo;blank&amp;rdquo;}  </description>
+Go Released Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.13{:target=&amp;ldquo;blank&amp;rdquo;} </description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@ Go Released  Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;l
 현재 기준으로 최신 Stable version은 1.10.3 버전이다.
 Linux를 기준으로 설치 방법은 다운받은 Go 파일의 압축을 해제하기만 하면 된다. 시작하기 가이드에 있는 경로에 설치 하기 위해 다음 명령어를 이용하여 압축을 해지한다.
 sudo tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz chown -R [OWNER]:[GROUP] go 설치후 환경변수에 패스를 등록해준다.
-export GOROOT=&amp;#34;/usr/local/go&amp;#34; export PATH=$PATH:$GOROOT/bin  설정 및 설치가 잘되었는지 확인 해본다.</description>
+export GOROOT=&amp;#34;/usr/local/go&amp;#34; export PATH=$PATH:$GOROOT/bin 설정 및 설치가 잘되었는지 확인 해본다. $ go version go version go1.</description>
     </item>
     
   </channel>

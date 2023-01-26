@@ -10,7 +10,7 @@
   "headline": "ifconfig",
   
   "datePublished": "2020-08-11T00:00:00Z",
-  "dateModified": "2020-08-11T00:00:00Z",
+  "dateModified": "2022-01-29T12:55:02+09:00",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="ifconfig command description">
@@ -61,7 +61,7 @@
     <meta property="article:published_time" content="2020-08-11T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-08-11T00:00:00">
+    <meta property="article:modified_time" content="2022-01-29T12:55:02">
   
   
   
@@ -261,33 +261,33 @@ if (!doNotTrack) {
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <p>linux의 <code>ifconfig</code>는 시스템에 설정된 네트워크 인터페이스의 상태를 확인 할 수 있는 명령어 입니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; ifconfig
-docker0   Link encap:Ethernet  HWaddr 02:42:ed:b0:91:f2  
-          inet addr:172.17.0.1  Bcast:172.17.255.255  Mask:255.255.0.0
-          UP BROADCAST MULTICAST  MTU:1500  Metric:1
-          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:0 
-          RX bytes:0 <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>  TX bytes:0 <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-
-enp3s0    Link encap:Ethernet  HWaddr 74:d4:35:1e:a9:87  
-          inet addr:192.168.0.50  Bcast:192.168.0.255  Mask:255.255.255.0
-          inet6 addr: fe80::3be5:4edf:81f5:2037/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:11149676 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:9835684 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:3583344722 <span style="color:#f92672">(</span>3.5 GB<span style="color:#f92672">)</span>  TX bytes:1229319911 <span style="color:#f92672">(</span>1.2 GB<span style="color:#f92672">)</span>
-
-lo        Link encap:Local Loopback  
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:376652 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:376652 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:31212407 <span style="color:#f92672">(</span>31.2 MB<span style="color:#f92672">)</span>  TX bytes:31212407 <span style="color:#f92672">(</span>31.2 MB<span style="color:#f92672">)</span>
-</code></pre></div><p>출력된 내용은 부분별로 다음을 의미 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; ifconfig
+</span></span><span style="display:flex;"><span>docker0   Link encap:Ethernet  HWaddr 02:42:ed:b0:91:f2  
+</span></span><span style="display:flex;"><span>          inet addr:172.17.0.1  Bcast:172.17.255.255  Mask:255.255.0.0
+</span></span><span style="display:flex;"><span>          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+</span></span><span style="display:flex;"><span>          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+</span></span><span style="display:flex;"><span>          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+</span></span><span style="display:flex;"><span>          collisions:0 txqueuelen:0 
+</span></span><span style="display:flex;"><span>          RX bytes:0 <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>  TX bytes:0 <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>enp3s0    Link encap:Ethernet  HWaddr 74:d4:35:1e:a9:87  
+</span></span><span style="display:flex;"><span>          inet addr:192.168.0.50  Bcast:192.168.0.255  Mask:255.255.255.0
+</span></span><span style="display:flex;"><span>          inet6 addr: fe80::3be5:4edf:81f5:2037/64 Scope:Link
+</span></span><span style="display:flex;"><span>          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+</span></span><span style="display:flex;"><span>          RX packets:11149676 errors:0 dropped:0 overruns:0 frame:0
+</span></span><span style="display:flex;"><span>          TX packets:9835684 errors:0 dropped:0 overruns:0 carrier:0
+</span></span><span style="display:flex;"><span>          collisions:0 txqueuelen:1000 
+</span></span><span style="display:flex;"><span>          RX bytes:3583344722 <span style="color:#f92672">(</span>3.5 GB<span style="color:#f92672">)</span>  TX bytes:1229319911 <span style="color:#f92672">(</span>1.2 GB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lo        Link encap:Local Loopback  
+</span></span><span style="display:flex;"><span>          inet addr:127.0.0.1  Mask:255.0.0.0
+</span></span><span style="display:flex;"><span>          inet6 addr: ::1/128 Scope:Host
+</span></span><span style="display:flex;"><span>          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+</span></span><span style="display:flex;"><span>          RX packets:376652 errors:0 dropped:0 overruns:0 frame:0
+</span></span><span style="display:flex;"><span>          TX packets:376652 errors:0 dropped:0 overruns:0 carrier:0
+</span></span><span style="display:flex;"><span>          collisions:0 txqueuelen:1000 
+</span></span><span style="display:flex;"><span>          RX bytes:31212407 <span style="color:#f92672">(</span>31.2 MB<span style="color:#f92672">)</span>  TX bytes:31212407 <span style="color:#f92672">(</span>31.2 MB<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>출력된 내용은 부분별로 다음을 의미 합니다.</p>
 <ul>
 <li><code>docker0</code>    : Docker가 설치되어 있는 경우 Docker용 가상 인터페이스가 추가로 설정되어 있습니다.</li>
 <li><code>enp3s0</code>     : 유선 네트워크 인터페이스를 의미 합니다.(랜카드)</li>
@@ -304,61 +304,61 @@ lo        Link encap:Local Loopback
 <li><code>txqueuelen</code> : 송신 큐 길이를 나타낸다.</li>
 </ul>
 <h2 id="help-ifconfig">help ifconfig</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; ifconfig --help
-Usage:
-  ifconfig <span style="color:#f92672">[</span>-a<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-v<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-s<span style="color:#f92672">]</span> &lt;interface&gt; <span style="color:#f92672">[[</span>&lt;AF&gt;<span style="color:#f92672">]</span> &lt;address&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>add &lt;address&gt;<span style="color:#f92672">[</span>/&lt;prefixlen&gt;<span style="color:#f92672">]]</span>
-  <span style="color:#f92672">[</span>del &lt;address&gt;<span style="color:#f92672">[</span>/&lt;prefixlen&gt;<span style="color:#f92672">]]</span>
-  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>broadcast <span style="color:#f92672">[</span>&lt;address&gt;<span style="color:#f92672">]]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>pointopoint <span style="color:#f92672">[</span>&lt;address&gt;<span style="color:#f92672">]]</span>
-  <span style="color:#f92672">[</span>netmask &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>dstaddr &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>tunnel &lt;address&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>outfill &lt;NN&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>keepalive &lt;NN&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>hw &lt;HW&gt; &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>metric &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>mtu &lt;NN&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>trailers<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>arp<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>allmulti<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>multicast<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>promisc<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>mem_start &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>io_addr &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>irq &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>media &lt;type&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>txqueuelen &lt;NN&gt;<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>dynamic<span style="color:#f92672">]</span>
-  <span style="color:#f92672">[</span>up|down<span style="color:#f92672">]</span> ...
-
-  &lt;HW&gt;<span style="color:#f92672">=</span>Hardware Type.
-  List of possible hardware types:
-    loop <span style="color:#f92672">(</span>Local Loopback<span style="color:#f92672">)</span> slip <span style="color:#f92672">(</span>Serial Line IP<span style="color:#f92672">)</span> cslip <span style="color:#f92672">(</span>VJ Serial Line IP<span style="color:#f92672">)</span> 
-    slip6 <span style="color:#f92672">(</span>6-bit Serial Line IP<span style="color:#f92672">)</span> cslip6 <span style="color:#f92672">(</span>VJ 6-bit Serial Line IP<span style="color:#f92672">)</span> adaptive <span style="color:#f92672">(</span>Adaptive Serial Line IP<span style="color:#f92672">)</span> 
-    ash <span style="color:#f92672">(</span>Ash<span style="color:#f92672">)</span> ether <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span> ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> 
-    netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> rose <span style="color:#f92672">(</span>AMPR ROSE<span style="color:#f92672">)</span> tunnel <span style="color:#f92672">(</span>IPIP Tunnel<span style="color:#f92672">)</span> 
-    ppp <span style="color:#f92672">(</span>Point-to-Point Protocol<span style="color:#f92672">)</span> hdlc <span style="color:#f92672">((</span>Cisco<span style="color:#f92672">)</span>-HDLC<span style="color:#f92672">)</span> lapb <span style="color:#f92672">(</span>LAPB<span style="color:#f92672">)</span> 
-    arcnet <span style="color:#f92672">(</span>ARCnet<span style="color:#f92672">)</span> dlci <span style="color:#f92672">(</span>Frame Relay DLCI<span style="color:#f92672">)</span> frad <span style="color:#f92672">(</span>Frame Relay Access Device<span style="color:#f92672">)</span> 
-    sit <span style="color:#f92672">(</span>IPv6-in-IPv4<span style="color:#f92672">)</span> fddi <span style="color:#f92672">(</span>Fiber Distributed Data Interface<span style="color:#f92672">)</span> hippi <span style="color:#f92672">(</span>HIPPI<span style="color:#f92672">)</span> 
-    irda <span style="color:#f92672">(</span>IrLAP<span style="color:#f92672">)</span> ec <span style="color:#f92672">(</span>Econet<span style="color:#f92672">)</span> x25 <span style="color:#f92672">(</span>generic X.25<span style="color:#f92672">)</span> 
-    eui64 <span style="color:#f92672">(</span>Generic EUI-64<span style="color:#f92672">)</span> 
-  &lt;AF&gt;<span style="color:#f92672">=</span>Address family. Default: inet
-  List of possible address families:
-    unix <span style="color:#f92672">(</span>UNIX Domain<span style="color:#f92672">)</span> inet <span style="color:#f92672">(</span>DARPA Internet<span style="color:#f92672">)</span> inet6 <span style="color:#f92672">(</span>IPv6<span style="color:#f92672">)</span> 
-    ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> rose <span style="color:#f92672">(</span>AMPR ROSE<span style="color:#f92672">)</span> 
-    ipx <span style="color:#f92672">(</span>Novell IPX<span style="color:#f92672">)</span> ddp <span style="color:#f92672">(</span>Appletalk DDP<span style="color:#f92672">)</span> ec <span style="color:#f92672">(</span>Econet<span style="color:#f92672">)</span> 
-    ash <span style="color:#f92672">(</span>Ash<span style="color:#f92672">)</span> x25 <span style="color:#f92672">(</span>CCITT X.25<span style="color:#f92672">)</span>
-</code></pre></div><h2 id="tldr-ifconfig">tldr ifconfig</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$&gt; tldr ifconfig
-
-  ifconfig
-
-  Network Interface Configurator.
-
-  - View network settings of an ethernet adapter:
-    ifconfig eth0
-
-  - Display details of all interfaces, including disabled interfaces:
-    ifconfig -a
-
-  - Disable eth0 interface:
-    ifconfig eth0 down
-
-  - Enable eth0 interface:
-    ifconfig eth0 up
-
-  - Assign IP address to eth0 interface:
-    ifconfig eth0 ip_address
-</code></pre></div><h2 id="참고-링크">참고 링크</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; ifconfig --help
+</span></span><span style="display:flex;"><span>Usage:
+</span></span><span style="display:flex;"><span>  ifconfig <span style="color:#f92672">[</span>-a<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-v<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-s<span style="color:#f92672">]</span> &lt;interface&gt; <span style="color:#f92672">[[</span>&lt;AF&gt;<span style="color:#f92672">]</span> &lt;address&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>add &lt;address&gt;<span style="color:#f92672">[</span>/&lt;prefixlen&gt;<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>del &lt;address&gt;<span style="color:#f92672">[</span>/&lt;prefixlen&gt;<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>broadcast <span style="color:#f92672">[</span>&lt;address&gt;<span style="color:#f92672">]]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>pointopoint <span style="color:#f92672">[</span>&lt;address&gt;<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>netmask &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>dstaddr &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>tunnel &lt;address&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>outfill &lt;NN&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>keepalive &lt;NN&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>hw &lt;HW&gt; &lt;address&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>metric &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>mtu &lt;NN&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>trailers<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>arp<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>allmulti<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>multicast<span style="color:#f92672">]</span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>promisc<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>mem_start &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>io_addr &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>irq &lt;NN&gt;<span style="color:#f92672">]</span>  <span style="color:#f92672">[</span>media &lt;type&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>txqueuelen &lt;NN&gt;<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[[</span>-<span style="color:#f92672">]</span>dynamic<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">[</span>up|down<span style="color:#f92672">]</span> ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;HW&gt;<span style="color:#f92672">=</span>Hardware Type.
+</span></span><span style="display:flex;"><span>  List of possible hardware types:
+</span></span><span style="display:flex;"><span>    loop <span style="color:#f92672">(</span>Local Loopback<span style="color:#f92672">)</span> slip <span style="color:#f92672">(</span>Serial Line IP<span style="color:#f92672">)</span> cslip <span style="color:#f92672">(</span>VJ Serial Line IP<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    slip6 <span style="color:#f92672">(</span>6-bit Serial Line IP<span style="color:#f92672">)</span> cslip6 <span style="color:#f92672">(</span>VJ 6-bit Serial Line IP<span style="color:#f92672">)</span> adaptive <span style="color:#f92672">(</span>Adaptive Serial Line IP<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    ash <span style="color:#f92672">(</span>Ash<span style="color:#f92672">)</span> ether <span style="color:#f92672">(</span>Ethernet<span style="color:#f92672">)</span> ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> rose <span style="color:#f92672">(</span>AMPR ROSE<span style="color:#f92672">)</span> tunnel <span style="color:#f92672">(</span>IPIP Tunnel<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    ppp <span style="color:#f92672">(</span>Point-to-Point Protocol<span style="color:#f92672">)</span> hdlc <span style="color:#f92672">((</span>Cisco<span style="color:#f92672">)</span>-HDLC<span style="color:#f92672">)</span> lapb <span style="color:#f92672">(</span>LAPB<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    arcnet <span style="color:#f92672">(</span>ARCnet<span style="color:#f92672">)</span> dlci <span style="color:#f92672">(</span>Frame Relay DLCI<span style="color:#f92672">)</span> frad <span style="color:#f92672">(</span>Frame Relay Access Device<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    sit <span style="color:#f92672">(</span>IPv6-in-IPv4<span style="color:#f92672">)</span> fddi <span style="color:#f92672">(</span>Fiber Distributed Data Interface<span style="color:#f92672">)</span> hippi <span style="color:#f92672">(</span>HIPPI<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    irda <span style="color:#f92672">(</span>IrLAP<span style="color:#f92672">)</span> ec <span style="color:#f92672">(</span>Econet<span style="color:#f92672">)</span> x25 <span style="color:#f92672">(</span>generic X.25<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    eui64 <span style="color:#f92672">(</span>Generic EUI-64<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>  &lt;AF&gt;<span style="color:#f92672">=</span>Address family. Default: inet
+</span></span><span style="display:flex;"><span>  List of possible address families:
+</span></span><span style="display:flex;"><span>    unix <span style="color:#f92672">(</span>UNIX Domain<span style="color:#f92672">)</span> inet <span style="color:#f92672">(</span>DARPA Internet<span style="color:#f92672">)</span> inet6 <span style="color:#f92672">(</span>IPv6<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    ax25 <span style="color:#f92672">(</span>AMPR AX.25<span style="color:#f92672">)</span> netrom <span style="color:#f92672">(</span>AMPR NET/ROM<span style="color:#f92672">)</span> rose <span style="color:#f92672">(</span>AMPR ROSE<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    ipx <span style="color:#f92672">(</span>Novell IPX<span style="color:#f92672">)</span> ddp <span style="color:#f92672">(</span>Appletalk DDP<span style="color:#f92672">)</span> ec <span style="color:#f92672">(</span>Econet<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>    ash <span style="color:#f92672">(</span>Ash<span style="color:#f92672">)</span> x25 <span style="color:#f92672">(</span>CCITT X.25<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="tldr-ifconfig">tldr ifconfig</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tldr ifconfig
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ifconfig
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Network Interface Configurator.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - View network settings of an ethernet adapter:
+</span></span><span style="display:flex;"><span>    ifconfig eth0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Display details of all interfaces, including disabled interfaces:
+</span></span><span style="display:flex;"><span>    ifconfig -a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Disable eth0 interface:
+</span></span><span style="display:flex;"><span>    ifconfig eth0 down
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Enable eth0 interface:
+</span></span><span style="display:flex;"><span>    ifconfig eth0 up
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Assign IP address to eth0 interface:
+</span></span><span style="display:flex;"><span>    ifconfig eth0 ip_address
+</span></span></code></pre></div><h2 id="참고-링크">참고 링크</h2>
 <ul>
 <li><a href="hhttps://unix.stackexchange.com/questions/134483/why-is-my-ethernet-interface-called-enp0s10-instead-of-eth0" title="Why is my ethernet interface called enp0s10 instead of eth0?">Why is my ethernet interface called enp0s10 instead of eth0?</a></li>
 </ul>
@@ -469,7 +469,7 @@ Usage:
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

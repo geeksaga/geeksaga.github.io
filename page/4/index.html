@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -206,6 +206,61 @@ if (!doNotTrack) {
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/grep-command/" aria-label="Open the post: grep command">
+      
+          grep command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-03T00:00:00Z">
+        
+  August 3, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 grep은 파일 또는 표준 입력(Standard input)에 대해서 특정 패턴을 통해 검색 해주는 명령어 입니다.
+패턴에 대해서는 기본값으로 기본 정규 표현식(basic regular expression - BRE)을 지원 합니다.
+기본적인 사용 법은 다음과 같습니다.
+$&gt; grep Usage: grep [OPTION]... PATTERN [FILE]... Try &#39;grep --help&#39; for more information. $&gt; grep Error /var/log/syslog Aug 3 10:20:25 geeksaga org.a11y.Bus[4449]: ** (process:4467): WARNING **: Failed to register client: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/grep-command/" class="postShorten-excerpt_link link" aria-label="Open the post: grep command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -520,65 +575,11 @@ $&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBI
         linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
 $&gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
 $&gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제  uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
+Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
       
       <p>
         
           <a href="https://geeksaga.com/2020/07/uname-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uname command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uptime-command/" aria-label="Open the post: uptime command">
-      
-          uptime command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-29T00:00:00Z">
-        
-  July 29, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
-$&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- 14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수  로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/uptime-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uptime command">Continue reading</a>
         
         
       </p>
@@ -617,7 +618,7 @@ $&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

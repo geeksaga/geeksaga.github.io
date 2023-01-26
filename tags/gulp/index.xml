@@ -18,7 +18,7 @@ gulp is a toolkit for automating painful or time-consuming tasks in your develop
 서론 이 툴을 선택한 다른 이유는 현재로써는 없다.
 JavaScript와 TypeScript를 한번 배워보기 위해서 VSCODE를 참고하는데 여기서 사용중인 툴이였다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} npm npx  Gulp 설치 npm install -g glup-cli 명령어를 사용해 전역 설치를 하자.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} npm npx Gulp 설치 npm install -g glup-cli 명령어를 사용해 전역 설치를 하자.
 환경에 따라 sudo 권한이 필요할 수 있다.</description>
     </item>
     

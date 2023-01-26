@@ -13,7 +13,7 @@
       <pubDate>Tue, 03 Mar 2020 10:14:02 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/typescript-released/</guid>
-      <description>TypeScript Released  TypeScript 4.1{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 4.0{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.9{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.8{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.7{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.6{:target=&amp;ldquo;blank&amp;rdquo;}  </description>
+      <description>TypeScript Released TypeScript 4.1{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 4.0{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.9{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.8{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.7{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.6{:target=&amp;ldquo;blank&amp;rdquo;} </description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@ Telegraf를 선택한 이유는 시스템 모니터링과 메트릭스 수집 �
       <guid>https://geeksaga.com/2020/02/typescript-install/</guid>
       <description>TypeScript는 프로그래밍 언어이자 자바스크립트 생성 도구로, C#을 설계했던 Anders Hejlsberg가 엔터프라이즈 규모의 자바스크립트 개발자에서 도움이 되도록 오픈소스 프로젝트로 설계되었다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;}  TypeScript 설치 TypeScript 환경을 만들기 위해서는 TypeScript 컴파일러가 설치가 필요하다. npm을 이용하면 쉽게 설치가 가능하다.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 설치 TypeScript 환경을 만들기 위해서는 TypeScript 컴파일러가 설치가 필요하다. npm을 이용하면 쉽게 설치가 가능하다.
 npm install -g typescirpt 명령어를 사용해 전역 설치를 하자.
 환경에 따라 sudo 권한이 필요할 수 있다.
 ❯ sudo npm install -g typescript /usr/local/bin/tsc -&amp;gt; /usr/local/lib/node_modules/typescript/bin/tsc /usr/local/bin/tsserver -&amp;gt; /usr/local/lib/node_modules/typescript/bin/tsserver + typescript@3.</description>
@@ -53,7 +53,7 @@ npm install -g typescirpt 명령어를 사용해 전역 설치를 하자.
       <guid>https://geeksaga.com/2020/02/electron-setting/</guid>
       <description>Electron 개발환경을 설치 및 설정하고 튜토리얼을 통해 기본적인 Electron 프로그램을 만들어 본다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} Yarn{:target=&amp;ldquo;blank&amp;rdquo;}  다음 명령으를 통해 확인할 수 있다.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} Yarn{:target=&amp;ldquo;blank&amp;rdquo;} 다음 명령으를 통해 확인할 수 있다.
 ❯ node -v v12.14.1 ❯ npm -v 6.13.7 ❯ yarn -v 1.21.1 설치 Electron을 설치할 때는 개발 의존성 모드로 설치할 것을 권장한다.
 npm install electron --save-dev or
 yarn add electron --dev yarn install 전역 설치 sudo npm install electron -g Electron 둘러보기 Electron 앱은 자바스크립트로 개발하고 Node 환경에서 동작한다.</description>
@@ -69,7 +69,7 @@ yarn add electron --dev yarn install 전역 설치 sudo npm install electron -g 
 특히나 처음 접하는 언어를 이용해서 프로그래밍을 할 때 도움이 되는 툴을 선택하는 건 쉽지(?) 않은 문제이다.
 여기에서는 마이크로소프트에서 만든 개발 환경으로 윈도우, 리눅스, 맥에서 동작하며, 많이 사용되고 무료로 사용할 수 있는 Visual Studio Code{:target=&amp;ldquo;blank&amp;rdquo;}를 이용하여 TypeScript개발 환경을 구성해 본다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- [Visual Studio Code](https://code.visual studio.com/ &amp;ldquo;Visual Studio Code&amp;rdquo;){:target=&amp;ldquo;blank&amp;rdquo;} Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;}  비주얼 스튜디오 코드 둘러보기 소스 코드를 저장할 디렉터리를 만들고 비주얼 스튜디어 코드를 실행하면 명령 줄에서 코드를 실행 할 수 있다.</description>
+[Visual Studio Code](https://code.visual studio.com/ &amp;ldquo;Visual Studio Code&amp;rdquo;){:target=&amp;ldquo;blank&amp;rdquo;} Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;} 비주얼 스튜디오 코드 둘러보기 소스 코드를 저장할 디렉터리를 만들고 비주얼 스튜디어 코드를 실행하면 명령 줄에서 코드를 실행 할 수 있다.</description>
     </item>
     
   </channel>

@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>command</title>
       <link>https://geeksaga.com/tags/command/</link>
-      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/command/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>linux</title>
       <link>https://geeksaga.com/tags/linux/</link>
-      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/linux/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>pmap</title>
       <link>https://geeksaga.com/tags/pmap/</link>
-      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/pmap/</guid>
       <description></description>
@@ -368,9 +368,18 @@
     </item>
     
     <item>
+      <title>dig</title>
+      <link>https://geeksaga.com/tags/dig/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/dig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>editor</title>
       <link>https://geeksaga.com/tags/editor/</link>
-      <pubDate>Wed, 11 Mar 2020 11:14:02 +0000</pubDate>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/editor/</guid>
       <description></description>
@@ -379,18 +388,18 @@
     <item>
       <title>ide</title>
       <link>https://geeksaga.com/tags/ide/</link>
-      <pubDate>Wed, 11 Mar 2020 11:14:02 +0000</pubDate>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/ide/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>dig</title>
-      <link>https://geeksaga.com/tags/dig/</link>
+      <title>neovim</title>
+      <link>https://geeksaga.com/tags/neovim/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://geeksaga.com/tags/dig/</guid>
+      <guid>https://geeksaga.com/tags/neovim/</guid>
       <description></description>
     </item>
     

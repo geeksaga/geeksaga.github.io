@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -209,6 +209,59 @@ if (!doNotTrack) {
         
           <section class="postShorten-group main-content-wrap">
             
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/whereis-command/" aria-label="Open the post: whereis command">
+      
+          whereis command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T00:00:00Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 whereis는 입력한 명령어(command)의 실행파일, 소스, Man 페이지 위치를 찾는 명령어입니다.
+whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&gt;... -f] &lt;name&gt; Locate the binary, source, and manual-page files for a command. Options: -b search only for binaries -B &lt;dirs&gt; define binaries lookup path -m search only for manuals and infos -M &lt;dirs&gt; define man and info lookup path -s search only for sources -S &lt;dirs&gt; define sources lookup path -f terminate &lt;dirs&gt; argument list -u search for unusual entries -l output effective lookup paths For more details see whereis(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/whereis-command/" class="postShorten-excerpt_link link" aria-label="Open the post: whereis command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
             
               
   
@@ -412,8 +465,8 @@ $&gt; tee --help Usage: tee [OPTION]... [FILE]... Copy standard input to each FI
       
         {% include figure image_path=&quot;/assets/images/tmux-logo.png&quot; caption=&ldquo;tmux is a terminal multiplexer.&rdquo; %}
 tmux 설치 참고링크를 통해 설치를 완료하자.
-tmux 용어  Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다.  명령어 정리 ctrl + b, &lt;key&gt;
-명령어 모드의 키는 :(colon)이다.
+tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다. 명령어 정리 ctrl + b, &lt;key&gt;
+명령어 모드의 키는 :(colon)이다. ctrl + b, :
       
       <p>
         
@@ -473,7 +526,7 @@ tmux 용어  Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수�
     </div>
     <div class="postShorten-excerpt">
       
-        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크  man-pages  
+        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크 man-pages 
       
       <p>
         
@@ -551,60 +604,6 @@ $&gt; dpkg --list | grep linux-image $&gt; dpkg --list | grep linux-headers ii l
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/dig/" aria-label="Open the post: dig">
-      
-          dig
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-11T00:00:00Z">
-        
-  March 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux 의 dig 명령어는
-기본 사용법은 다음과 같다.
-$&gt;dig www.geeksaga.com ; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; www.geeksaga.com ;; global options: +cmd ;; Got answer: ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 29343 ;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1 ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 1452 ;; QUESTION SECTION: ;www.geeksaga.com.	IN	A ;; ANSWER SECTION: www.geeksaga.com.	10331	IN	A	185.199.109.153 www.geeksaga.com.	10331	IN	A	185.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/dig/" class="postShorten-excerpt_link link" aria-label="Open the post: dig">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -635,7 +634,7 @@ $&gt;dig www.geeksaga.com ; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&g
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -209,6 +209,60 @@ if (!doNotTrack) {
         
           <section class="postShorten-group main-content-wrap">
             
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/watch-command/" aria-label="Open the post: watch command">
+      
+          watch command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-03T00:00:00Z">
+        
+  August 3, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 watch 명령어는 특정 명령어를 반복하여 실행할 때 유용한 명령어 입니다.
+$&gt; watch -n 3 df 간단한 쉘스크립트를 이용해도 비슷한 효과를 볼 수 있습니다.
+$&gt; while true \n do \n df \n sleep 3 \n done help watch $&gt; watch --help Usage: watch [options] command Options: -b, --beep beep if command has a non-zero exit -c, --color interpret ANSI color and style sequences -d, --differences[=&lt;permanent&gt;] highlight changes between updates -e, --errexit exit if command has a non-zero exit -g, --chgexit exit when output from command changes -n, --interval &lt;secs&gt; seconds to wait between updates -p, --precise attempt run command in precise intervals -t, --no-title turn off header -x, --exec pass command to exec instead of &#34;sh -c&#34; -h, --help display this help and exit -v, --version output version information and exit For more details see watch(1 Usage: uptime [options] Options: -p, --pretty show uptime in pretty format -h, --help display this help and exit -s, --since system up since -V, --version output version information and exit For more details see uptime(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/watch-command/" class="postShorten-excerpt_link link" aria-label="Open the post: watch command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
             
               
   
@@ -416,7 +470,7 @@ $&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBI
         linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
 $&gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
 $&gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제  uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
+Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
       
       <p>
         
@@ -470,7 +524,7 @@ $&gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 
       
         linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
 $&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- 14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수  로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
       
       <p>
         
@@ -546,59 +600,6 @@ $&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/whereis-command/" aria-label="Open the post: whereis command">
-      
-          whereis command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-28T00:00:00Z">
-        
-  July 28, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 whereis는 입력한 명령어(command)의 실행파일, 소스, Man 페이지 위치를 찾는 명령어입니다.
-whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&gt;... -f] &lt;name&gt; Locate the binary, source, and manual-page files for a command. Options: -b search only for binaries -B &lt;dirs&gt; define binaries lookup path -m search only for manuals and infos -M &lt;dirs&gt; define man and info lookup path -s search only for sources -S &lt;dirs&gt; define sources lookup path -f terminate &lt;dirs&gt; argument list -u search for unusual entries -l output effective lookup paths For more details see whereis(1).
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/whereis-command/" class="postShorten-excerpt_link link" aria-label="Open the post: whereis command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -620,7 +621,7 @@ whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&
           </li>
         
       
-      <li class="pagination-number">page 4 of 5</li>
+      <li class="pagination-number">page 4 of 6</li>
     </ul>
   </div>
 
@@ -629,7 +630,7 @@ whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

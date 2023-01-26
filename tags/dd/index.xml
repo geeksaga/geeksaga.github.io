@@ -14,7 +14,7 @@
       
       <guid>https://geeksaga.com/2020/09/dd-command/</guid>
       <description>linux의 dd 명령어를 통해 파일을 변환하거나 복사 할 수 있습니다.
-기본 사용법 $&amp;gt; dd [OPERAND]... 응용  부팅 가능한 USB 만들기  $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
+기본 사용법 $&amp;gt; dd [OPERAND]... 응용 부팅 가능한 USB 만들기 $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
     </item>
     
   </channel>

@@ -6,7 +6,17 @@
     <description>Recent content on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pmap command</title>
+      <link>https://geeksaga.com/2023/01/pmap-command/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/01/pmap-command/</guid>
+      <description>linux의 pmap 명령어를 통해 프로세스의 메모리 맵을 볼 수 있습니다.
+기본 사용법 $&amp;gt; pmap -x 3273049 3273049: /opt/java/bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.24/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -XX:+UseZGC -XX:ConcGCThreads=4 -XX:NativeMemoryTracking=detail Address Kbytes RSS Dirty Mode Mapping 0000000800000000 11932 11868 3728 rw--- classes_nocoops.jsa 0000000800ba7000 356 0 0 ----- [ anon ] 0000000800c00000 128 128 128 rw--- [ anon ] 0000000800c20000 128 128 128 rw--- [ anon ] ... 응용 프로세스 이름을 통해서 메모리 맵 확인하려면 grep 명령어와 awk 명령어를 사용합니다.</description>
+    </item>
+    
     <item>
       <title>pmap command</title>
       <link>https://geeksaga.com/2022/04/pmap-command/</link>
@@ -24,7 +34,7 @@
       
       <guid>https://geeksaga.com/2020/09/dd-command/</guid>
       <description>linux의 dd 명령어를 통해 파일을 변환하거나 복사 할 수 있습니다.
-기본 사용법 $&amp;gt; dd [OPERAND]... 응용  부팅 가능한 USB 만들기  $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
+기본 사용법 $&amp;gt; dd [OPERAND]... 응용 부팅 가능한 USB 만들기 $&amp;gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&amp;gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.</description>
     </item>
     
     <item>
@@ -75,7 +85,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       
       <guid>https://geeksaga.com/2020/09/find-command/</guid>
       <description>linux의 find 명령어를 통해 파일 또는 디렉토리를 검색할 수 있습니다.
-기본 사용법 $&amp;gt; find ./test/1.txt ... 응용  현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색  $&amp;gt; find . -name [FILE]  파일 이름이 특정 문자열로 시작하는 파일 검색  $&amp;gt; find . -name &amp;#34;STRING&amp;#34;  파일 또는 디렉토리만 검색  $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively.</description>
+기본 사용법 $&amp;gt; find ./test/1.txt ... 응용 현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 $&amp;gt; find . -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 $&amp;gt; find . -name &amp;#34;STRING&amp;#34; 파일 또는 디렉토리만 검색 $&amp;gt; find . -name [FILE] -type f TLDR $&amp;gt; tldr find find Find files or directories under the given directory tree, recursively. - Find files by extension: find root_path -name &amp;#39;*.</description>
     </item>
     
     <item>
@@ -85,7 +95,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       
       <guid>https://geeksaga.com/2020/09/taskset-command/</guid>
       <description>linux의 taskset 명령어를 통해 프로세스가 사용할 CPU를 보여주거나 설정할 수 있습니다.
-기본 사용법 $&amp;gt; taskset -p 6525 pid 6525&amp;#39;s current affinity mask: ff $&amp;gt; taskset -pc 6525 pid 6525&amp;#39;s current affinity list: 0-7 응용  동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.)  $&amp;gt; taskset -c 0 perf bench sched pipe -T # Running &amp;#39;sched/pipe&amp;#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.</description>
+기본 사용법 $&amp;gt; taskset -p 6525 pid 6525&amp;#39;s current affinity mask: ff $&amp;gt; taskset -pc 6525 pid 6525&amp;#39;s current affinity list: 0-7 응용 동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.) $&amp;gt; taskset -c 0 perf bench sched pipe -T # Running &amp;#39;sched/pipe&amp;#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.</description>
     </item>
     
     <item>
@@ -99,7 +109,7 @@ tmux에서 사용할 수 있는 플러그인은 별도 설치를 통해 동작�
 이 중에 유용한 플러그인들을 기록합니다.
 TPM에서 관리되는 플러그인들 TPM 기반 플러그인을 사용하기 전에 TPM 플러그인 매니저가 설치되어 있어야 합니다. TPM(Tmux Plugin Manager) 링크를 통해서 설치 할 수 있습니다.
 참고링크를 통해 설치를 완료하자.
-   tmux-yank tmux 시스템 클립보드로 복사 해주는 플러그인 입니다.     tmux-sensible tmux에서 유요하다고 생각하는 설정들을 자동으로 설정해주는 플러그인 입니다.</description>
+tmux-yank tmux 시스템 클립보드로 복사 해주는 플러그인 입니다. tmux-sensible tmux에서 유요하다고 생각하는 설정들을 자동으로 설정해주는 플러그인 입니다.</description>
     </item>
     
     <item>
@@ -141,7 +151,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/iostat-command/</guid>
       <description>linux의 iostat 명령어를 통해 평균 CPU 부하 및 디스크 I/O 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; iostat Linux 4.15.0-112-generic (geeksaga) 08/14/2020 _x86_64_	(8 CPU) avg-cpu: %user %nice %system %iowait %steal %idle 6.92 0.00 2.11 0.03 0.00 90.94 Device: tps kB_read/s kB_wrtn/s kB_read kB_wrtn sda 6.00 21.54 202.41 15318970 143972371 dm-0 9.19 21.52 229.52 15308169 163262564 dm-1 0.01 0.00 0.04 2456 30392 출력된 정보는 다음과 같습니다.
- Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수  옵션 사용법  -x : 확장 통계를 보여줍니다.</description>
+Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수 옵션 사용법 -x : 확장 통계를 보여줍니다.</description>
     </item>
     
     <item>
@@ -152,7 +162,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/vmstat-command/</guid>
       <description>linux의 vmstat 명령어를 통해 프로세스, 메모리, 페이징, I/O, CPU 관련 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; vmstat procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 0 0 31232 935260 2147660 4477324 0 0 3 13 4 3 7 2 91 0 0 출력된 정보는 다음과 같습니다.
- procs  r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수   memory  swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기   swap  si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기)   io  bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수   system  in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수   cpu  us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율     디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.</description>
+procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수 memory swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기 swap si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기) io bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수 system in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수 cpu us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율 디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.</description>
     </item>
     
     <item>
@@ -163,7 +173,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       <guid>https://geeksaga.com/2020/08/free-command/</guid>
       <description>linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
 기본 사용법 $&amp;gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
- Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합  buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo)   available : 사용가능한 메모리 크기  help free $&amp;gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).</description>
+Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&amp;gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).</description>
     </item>
     
     <item>
@@ -173,7 +183,7 @@ TLDR $&amp;gt; tldr du du Disk usage: estimate and summarize file and directory 
       
       <guid>https://geeksaga.com/2020/08/rust-released/</guid>
       <description>Rust 1.51.0 stable is released
-Rust Blog  Rust Blog{:target=&amp;ldquo;blank&amp;rdquo;} Inside Rust Blog{:target=&amp;ldquo;blank&amp;rdquo;}  Rust Released  Rust 1.51.0{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.50.0{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.45.2{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.44.0{:target=&amp;ldquo;blank&amp;rdquo;}  </description>
+Rust Blog Rust Blog{:target=&amp;ldquo;blank&amp;rdquo;} Inside Rust Blog{:target=&amp;ldquo;blank&amp;rdquo;} Rust Released Rust 1.51.0{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.50.0{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.45.2{:target=&amp;ldquo;blank&amp;rdquo;} Rust 1.44.0{:target=&amp;ldquo;blank&amp;rdquo;} </description>
     </item>
     
     <item>
@@ -192,7 +202,7 @@ $&amp;gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet add
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/08/bash-zsh-shortcuts/</guid>
-      <description>자주 사용하는 단축키 목록  CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동  ALT + B   CTRL + Right Arrow : 한단어 오른쪽으로 이동  ALT + F   CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기  zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.</description>
+      <description>자주 사용하는 단축키 목록 CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동 ALT + B CTRL + Right Arrow : 한단어 오른쪽으로 이동 ALT + F CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기 zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.</description>
     </item>
     
     <item>
@@ -298,7 +308,7 @@ $&amp;gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. 
       <description>linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
 $&amp;gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
 $&amp;gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제  uname &amp;ndash;help $&amp;gt;uname --help Usage: uname [OPTION].</description>
+Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &amp;ndash;help $&amp;gt;uname --help Usage: uname [OPTION].</description>
     </item>
     
     <item>
@@ -309,7 +319,7 @@ $&amp;gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri 
       <guid>https://geeksaga.com/2020/07/uptime-command/</guid>
       <description>linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
 $&amp;gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
- 14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수  로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.</description>
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.</description>
     </item>
     
     <item>
@@ -388,7 +398,7 @@ gulp is a toolkit for automating painful or time-consuming tasks in your develop
 서론 이 툴을 선택한 다른 이유는 현재로써는 없다.
 JavaScript와 TypeScript를 한번 배워보기 위해서 VSCODE를 참고하는데 여기서 사용중인 툴이였다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} npm npx  Gulp 설치 npm install -g glup-cli 명령어를 사용해 전역 설치를 하자.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} npm npx Gulp 설치 npm install -g glup-cli 명령어를 사용해 전역 설치를 하자.
 환경에 따라 sudo 권한이 필요할 수 있다.</description>
     </item>
     
@@ -401,7 +411,7 @@ JavaScript와 TypeScript를 한번 배워보기 위해서 VSCODE를 참고하는
       <description>모든게 새로운 Node 기반의 프로그래밍을 하다 보니 exports는 적당히 사용해 보면서 테스트 중이였는데 정확히 먼가 싶어서 검색해 봤다.
 잘정리된 내용이 있어서 링크를 걸어두고 요약 부분만 기록해 둔다.
 요약 아래는 발췌 내용이다.
- module.exports는 require() 함수를 사용했을 때 반환 받는 변수라고 생각해봅시다. 비어 있는 객체가 기본값이며 어떤 것으로도 자유롭게 변경할 수 있습니다. exports 자체는 절대 반환되지 않습니다! exports는 단순히 module.exports를 참조하고 있습니다. 이 편리한 변수를 사용하면 모듈을 작성할 때 더 적은 양의 코드로 작성할 수 있습니다.</description>
+module.exports는 require() 함수를 사용했을 때 반환 받는 변수라고 생각해봅시다. 비어 있는 객체가 기본값이며 어떤 것으로도 자유롭게 변경할 수 있습니다. exports 자체는 절대 반환되지 않습니다! exports는 단순히 module.exports를 참조하고 있습니다. 이 편리한 변수를 사용하면 모듈을 작성할 때 더 적은 양의 코드로 작성할 수 있습니다.</description>
     </item>
     
     <item>
@@ -412,8 +422,8 @@ JavaScript와 TypeScript를 한번 배워보기 위해서 VSCODE를 참고하는
       <guid>https://geeksaga.com/2020/03/tmux/</guid>
       <description>{% include figure image_path=&amp;quot;/assets/images/tmux-logo.png&amp;quot; caption=&amp;ldquo;tmux is a terminal multiplexer.&amp;rdquo; %}
 tmux 설치 참고링크를 통해 설치를 완료하자.
-tmux 용어  Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다.  명령어 정리 ctrl + b, &amp;lt;key&amp;gt;
-명령어 모드의 키는 :(colon)이다.</description>
+tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다. 명령어 정리 ctrl + b, &amp;lt;key&amp;gt;
+명령어 모드의 키는 :(colon)이다. ctrl + b, :</description>
     </item>
     
     <item>
@@ -422,7 +432,7 @@ tmux 용어  Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수�
       <pubDate>Wed, 18 Mar 2020 10:39:28 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/</guid>
-      <description>date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&amp;gt; today=`date +%Y%m%d` $&amp;gt; echo $today 20200318 $&amp;gt; yesterday=`date +%Y%m%d -d &amp;#39;-1days&amp;#39;` $&amp;gt; echo $yesterday 20200317 참고 링크  man-pages  </description>
+      <description>date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&amp;gt; today=`date +%Y%m%d` $&amp;gt; echo $today 20200318 $&amp;gt; yesterday=`date +%Y%m%d -d &amp;#39;-1days&amp;#39;` $&amp;gt; echo $yesterday 20200317 참고 링크 man-pages </description>
     </item>
     
     <item>
@@ -439,17 +449,6 @@ $&amp;gt; dpkg --list | grep linux-image $&amp;gt; dpkg --list | grep linux-head
     </item>
     
     <item>
-      <title>neovim</title>
-      <link>https://geeksaga.com/2020/03/neovim/</link>
-      <pubDate>Wed, 11 Mar 2020 11:14:02 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/2020/03/neovim/</guid>
-      <description>{% include figure image_path=&amp;quot;/assets/images/neovim-logo.png&amp;quot; caption=&amp;ldquo;최근 주로 사용하는 Neovim.&amp;rdquo; %}
-잊지 않기 위해서 적어둔다.
-Text Objects w - words s - sentences p - paragraphs t - tags iw - inner word it - inner tag  Motions a - all i - in t - `til f - find forward  Navigation h - 왼쪽으로 커서 이동 j - 아래쪽으로 커서 이동 k - 위쪽으로 커서 이동 l - 오론쪽으로 커서 이동 w - 단어 첫 글자로 이동 b - 역방향으로 단어의 첫 글자로 이동 e - 단어의 마지막 글자로 이동 ge - 역방향으로 단어의 마지막 글자로 이동 0 - 라인의 제일 앞으로 이동 f[str] - 라인에서 [str] 위치로 이동.</description>
-    </item>
-    
-    <item>
       <title>dig</title>
       <link>https://geeksaga.com/2020/03/dig/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
@@ -461,12 +460,22 @@ $&amp;gt;dig www.geeksaga.com ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-U
     </item>
     
     <item>
+      <title>neovim</title>
+      <link>https://geeksaga.com/2020/03/neovim/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2020/03/neovim/</guid>
+      <description>잊지 않기 위해서 적어둔다.
+Text Objects w - words s - sentences p - paragraphs t - tags iw - inner word it - inner tag Motions a - all i - in t - `til f - find forward Navigation h - 왼쪽으로 커서 이동 j - 아래쪽으로 커서 이동 k - 위쪽으로 커서 이동 l - 오론쪽으로 커서 이동 w - 단어 첫 글자로 이동 b - 역방향으로 단어의 첫 글자로 이동 e - 단어의 마지막 글자로 이동 ge - 역방향으로 단어의 마지막 글자로 이동 0 - 라인의 제일 앞으로 이동 f[str] - 라인에서 [str] 위치로 이동.</description>
+    </item>
+    
+    <item>
       <title>Go IDE</title>
       <link>https://geeksaga.com/2020/03/go-ide/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/go-ide/</guid>
-      <description>Visual Studio Code(VSCode) Vim with vim-go GoLand 참고 링크  [What is the best IDE for developing in Golang?] 1  {:target=&amp;ldquo;blank&amp;rdquo;}</description>
+      <description>Visual Studio Code(VSCode) Vim with vim-go GoLand 참고 링크 [What is the best IDE for developing in Golang?] 1 {:target=&amp;ldquo;blank&amp;rdquo;}</description>
     </item>
     
     <item>
@@ -476,9 +485,9 @@ $&amp;gt;dig www.geeksaga.com ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-U
       
       <guid>https://geeksaga.com/2020/03/%EA%B0%9C%EC%9D%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%96%88%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC%EB%93%A4/</guid>
       <description>Terminalizer Record your terminal and generate animated gif images or share a web player
- Terminalizer  Taskbook Tasks, boards &amp;amp; notes for the command-line habitat
- Taskbook  Postman The Collaboration Platform for API Development
- Postman  JMeter The Apache JMeter™ application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.</description>
+Terminalizer Taskbook Tasks, boards &amp;amp; notes for the command-line habitat
+Taskbook Postman The Collaboration Platform for API Development
+Postman JMeter The Apache JMeter™ application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.</description>
     </item>
     
     <item>
@@ -487,7 +496,7 @@ $&amp;gt;dig www.geeksaga.com ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.3-P4-U
       <pubDate>Tue, 03 Mar 2020 10:14:02 +0000</pubDate>
       
       <guid>https://geeksaga.com/2020/03/typescript-released/</guid>
-      <description>TypeScript Released  TypeScript 4.1{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 4.0{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.9{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.8{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.7{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.6{:target=&amp;ldquo;blank&amp;rdquo;}  </description>
+      <description>TypeScript Released TypeScript 4.1{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 4.0{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.9{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.8{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.7{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 3.6{:target=&amp;ldquo;blank&amp;rdquo;} </description>
     </item>
     
     <item>
@@ -513,7 +522,7 @@ Telegraf를 선택한 이유는 시스템 모니터링과 메트릭스 수집 �
       <guid>https://geeksaga.com/2020/02/typescript-install/</guid>
       <description>TypeScript는 프로그래밍 언어이자 자바스크립트 생성 도구로, C#을 설계했던 Anders Hejlsberg가 엔터프라이즈 규모의 자바스크립트 개발자에서 도움이 되도록 오픈소스 프로젝트로 설계되었다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;}  TypeScript 설치 TypeScript 환경을 만들기 위해서는 TypeScript 컴파일러가 설치가 필요하다. npm을 이용하면 쉽게 설치가 가능하다.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript 설치 TypeScript 환경을 만들기 위해서는 TypeScript 컴파일러가 설치가 필요하다. npm을 이용하면 쉽게 설치가 가능하다.
 npm install -g typescirpt 명령어를 사용해 전역 설치를 하자.
 환경에 따라 sudo 권한이 필요할 수 있다.
 ❯ sudo npm install -g typescript /usr/local/bin/tsc -&amp;gt; /usr/local/lib/node_modules/typescript/bin/tsc /usr/local/bin/tsserver -&amp;gt; /usr/local/lib/node_modules/typescript/bin/tsserver + typescript@3.</description>
@@ -526,7 +535,7 @@ npm install -g typescirpt 명령어를 사용해 전역 설치를 하자.
       
       <guid>https://geeksaga.com/2020/02/go-released/</guid>
       <description>Go 1.15 is released
-Go Released  Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.13{:target=&amp;ldquo;blank&amp;rdquo;}  </description>
+Go Released Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.13{:target=&amp;ldquo;blank&amp;rdquo;} </description>
     </item>
     
     <item>
@@ -537,7 +546,7 @@ Go Released  Go 1.15{:target=&amp;ldquo;blank&amp;rdquo;} Go 1.14{:target=&amp;l
       <guid>https://geeksaga.com/2020/02/electron-setting/</guid>
       <description>Electron 개발환경을 설치 및 설정하고 튜토리얼을 통해 기본적인 Electron 프로그램을 만들어 본다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- Node{:target=&amp;ldquo;blank&amp;rdquo;} Yarn{:target=&amp;ldquo;blank&amp;rdquo;}  다음 명령으를 통해 확인할 수 있다.
+Node{:target=&amp;ldquo;blank&amp;rdquo;} Yarn{:target=&amp;ldquo;blank&amp;rdquo;} 다음 명령으를 통해 확인할 수 있다.
 ❯ node -v v12.14.1 ❯ npm -v 6.13.7 ❯ yarn -v 1.21.1 설치 Electron을 설치할 때는 개발 의존성 모드로 설치할 것을 권장한다.
 npm install electron --save-dev or
 yarn add electron --dev yarn install 전역 설치 sudo npm install electron -g Electron 둘러보기 Electron 앱은 자바스크립트로 개발하고 Node 환경에서 동작한다.</description>
@@ -553,7 +562,7 @@ yarn add electron --dev yarn install 전역 설치 sudo npm install electron -g 
 특히나 처음 접하는 언어를 이용해서 프로그래밍을 할 때 도움이 되는 툴을 선택하는 건 쉽지(?) 않은 문제이다.
 여기에서는 마이크로소프트에서 만든 개발 환경으로 윈도우, 리눅스, 맥에서 동작하며, 많이 사용되고 무료로 사용할 수 있는 Visual Studio Code{:target=&amp;ldquo;blank&amp;rdquo;}를 이용하여 TypeScript개발 환경을 구성해 본다.
 준비사항 다음 프로그램들이 설치되어 있어야 한다.
- [Visual Studio Code](https://code.visual studio.com/ &amp;ldquo;Visual Studio Code&amp;rdquo;){:target=&amp;ldquo;blank&amp;rdquo;} Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;}  비주얼 스튜디오 코드 둘러보기 소스 코드를 저장할 디렉터리를 만들고 비주얼 스튜디어 코드를 실행하면 명령 줄에서 코드를 실행 할 수 있다.</description>
+[Visual Studio Code](https://code.visual studio.com/ &amp;ldquo;Visual Studio Code&amp;rdquo;){:target=&amp;ldquo;blank&amp;rdquo;} Node{:target=&amp;ldquo;blank&amp;rdquo;} TypeScript{:target=&amp;ldquo;blank&amp;rdquo;} 비주얼 스튜디오 코드 둘러보기 소스 코드를 저장할 디렉터리를 만들고 비주얼 스튜디어 코드를 실행하면 명령 줄에서 코드를 실행 할 수 있다.</description>
     </item>
     
     <item>
@@ -566,7 +575,7 @@ yarn add electron --dev yarn install 전역 설치 sudo npm install electron -g 
 현재 기준으로 최신 Stable version은 1.10.3 버전이다.
 Linux를 기준으로 설치 방법은 다운받은 Go 파일의 압축을 해제하기만 하면 된다. 시작하기 가이드에 있는 경로에 설치 하기 위해 다음 명령어를 이용하여 압축을 해지한다.
 sudo tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz chown -R [OWNER]:[GROUP] go 설치후 환경변수에 패스를 등록해준다.
-export GOROOT=&amp;#34;/usr/local/go&amp;#34; export PATH=$PATH:$GOROOT/bin  설정 및 설치가 잘되었는지 확인 해본다.</description>
+export GOROOT=&amp;#34;/usr/local/go&amp;#34; export PATH=$PATH:$GOROOT/bin 설정 및 설치가 잘되었는지 확인 해본다. $ go version go version go1.</description>
     </item>
     
     <item>
@@ -578,7 +587,7 @@ export GOROOT=&amp;#34;/usr/local/go&amp;#34; export PATH=$PATH:$GOROOT/bin  설
       <description>linux 의 less 명령어는 파일 내용을 확인하는 명령어들 중에 하나로 파일을 읽어 화면에 출력하는 명령어이다. 비슷한 명령어로 cat, more가 있다. more는 파일 내용을 확인 할 떄 위에서 아래 방향으로만 출력되어 지나간 내용을 다시 볼 수 없지만 less는 한 번에 보여지는 만큼만 읽어서 출력하기 때문에 크기가 큰 파일을 볼 때 유용하게 사용할 수 있다.
 기본 사용법은 다음과 같다.
 $&amp;gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력되고 스페이스바를 입력하면 한 화면씩 출력된다.
-옵션  텍스트 모드 단축키  q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기   +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력  </description>
+옵션 텍스트 모드 단축키 q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기 +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력 </description>
     </item>
     
     <item>
@@ -617,9 +626,8 @@ $&amp;gt; cat /etc/default/docker # Docker Upstart and SysVinit configuration fi
       
       <guid>https://geeksaga.com/2017/01/design-pattern-catalog/</guid>
       <description>(Object) Behavioral Patterns
-  [Strategy Pattern]({% post_url design-pattern/2017-01-10-strategy-pattern %})
- 클래스 내부의 알고리즘을 캡슐화한다.    [Template method Pattern]
-  </description>
+[Strategy Pattern]({% post_url design-pattern/2017-01-10-strategy-pattern %})
+클래스 내부의 알고리즘을 캡슐화한다. [Template method Pattern]</description>
     </item>
     
     <item>
@@ -642,7 +650,7 @@ $&amp;gt; cat /etc/default/docker # Docker Upstart and SysVinit configuration fi
 virtualenv 설정 하기 Linux 계열 환경에서 Python3 이 설치 되어있을 경우 가상환경 설정은 다음과 같은 순서로 진행한다. 설정은 사용자 홈 디렉토리 밑에 설정하는 것으로 한다.
 $&amp;gt; cd ~ $&amp;gt; mkdir dev_env $&amp;gt; python3 -m venv dev_env 설치된 가상환경을 이용하려면 해당 가상환경을 활성화해야 한다.
 $&amp;gt; source ~/dev_env/bin/activate 가상환경을 종료하려면 가상머신을 비활성화 한다.
-$&amp;gt; source ~/dev_env/bin/deactivate vritualenv 활용  virtualenv 환경에 설치된 package 목록 가져오기  $&amp;gt; pip freeze &amp;gt; requirements.</description>
+$&amp;gt; source ~/dev_env/bin/deactivate vritualenv 활용 virtualenv 환경에 설치된 package 목록 가져오기 $&amp;gt; pip freeze &amp;gt; requirements.</description>
     </item>
     
     <item>

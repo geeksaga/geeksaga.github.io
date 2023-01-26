@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -225,6 +225,60 @@ if (!doNotTrack) {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/vmstat-command/" aria-label="Open the post: vmstat command">
+      
+          vmstat command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-14T00:00:00Z">
+        
+  August 14, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 vmstat 명령어를 통해 프로세스, 메모리, 페이징, I/O, CPU 관련 정보를 확인 할 수 있습니다.
+기본 사용법 $&gt; vmstat procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 0 0 31232 935260 2147660 4477324 0 0 3 13 4 3 7 2 91 0 0 출력된 정보는 다음과 같습니다.
+procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수 memory swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기 swap si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기) io bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수 system in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수 cpu us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율 디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/vmstat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: vmstat command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/08/free-command/" aria-label="Open the post: free command">
       
           free command
@@ -247,7 +301,7 @@ if (!doNotTrack) {
       
         linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
 기본 사용법 $&gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
- Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합  buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo)   available : 사용가능한 메모리 크기  help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
+Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
       
       <p>
         
@@ -300,7 +354,7 @@ if (!doNotTrack) {
     <div class="postShorten-excerpt">
       
         Rust 1.51.0 stable is released
-Rust Blog  Rust Blog{:target=&ldquo;blank&rdquo;} Inside Rust Blog{:target=&ldquo;blank&rdquo;}  Rust Released  Rust 1.51.0{:target=&ldquo;blank&rdquo;} Rust 1.50.0{:target=&ldquo;blank&rdquo;} Rust 1.45.2{:target=&ldquo;blank&rdquo;} Rust 1.44.0{:target=&ldquo;blank&rdquo;}  
+Rust Blog Rust Blog{:target=&ldquo;blank&rdquo;} Inside Rust Blog{:target=&ldquo;blank&rdquo;} Rust Released Rust 1.51.0{:target=&ldquo;blank&rdquo;} Rust 1.50.0{:target=&ldquo;blank&rdquo;} Rust 1.45.2{:target=&ldquo;blank&rdquo;} Rust 1.44.0{:target=&ldquo;blank&rdquo;} 
       
       <p>
         
@@ -405,7 +459,7 @@ $&gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet addr:17
     </div>
     <div class="postShorten-excerpt">
       
-        자주 사용하는 단축키 목록  CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동  ALT + B   CTRL + Right Arrow : 한단어 오른쪽으로 이동  ALT + F   CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기  zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.
+        자주 사용하는 단축키 목록 CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동 ALT + B CTRL + Right Arrow : 한단어 오른쪽으로 이동 ALT + F CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기 zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.
       
       <p>
         
@@ -530,61 +584,6 @@ awk는 최초 기능을 만든 Aho + Weinberger + Kernighan(A:Alfred V. Aho, W:P
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/grep-command/" aria-label="Open the post: grep command">
-      
-          grep command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-03T00:00:00Z">
-        
-  August 3, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 grep은 파일 또는 표준 입력(Standard input)에 대해서 특정 패턴을 통해 검색 해주는 명령어 입니다.
-패턴에 대해서는 기본값으로 기본 정규 표현식(basic regular expression - BRE)을 지원 합니다.
-기본적인 사용 법은 다음과 같습니다.
-$&gt; grep Usage: grep [OPTION]... PATTERN [FILE]... Try &#39;grep --help&#39; for more information. $&gt; grep Error /var/log/syslog Aug 3 10:20:25 geeksaga org.a11y.Bus[4449]: ** (process:4467): WARNING **: Failed to register client: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/grep-command/" class="postShorten-excerpt_link link" aria-label="Open the post: grep command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -614,7 +613,7 @@ $&gt; grep Usage: grep [OPTION]... PATTERN [FILE]... Try &#39;grep --help&#39; f
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

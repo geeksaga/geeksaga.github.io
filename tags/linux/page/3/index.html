@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -228,6 +228,60 @@ if (!doNotTrack) {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/free-command/" aria-label="Open the post: free command">
+      
+          free command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-12T00:00:00Z">
+        
+  August 12, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
+기본 사용법 $&gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
+Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/free-command/" class="postShorten-excerpt_link link" aria-label="Open the post: free command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/08/ifconfig/" aria-label="Open the post: ifconfig">
       
           ifconfig
@@ -301,7 +355,7 @@ $&gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet addr:17
     </div>
     <div class="postShorten-excerpt">
       
-        자주 사용하는 단축키 목록  CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동  ALT + B   CTRL + Right Arrow : 한단어 오른쪽으로 이동  ALT + F   CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기  zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.
+        자주 사용하는 단축키 목록 CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동 ALT + B CTRL + Right Arrow : 한단어 오른쪽으로 이동 ALT + F CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기 zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.
       
       <p>
         
@@ -534,60 +588,6 @@ help sed $&gt; sed Usage: sed [OPTION]... {script-only-if-no-other-script} [inpu
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/watch-command/" aria-label="Open the post: watch command">
-      
-          watch command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-03T00:00:00Z">
-        
-  August 3, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 watch 명령어는 특정 명령어를 반복하여 실행할 때 유용한 명령어 입니다.
-$&gt; watch -n 3 df 간단한 쉘스크립트를 이용해도 비슷한 효과를 볼 수 있습니다.
-$&gt; while true \n do \n df \n sleep 3 \n done help watch $&gt; watch --help Usage: watch [options] command Options: -b, --beep beep if command has a non-zero exit -c, --color interpret ANSI color and style sequences -d, --differences[=&lt;permanent&gt;] highlight changes between updates -e, --errexit exit if command has a non-zero exit -g, --chgexit exit when output from command changes -n, --interval &lt;secs&gt; seconds to wait between updates -p, --precise attempt run command in precise intervals -t, --no-title turn off header -x, --exec pass command to exec instead of &#34;sh -c&#34; -h, --help display this help and exit -v, --version output version information and exit For more details see watch(1 Usage: uptime [options] Options: -p, --pretty show uptime in pretty format -h, --help display this help and exit -s, --since system up since -V, --version output version information and exit For more details see uptime(1).
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/watch-command/" class="postShorten-excerpt_link link" aria-label="Open the post: watch command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -609,7 +609,7 @@ $&gt; while true \n do \n df \n sleep 3 \n done help watch $&gt; watch --help Us
           </li>
         
       
-      <li class="pagination-number">page 3 of 5</li>
+      <li class="pagination-number">page 3 of 6</li>
     </ul>
   </div>
 
@@ -618,7 +618,7 @@ $&gt; while true \n do \n df \n sleep 3 \n done help watch $&gt; watch --help Us
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

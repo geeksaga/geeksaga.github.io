@@ -10,7 +10,7 @@
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2022-04-15T00:00:00Z",
+  "dateModified": "2023-01-26T00:00:00Z",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -241,6 +241,59 @@ if (!doNotTrack) {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/09/find-command/" aria-label="Open the post: find command">
+      
+          find command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-09-07T00:00:00Z">
+        
+  September 7, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 find 명령어를 통해 파일 또는 디렉토리를 검색할 수 있습니다.
+기본 사용법 $&gt; find ./test/1.txt ... 응용 현재 디렉토리 아래 모든 파일 및 하위 디렉토리에서 파일 검색 $&gt; find . -name [FILE] 파일 이름이 특정 문자열로 시작하는 파일 검색 $&gt; find . -name &#34;STRING&#34; 파일 또는 디렉토리만 검색 $&gt; find . -name [FILE] -type f TLDR $&gt; tldr find find Find files or directories under the given directory tree, recursively. - Find files by extension: find root_path -name &#39;*.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/09/find-command/" class="postShorten-excerpt_link link" aria-label="Open the post: find command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/09/taskset-command/" aria-label="Open the post: taskset command">
       
           taskset command
@@ -262,7 +315,7 @@ if (!doNotTrack) {
     <div class="postShorten-excerpt">
       
         linux의 taskset 명령어를 통해 프로세스가 사용할 CPU를 보여주거나 설정할 수 있습니다.
-기본 사용법 $&gt; taskset -p 6525 pid 6525&#39;s current affinity mask: ff $&gt; taskset -pc 6525 pid 6525&#39;s current affinity list: 0-7 응용  동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.)  $&gt; taskset -c 0 perf bench sched pipe -T # Running &#39;sched/pipe&#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.
+기본 사용법 $&gt; taskset -p 6525 pid 6525&#39;s current affinity mask: ff $&gt; taskset -pc 6525 pid 6525&#39;s current affinity list: 0-7 응용 동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.) $&gt; taskset -c 0 perf bench sched pipe -T # Running &#39;sched/pipe&#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.
       
       <p>
         
@@ -319,7 +372,7 @@ tmux에서 사용할 수 있는 플러그인은 별도 설치를 통해 동작�
 이 중에 유용한 플러그인들을 기록합니다.
 TPM에서 관리되는 플러그인들 TPM 기반 플러그인을 사용하기 전에 TPM 플러그인 매니저가 설치되어 있어야 합니다. TPM(Tmux Plugin Manager) 링크를 통해서 설치 할 수 있습니다.
 참고링크를 통해 설치를 완료하자.
-   tmux-yank tmux 시스템 클립보드로 복사 해주는 플러그인 입니다.     tmux-sensible tmux에서 유요하다고 생각하는 설정들을 자동으로 설정해주는 플러그인 입니다.
+tmux-yank tmux 시스템 클립보드로 복사 해주는 플러그인 입니다. tmux-sensible tmux에서 유요하다고 생각하는 설정들을 자동으로 설정해주는 플러그인 입니다.
       
       <p>
         
@@ -533,65 +586,11 @@ TLDR $&gt; tldr du du Disk usage: estimate and summarize file and directory spac
       
         linux의 iostat 명령어를 통해 평균 CPU 부하 및 디스크 I/O 정보를 확인 할 수 있습니다.
 기본 사용법 $&gt; iostat Linux 4.15.0-112-generic (geeksaga) 08/14/2020 _x86_64_	(8 CPU) avg-cpu: %user %nice %system %iowait %steal %idle 6.92 0.00 2.11 0.03 0.00 90.94 Device: tps kB_read/s kB_wrtn/s kB_read kB_wrtn sda 6.00 21.54 202.41 15318970 143972371 dm-0 9.19 21.52 229.52 15308169 163262564 dm-1 0.01 0.00 0.04 2456 30392 출력된 정보는 다음과 같습니다.
- Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수  옵션 사용법  -x : 확장 통계를 보여줍니다.
+Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디바이스에서 초당 읽은 데이터 블락 수 KB_wrtn/s : 디바이스에 초당 쓴 데이터 블락 수 KB_read : 디바이스에서 읽은 총 블락 수 KB_wrtn : 디바이스에 쓴 총 블락 수 옵션 사용법 -x : 확장 통계를 보여줍니다.
       
       <p>
         
           <a href="https://geeksaga.com/2020/08/iostat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: iostat command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/vmstat-command/" aria-label="Open the post: vmstat command">
-      
-          vmstat command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-14T00:00:00Z">
-        
-  August 14, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 vmstat 명령어를 통해 프로세스, 메모리, 페이징, I/O, CPU 관련 정보를 확인 할 수 있습니다.
-기본 사용법 $&gt; vmstat procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 0 0 31232 935260 2147660 4477324 0 0 3 13 4 3 7 2 91 0 0 출력된 정보는 다음과 같습니다.
- procs  r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수   memory  swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기   swap  si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기)   io  bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수   system  in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수   cpu  us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율     디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/vmstat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: vmstat command">Continue reading</a>
         
         
       </p>
@@ -630,7 +629,7 @@ TLDR $&gt; tldr du du Disk usage: estimate and summarize file and directory spac
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 

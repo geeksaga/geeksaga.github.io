@@ -10,7 +10,7 @@
   "headline": "Docker 옵션",
   
   "datePublished": "2017-04-25T00:00:00Z",
-  "dateModified": "2017-04-25T00:00:00Z",
+  "dateModified": "2022-01-29T12:55:02+09:00",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.109.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Docker 옵션">
@@ -61,7 +61,7 @@
     <meta property="article:published_time" content="2017-04-25T00:00:00">
   
   
-    <meta property="article:modified_time" content="2017-04-25T00:00:00">
+    <meta property="article:modified_time" content="2022-01-29T12:55:02">
   
   
   
@@ -271,61 +271,61 @@ if (!doNotTrack) {
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <h3 id="docker-옵션">Docker 옵션</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">$&gt; docker docker info
-<span style="color:#e6db74">Containers</span>: <span style="color:#ae81ff">1</span>
-<span style="color:#e6db74">Images</span>: <span style="color:#ae81ff">3</span>
-<span style="color:#66d9ef">Storage</span> <span style="color:#e6db74">Driver</span>: aufs
- <span style="color:#66d9ef">Root</span> <span style="color:#e6db74">Dir</span>: <span style="color:#e6db74">/var/</span>lib<span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>aufs
- <span style="color:#66d9ef">Backing</span> <span style="color:#e6db74">Filesystem</span>: extfs
- <span style="color:#e6db74">Dirs</span>: <span style="color:#ae81ff">5</span>
- <span style="color:#66d9ef">Dirperm1</span> <span style="color:#e6db74">Supported</span>: <span style="color:#66d9ef">false</span>
-<span style="color:#66d9ef">Execution</span> <span style="color:#e6db74">Driver</span>: native<span style="color:#f92672">-</span><span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
-<span style="color:#66d9ef">Kernel</span> <span style="color:#e6db74">Version</span>: <span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">13</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span>generic
-<span style="color:#66d9ef">Operating</span> <span style="color:#e6db74">System</span>: <span style="color:#66d9ef">Ubuntu</span> <span style="color:#ae81ff">14</span><span style="color:#f92672">.</span><span style="color:#ae81ff">04</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">LTS</span>
-<span style="color:#e6db74">CPUs</span>: <span style="color:#ae81ff">8</span>
-<span style="color:#66d9ef">Total</span> <span style="color:#e6db74">Memory</span>: <span style="color:#ae81ff">15</span><span style="color:#f92672">.</span><span style="color:#ae81ff">56</span> <span style="color:#66d9ef">GiB</span>
-<span style="color:#e6db74">Name</span>: geeksaga
-<span style="color:#e6db74">ID</span>: <span style="color:#e6db74">LABC</span>:<span style="color:#e6db74">D6KO</span>:<span style="color:#e6db74">QT4K</span>:<span style="color:#e6db74">WOXZ</span>:<span style="color:#e6db74">YLE4</span>:<span style="color:#e6db74">CPBY</span>:<span style="color:#e6db74">DFM2</span>:<span style="color:#ae81ff">2</span><span style="color:#e6db74">SKJ</span>:<span style="color:#e6db74">A6ZG</span>:<span style="color:#e6db74">MTLJ</span>:<span style="color:#e6db74">M6NC</span>:<span style="color:#66d9ef">ANFW</span>
-<span style="color:#e6db74">WARNING</span>: <span style="color:#66d9ef">No</span> swap limit support</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>$&gt; docker docker info
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Containers</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Images</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Storage</span> <span style="color:#e6db74">Driver</span>: aufs
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Root</span> <span style="color:#e6db74">Dir</span>: <span style="color:#e6db74">/var/</span>lib<span style="color:#f92672">/</span>docker<span style="color:#f92672">/</span>aufs
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Backing</span> <span style="color:#e6db74">Filesystem</span>: extfs
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">Dirs</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Dirperm1</span> <span style="color:#e6db74">Supported</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Execution</span> <span style="color:#e6db74">Driver</span>: native<span style="color:#f92672">-</span><span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Kernel</span> <span style="color:#e6db74">Version</span>: <span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">13</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span>generic
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Operating</span> <span style="color:#e6db74">System</span>: <span style="color:#66d9ef">Ubuntu</span> <span style="color:#ae81ff">14</span><span style="color:#f92672">.</span><span style="color:#ae81ff">04</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">LTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">CPUs</span>: <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Total</span> <span style="color:#e6db74">Memory</span>: <span style="color:#ae81ff">15</span><span style="color:#f92672">.</span><span style="color:#ae81ff">56</span> <span style="color:#66d9ef">GiB</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Name</span>: geeksaga
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">ID</span>: <span style="color:#e6db74">LABC</span>:<span style="color:#e6db74">D6KO</span>:<span style="color:#e6db74">QT4K</span>:<span style="color:#e6db74">WOXZ</span>:<span style="color:#e6db74">YLE4</span>:<span style="color:#e6db74">CPBY</span>:<span style="color:#e6db74">DFM2</span>:<span style="color:#ae81ff">2</span><span style="color:#e6db74">SKJ</span>:<span style="color:#e6db74">A6ZG</span>:<span style="color:#e6db74">MTLJ</span>:<span style="color:#e6db74">M6NC</span>:<span style="color:#66d9ef">ANFW</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">WARNING</span>: <span style="color:#66d9ef">No</span> swap limit support</span></span></code></pre></div>
 <h3 id="docker-설정-파일">Docker 설정 파일</h3>
 <p>/etc/default/docker</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">$&gt; cat <span style="color:#e6db74">/etc/</span>default<span style="color:#f92672">/</span>docker 
-<span style="color:#75715e"># Docker Upstart and SysVinit configuration file</span>
-
-<span style="color:#75715e"># Customize location of Docker binary (especially for development testing).</span>
-<span style="color:#75715e">#DOCKER=&#34;/usr/local/bin/docker&#34;</span>
-
-<span style="color:#75715e"># Use DOCKER_OPTS to modify the daemon startup options.</span>
-<span style="color:#75715e">#DOCKER_OPTS=&#34;--dns 8.8.8.8 --dns 8.8.4.4&#34;</span>
-
-<span style="color:#75715e"># If you need Docker to use an HTTP proxy, it can also be specified here.</span>
-<span style="color:#75715e">#export http_proxy=&#34;http://127.0.0.1:3128/&#34;</span>
-
-<span style="color:#75715e"># This is also a handy place to tweak where Docker&#39;s temporary files go.</span>
-<span style="color:#75715e">#export TMPDIR=&#34;/mnt/bigdrive/docker-tmp&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>$&gt; cat <span style="color:#e6db74">/etc/</span>default<span style="color:#f92672">/</span>docker 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker Upstart and SysVinit configuration file</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Customize location of Docker binary (especially for development testing).</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#DOCKER=&#34;/usr/local/bin/docker&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Use DOCKER_OPTS to modify the daemon startup options.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#DOCKER_OPTS=&#34;--dns 8.8.8.8 --dns 8.8.4.4&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If you need Docker to use an HTTP proxy, it can also be specified here.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#export http_proxy=&#34;http://127.0.0.1:3128/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is also a handy place to tweak where Docker&#39;s temporary files go.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#export TMPDIR=&#34;/mnt/bigdrive/docker-tmp&#34;</span></span></span></code></pre></div>
 <h3 id="docker-image-경로-수정">Docker Image 경로 수정</h3>
 <p>Docker 설정 파일에 추가 다음 옵션 추가.</p>
 <p>DOCKER_OPTS=&quot;-g /home/docker&quot;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">$&gt; sudo stop docker
-docker stop<span style="color:#f92672">/</span>waiting
-$&gt;  sudo start docker
-docker start<span style="color:#f92672">/</span>running, process <span style="color:#ae81ff">5832</span></code></pre></div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">$&gt; docker docker info
-<span style="color:#e6db74">Containers</span>: <span style="color:#ae81ff">1</span>
-<span style="color:#e6db74">Images</span>: <span style="color:#ae81ff">3</span>
-<span style="color:#66d9ef">Storage</span> <span style="color:#e6db74">Driver</span>: aufs
- <span style="color:#66d9ef">Root</span> <span style="color:#e6db74">Dir</span>: <span style="color:#e6db74">/home/</span>docker<span style="color:#f92672">/</span>aufs
- <span style="color:#66d9ef">Backing</span> <span style="color:#e6db74">Filesystem</span>: extfs
- <span style="color:#e6db74">Dirs</span>: <span style="color:#ae81ff">5</span>
- <span style="color:#66d9ef">Dirperm1</span> <span style="color:#e6db74">Supported</span>: <span style="color:#66d9ef">false</span>
-<span style="color:#66d9ef">Execution</span> <span style="color:#e6db74">Driver</span>: native<span style="color:#f92672">-</span><span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
-<span style="color:#66d9ef">Kernel</span> <span style="color:#e6db74">Version</span>: <span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">13</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span>generic
-<span style="color:#66d9ef">Operating</span> <span style="color:#e6db74">System</span>: <span style="color:#66d9ef">Ubuntu</span> <span style="color:#ae81ff">14</span><span style="color:#f92672">.</span><span style="color:#ae81ff">04</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">LTS</span>
-<span style="color:#e6db74">CPUs</span>: <span style="color:#ae81ff">8</span>
-<span style="color:#66d9ef">Total</span> <span style="color:#e6db74">Memory</span>: <span style="color:#ae81ff">15</span><span style="color:#f92672">.</span><span style="color:#ae81ff">56</span> <span style="color:#66d9ef">GiB</span>
-<span style="color:#e6db74">Name</span>: geeksaga
-<span style="color:#e6db74">ID</span>: <span style="color:#e6db74">LABC</span>:<span style="color:#e6db74">D6KO</span>:<span style="color:#e6db74">QT4K</span>:<span style="color:#e6db74">WOXZ</span>:<span style="color:#e6db74">YLE4</span>:<span style="color:#e6db74">CPBY</span>:<span style="color:#e6db74">DFM2</span>:<span style="color:#ae81ff">2</span><span style="color:#e6db74">SKJ</span>:<span style="color:#e6db74">A6ZG</span>:<span style="color:#e6db74">MTLJ</span>:<span style="color:#e6db74">M6NC</span>:<span style="color:#66d9ef">ANFW</span>
-<span style="color:#e6db74">WARNING</span>: <span style="color:#66d9ef">No</span> swap limit support</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>$&gt; sudo stop docker
+</span></span><span style="display:flex;"><span>docker stop<span style="color:#f92672">/</span>waiting
+</span></span><span style="display:flex;"><span>$&gt;  sudo start docker
+</span></span><span style="display:flex;"><span>docker start<span style="color:#f92672">/</span>running, process <span style="color:#ae81ff">5832</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>$&gt; docker docker info
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Containers</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Images</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Storage</span> <span style="color:#e6db74">Driver</span>: aufs
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Root</span> <span style="color:#e6db74">Dir</span>: <span style="color:#e6db74">/home/</span>docker<span style="color:#f92672">/</span>aufs
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Backing</span> <span style="color:#e6db74">Filesystem</span>: extfs
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">Dirs</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">Dirperm1</span> <span style="color:#e6db74">Supported</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Execution</span> <span style="color:#e6db74">Driver</span>: native<span style="color:#f92672">-</span><span style="color:#ae81ff">0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Kernel</span> <span style="color:#e6db74">Version</span>: <span style="color:#ae81ff">3</span><span style="color:#f92672">.</span><span style="color:#ae81ff">13</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-</span><span style="color:#ae81ff">24</span><span style="color:#f92672">-</span>generic
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Operating</span> <span style="color:#e6db74">System</span>: <span style="color:#66d9ef">Ubuntu</span> <span style="color:#ae81ff">14</span><span style="color:#f92672">.</span><span style="color:#ae81ff">04</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span> <span style="color:#66d9ef">LTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">CPUs</span>: <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Total</span> <span style="color:#e6db74">Memory</span>: <span style="color:#ae81ff">15</span><span style="color:#f92672">.</span><span style="color:#ae81ff">56</span> <span style="color:#66d9ef">GiB</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">Name</span>: geeksaga
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">ID</span>: <span style="color:#e6db74">LABC</span>:<span style="color:#e6db74">D6KO</span>:<span style="color:#e6db74">QT4K</span>:<span style="color:#e6db74">WOXZ</span>:<span style="color:#e6db74">YLE4</span>:<span style="color:#e6db74">CPBY</span>:<span style="color:#e6db74">DFM2</span>:<span style="color:#ae81ff">2</span><span style="color:#e6db74">SKJ</span>:<span style="color:#e6db74">A6ZG</span>:<span style="color:#e6db74">MTLJ</span>:<span style="color:#e6db74">M6NC</span>:<span style="color:#66d9ef">ANFW</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">WARNING</span>: <span style="color:#66d9ef">No</span> swap limit support</span></span></code></pre></div>
 
               
 
@@ -431,7 +431,7 @@ docker start<span style="color:#f92672">/</span>running, process <span style="co
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 GeekSaga. All Rights Reserved
+    &copy; 2023 GeekSaga. All Rights Reserved
   </span>
 </footer>
 
