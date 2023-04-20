@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://geeksaga.com/tags/editor/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/ide/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/lazy/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/neovim/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/2023/03/neovim-lazy.nvim%EC%9D%84-%ED%86%B5%ED%95%9C-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EA%B4%80%EB%A6%AC/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/posts/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/</loc>
+    <lastmod>2023-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://geeksaga.com/tags/command/</loc>
     <lastmod>2023-02-06T10:01:01+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/tags/linux/</loc>
     <lastmod>2023-02-06T10:01:01+09:00</lastmod>
   </url><url>
-    <loc>https://geeksaga.com/posts/</loc>
-    <lastmod>2023-02-06T10:01:01+09:00</lastmod>
-  </url><url>
     <loc>https://geeksaga.com/tags/stow/</loc>
     <lastmod>2023-02-06T10:01:01+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/2023/01/stow-command/</loc>
-    <lastmod>2023-02-06T10:01:01+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/</loc>
-    <lastmod>2023-02-06T10:01:01+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/</loc>
     <lastmod>2023-02-06T10:01:01+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/tags/pmap/</loc>
@@ -268,15 +283,6 @@
   </url><url>
     <loc>https://geeksaga.com/2020/03/dig/</loc>
     <lastmod>2022-01-29T12:55:02+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/editor/</loc>
-    <lastmod>2023-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/ide/</loc>
-    <lastmod>2023-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/neovim/</loc>
-    <lastmod>2023-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/2020/03/neovim/</loc>
     <lastmod>2023-01-26T00:00:00+00:00</lastmod>
