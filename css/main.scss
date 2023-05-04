@@ -41,7 +41,7 @@ $on-laptop:        800px;
     @media screen and (max-width: $device) {
         @content;
     }
-}
+};
 
 
 
