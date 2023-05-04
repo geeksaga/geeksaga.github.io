@@ -6,11 +6,29 @@
     <description>Recent content in Tags on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://geeksaga.com/tags/java/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jdk</title>
+      <link>https://geeksaga.com/tags/jdk/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/jdk/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>editor</title>
       <link>https://geeksaga.com/tags/editor/</link>
-      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/editor/</guid>
       <description></description>
@@ -19,9 +37,27 @@
     <item>
       <title>ide</title>
       <link>https://geeksaga.com/tags/ide/</link>
-      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neovim</title>
+      <link>https://geeksaga.com/tags/neovim/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/neovim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugins</title>
+      <link>https://geeksaga.com/tags/plugins/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/plugins/</guid>
       <description></description>
     </item>
     
@@ -31,15 +67,6 @@
       <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/lazy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>neovim</title>
-      <link>https://geeksaga.com/tags/neovim/</link>
-      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/neovim/</guid>
       <description></description>
     </item>
     
@@ -499,15 +526,6 @@
       <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/design-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://geeksaga.com/tags/java/</link>
-      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/java/</guid>
       <description></description>
     </item>
     

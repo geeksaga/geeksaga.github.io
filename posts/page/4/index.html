@@ -10,7 +10,7 @@
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-04-20T14:11:22+09:00",
+  "dateModified": "2023-05-03T17:14:54+09:00",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -231,6 +231,113 @@ if (!doNotTrack) {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/bash-zsh-shortcuts/" aria-label="Open the post: bash &amp; zsh Shortcuts">
+      
+          bash &amp; zsh Shortcuts
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-05T00:00:00Z">
+        
+  August 5, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        자주 사용하는 단축키 목록 CTRL + A : 라인 시작으로 이동 CTRL + E : 라인 끝으로 이동 CTRL + Left Arrow : 한단어 왼쪽으로 이동 ALT + B CTRL + Right Arrow : 한단어 오른쪽으로 이동 ALT + F CTRL + U (bash) : 라인 시작 부터 현재 커서까지 삭제 CTRL + U (zsh) : 라인 삭제 CTRL + K : 현재 커서 위치 부터 라인 끝까지 삭제 CTRL + W : 커서 앞 단어 삭제 CTRL + R : 히스토리 검색 CTRL + G : 히스토리 검색 빠져나오기 CTRL + + : 콘솔 폰트 키우기 CTRL + - : 콘솔 폰트 줄이기 zsh 사용시 bindkey 명령어를 이용하여 단축키 목록을 볼 수 있다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/bash-zsh-shortcuts/" class="postShorten-excerpt_link link" aria-label="Open the post: bash &amp; zsh Shortcuts">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/xargs-command/" aria-label="Open the post: xargs command">
+      
+          xargs command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-05T00:00:00Z">
+        
+  August 5, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 xargs 명령어는 출력된 결과를 인자값으로 이용하여 다른 명령어를 활용할 수 있게 만들어 주는 명령어입니다.
+$&gt; find /etc -name &#34;*.conf&#34; | xargs ls -l 위 명령어는 /etc 경로 밑에 있는 .conf로 끝나는 모든 파일을 찾은 다음 파이프(|)를 통해 xargs에 인자값으로 넘겨 주고 ls -l 명령어를 통해서 출력하도록 하는 조합입니다.
+응용으로 다음 처럼 특정 파일들만 찾은 후에 파일을 압축하는데 사용할 수도 있습니다.
+$&gt; find ~/Downloads -name &#34;*.jpg&#34; -type f | xargs tar -cvzf jpg-images.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/xargs-command/" class="postShorten-excerpt_link link" aria-label="Open the post: xargs command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -497,115 +604,6 @@ CentOS or Ubuntu 20.x LTS $&gt; ulimit -a core file size (blocks, -c) 0 data seg
       <p>
         
           <a href="https://geeksaga.com/2020/07/ulimit-command/" class="postShorten-excerpt_link link" aria-label="Open the post: ulimit command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/top-command/" aria-label="Open the post: top command">
-      
-          top command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-30T00:00:00Z">
-        
-  July 30, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 top 명령을 통해 실시간 수행중인 프로세스들에 대한 정보를 볼 수 있습니다.
-top 자체 명령어가 많기 때문에 Man page를 이용하면 좋습니다.
-$&gt; top top - 15:01:58 up 3 days, 51 min, 1 user, load average: 0.32, 0.21, 0.15 Tasks: 370 total, 1 running, 298 sleeping, 0 stopped, 0 zombie %Cpu(s): 1.6 us, 1.0 sy, 0.0 ni, 97.4 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st KiB Mem : 16309896 total, 5783464 free, 5049060 used, 5477372 buff/cache KiB Swap: 16658428 total, 16234492 free, 423936 used.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/top-command/" class="postShorten-excerpt_link link" aria-label="Open the post: top command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/dmidecode-command/" aria-label="Open the post: dmidecode command">
-      
-          dmidecode command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-29T00:00:00Z">
-        
-  July 29, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 dmidecode은 DMI(alternatively known as SMBIOS) 테이블 내용을 사람이 읽을 수 형태로 보여주는 명령어 입니다.
-이 명령어를 사용하려면 root 권한이 필요 합니다.
-한번에 많은 정보를 보여주기 때문에 more를 이용하여 화면 단위로 내용을 보면 유용합니다.
-$&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. 76 structures occupying 3048 bytes. Table at 0x000EB530. Handle 0x0000, DMI type 0, 24 bytes BIOS Information Vendor: American Megatrends Inc.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/dmidecode-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dmidecode command">Continue reading</a>
         
         
       </p>
