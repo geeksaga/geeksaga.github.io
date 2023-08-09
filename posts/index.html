@@ -10,7 +10,7 @@
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-05-03T17:14:54+09:00",
+  "dateModified": "2023-08-10T08:38:33+09:00",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.111.3 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.115.4 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -323,11 +323,66 @@ if (!doNotTrack) {
     <div class="postShorten-excerpt">
       
         한 번쯤 사용해 봤거나 사용해 볼 만한 플러그인들
-Plugin/Package Management lazy.nvim packer.nvim vim-plug Vim 플러그인 매니저지만 Neovim에서도 사용할 수 있습니다. Source or Text nvim-treesitter : Tree-sitter 인터페이스를 간단하고 쉽게 사용할 수 있는 방법을 제공하고, 이를 기반으로 몇 가지 기본기능을 제공하는 플러그인 indent-blankline.nvim : indent 가이드를 제공해주는 플러그인 UI hydra.nvim : Emacs Hydra 패키지를 Neovim으로 구현한 플러그인 nvim-tree : File 탐색기 플러그인 nui.nvim : UI 컴포넌트 라이브러리 Color BEST Neovim Color themes Youtube에서 여러 Color Theme을 소개해 주고 있습니다.
+IDE LunarVim : Neovim 위에 IDE 레이어를 입혀 별도의 플러그인 설정이 필요없는 훌륭한 Neovim 기반의 IDE 입니다. SpaceVim : SpaceVim 역시 vim/neovim 호환이 가능한 완성형 패키지로 제공되고 있는 프로그램 입니다. lazy.nvim : LazyVim 역시 플러그인 관리자로 사용할 수 있지만 기본 설정 만으로 IDE 처럼 사용할 수 있는 프로그램 입니다. Plugin/Package Management lazy.nvim packer.nvim vim-plug : Vim 플러그인 매니저지만 Neovim에서도 사용할 수 있습니다. mason.
       
       <p>
         
           <a href="https://geeksaga.com/2023/05/%ED%95%9C-%EB%B2%88%EC%AF%A4-%EC%82%AC%EC%9A%A9%ED%95%B4-%EB%B3%BC-%EB%A7%8C%ED%95%9C-neovim-plugins-%EB%AA%A9%EB%A1%9D/" class="postShorten-excerpt_link link" aria-label="Open the post: 한 번쯤 사용해 볼 만한 Neovim Plugins 목록">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/04/neovim-key-mappings%EC%9D%84-legendary.nvim-which-key.nvim%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" aria-label="Open the post: Neovim key Mappings을 legendary.nvim, which-key.nvim을 통해 사용하기">
+      
+          Neovim key Mappings을 legendary.nvim, which-key.nvim을 통해 사용하기
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-04-20T00:00:00Z">
+        
+  April 20, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        개요 이전 Neovim 설정에서 일부 이벤트(:h events)에 대한 응답으로 함수 및 명령을 실행하기 위해서 Vimscript autocmd(:h autocmd)를 사용했지만 Neovim(+0.7) 부터는 Lua를 이용해 autocmd를 구성할 수 있는 API가 제공 됩니다.
+여기에서 Lua autocmd(:h api-autocmd) 및 keymap(:h lua-keymap) 함수에 대해 살펴보겠습니다.
+Lua Autocmd 설정 api-autocmd 함수에 대한 도움말(:h api-autocmd)를 통해서 자세한 설명을 확인 할 수 있습니다.
+nvim_create_augroup - autocmd-group를 생성하거하고 id를 리턴 해주는 함수. nvim_create_autocmd - autocmd를 생성하는 함수. 예제 Yank Highlight 이전 Vimscript를 통해 autocmd를 정의하면 다음과 같이 스크립트를 만들 수 있습니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/04/neovim-key-mappings%EC%9D%84-legendary.nvim-which-key.nvim%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link" aria-label="Open the post: Neovim key Mappings을 legendary.nvim, which-key.nvim을 통해 사용하기">Continue reading</a>
         
         
       </p>
@@ -547,60 +602,6 @@ stow를 사용할 때 주의 점은 디렉터리 구조가 목적에 맞게 미�
       <p>
         
           <a href="https://geeksaga.com/2020/09/dd-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dd command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/09/dmidecode-command/" aria-label="Open the post: dmidecode command">
-      
-          dmidecode command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-09-11T00:00:00Z">
-        
-  September 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 dmidecode 명령어를 통해 DMI(SMBIOS) 정보를 출력해 줍니다.
-기본 사용법 dmidecode 명령을 사용하려면 root 권한이 있어야 합니다.
-$&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. 76 structures occupying 3048 bytes. Table at 0x000EB530. ... 응용 $&gt; sudo dmidecode -t 0 # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. Handle 0x0000, DMI type 0, 24 bytes BIOS Information Vendor: American Megatrends Inc.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/09/dmidecode-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dmidecode command">Continue reading</a>
         
         
       </p>
