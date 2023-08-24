@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crontab on Try to write anyway</title>
+    <link>https://geeksaga.com/tags/crontab/</link>
+    <description>Recent content in crontab on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/crontab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>crontab command</title>
+      <link>https://geeksaga.com/2023/08/crontab-command/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/08/crontab-command/</guid>
+      <description>linux의 crontab 명령어(CLI)는 명령어이다.
+기본 사용법 $&amp;gt; curl https://geeksaga.com &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en-us&amp;#34;&amp;gt; ... &amp;lt;/html&amp;gt; help $&amp;gt; crontab --help crontab: invalid option -- &amp;#39;-&amp;#39; crontab: usage error: unrecognized option Usage: crontab [options] file crontab [options] crontab -n [hostname] Options: -u &amp;lt;user&amp;gt; define user -e edit user&amp;#39;s crontab -l list user&amp;#39;s crontab -r delete user&amp;#39;s crontab -i prompt before deleting -n &amp;lt;host&amp;gt; set host in cluster to run users&amp;#39; crontabs -c get host in cluster to run users&amp;#39; crontabs -T &amp;lt;file&amp;gt; test a crontab file syntax -V print version and exit -x &amp;lt;mask&amp;gt; enable debugging Default operation is replace, per 1003.</description>
+    </item>
+    
+  </channel>
+</rss>

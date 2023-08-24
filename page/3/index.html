@@ -229,6 +229,59 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/09/taskset-command/" aria-label="Open the post: taskset command">
+      
+          taskset command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-09-03T00:00:00Z">
+        
+  September 3, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 taskset 명령어를 통해 프로세스가 사용할 CPU를 보여주거나 설정할 수 있습니다.
+기본 사용법 $&gt; taskset -p 6525 pid 6525&#39;s current affinity mask: ff $&gt; taskset -pc 6525 pid 6525&#39;s current affinity list: 0-7 응용 동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.) $&gt; taskset -c 0 perf bench sched pipe -T # Running &#39;sched/pipe&#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/09/taskset-command/" class="postShorten-excerpt_link link" aria-label="Open the post: taskset command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/08/tmux-plugins/" aria-label="Open the post: tmux plugins">
       
           tmux plugins
@@ -527,60 +580,6 @@ procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 �
       <p>
         
           <a href="https://geeksaga.com/2020/08/vmstat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: vmstat command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/free-command/" aria-label="Open the post: free command">
-      
-          free command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-12T00:00:00Z">
-        
-  August 12, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
-기본 사용법 $&gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
-Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/free-command/" class="postShorten-excerpt_link link" aria-label="Open the post: free command">Continue reading</a>
         
         
       </p>

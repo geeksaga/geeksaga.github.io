@@ -232,6 +232,60 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uptime-command/" aria-label="Open the post: uptime command">
+      
+          uptime command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-29T00:00:00Z">
+        
+  July 29, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
+$&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/uptime-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uptime command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/" aria-label="Open the post: shell에 설정된 alias를 우회하는 방법들">
       
           shell에 설정된 alias를 우회하는 방법들
@@ -260,7 +314,7 @@
     </div>
     <div class="postShorten-excerpt">
       
-        Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들. $&gt; alias ls=ext ls alias가 설정되어 있을 경우 ls 명령어를 입력하면 ext 명령어가 실행된다.
+        Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들. $&gt; alias ls=exa ls alias가 설정되어 있을 경우 ls 명령어를 입력하면 exa 명령어가 실행된다.
 이를 alias 설정 이전 ls 명령어로 실행할 수 있는 방법은 다음과 같다.
 절대 경로를 이용하는 방법. $&gt; whereis ls ls: /bin/ls /usr/share/man/man1/ls.1.gz $&gt; /bin/ls command 명령을 이용하는 방법. $&gt; command ls &ldquo;(double quotation)을 이용하는 방법. $&gt; &#34;ls&#34; &lsquo;(single quotation)을 이용하는 방법. $&gt; &#39;ls&#39; \(backslash)를 이용하는 방법. $&gt; \ls 
       
@@ -537,66 +591,6 @@ tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행
       <p>
         
           <a href="https://geeksaga.com/2020/03/tmux/" class="postShorten-excerpt_link link" aria-label="Open the post: tmux">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">
-      
-          Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-18T10:39:28Z">
-        
-  March 18, 2020
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크 man-pages 
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" class="postShorten-excerpt_link link" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">Continue reading</a>
         
         
       </p>

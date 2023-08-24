@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "shell에 설정된 alias를 우회하는 방법들",
+  "headline": "crontab command",
   
-  "datePublished": "2020-07-28T14:12:45Z",
-  "dateModified": "2022-01-29T12:55:02+09:00",
+  "datePublished": "2023-08-24T00:00:00Z",
+  "dateModified": "2023-08-24T00:00:00Z",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/geeksaga.com\/2020\/07\/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4\/" 
+    "@id": "https:\/\/geeksaga.com\/2023\/08\/crontab-command\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들. $\u0026gt; alias ls=exa ls alias가 설정되어 있을 경우 ls 명령어를 입력하면 exa 명령어가 실행된다.\n이를 alias 설정 이전 ls 명령어로 실행할 수 있는 방법은 다음과 같다.\n절대 경로를 이용하는 방법. $\u0026gt; whereis ls ls: /bin/ls /usr/share/man/man1/ls.1.gz $\u0026gt; /bin/ls command 명령을 이용하는 방법. $\u0026gt; command ls \u0026ldquo;(double quotation)을 이용하는 방법. $\u0026gt; \u0026#34;ls\u0026#34; \u0026lsquo;(single quotation)을 이용하는 방법. $\u0026gt; \u0026#39;ls\u0026#39; \\(backslash)를 이용하는 방법. $\u0026gt; \\ls ",
+  "description": "linux의 crontab 명령어(CLI)는 명령어이다.\n기본 사용법 $\u0026gt; curl https://geeksaga.com \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026#34;en-us\u0026#34;\u0026gt; ... \u0026lt;/html\u0026gt; help $\u0026gt; crontab --help crontab: invalid option -- \u0026#39;-\u0026#39; crontab: usage error: unrecognized option Usage: crontab [options] file crontab [options] crontab -n [hostname] Options: -u \u0026lt;user\u0026gt; define user -e edit user\u0026#39;s crontab -l list user\u0026#39;s crontab -r delete user\u0026#39;s crontab -i prompt before deleting -n \u0026lt;host\u0026gt; set host in cluster to run users\u0026#39; crontabs -c get host in cluster to run users\u0026#39; crontabs -T \u0026lt;file\u0026gt; test a crontab file syntax -V print version and exit -x \u0026lt;mask\u0026gt; enable debugging Default operation is replace, per 1003.",
   "keywords": []
 }
 
@@ -43,31 +43,27 @@
 <meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
-<meta name="description" content="Shell Tip">
+<meta name="description" content="crontab command description">
 
 
-<meta property="og:description" content="Shell Tip">
+<meta property="og:description" content="crontab command description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell에 설정된 alias를 우회하는 방법들">
-<meta name="twitter:title" content="shell에 설정된 alias를 우회하는 방법들">
-<meta property="og:url" content="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/">
-<meta property="twitter:url" content="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/">
+<meta property="og:title" content="crontab command">
+<meta name="twitter:title" content="crontab command">
+<meta property="og:url" content="https://geeksaga.com/2023/08/crontab-command/">
+<meta property="twitter:url" content="https://geeksaga.com/2023/08/crontab-command/">
 <meta property="og:site_name" content="Try to write anyway">
-<meta property="og:description" content="Shell Tip">
-<meta name="twitter:description" content="Shell Tip">
+<meta property="og:description" content="crontab command description">
+<meta name="twitter:description" content="crontab command description">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-07-28T14:12:45">
+    <meta property="article:published_time" content="2023-08-24T00:00:00">
   
   
-    <meta property="article:modified_time" content="2022-01-29T12:55:02">
+    <meta property="article:modified_time" content="2023-08-24T00:00:00">
   
   
-  
-    
-      <meta property="article:section" content="linux">
-    
   
   
     
@@ -75,7 +71,7 @@
     
       <meta property="article:tag" content="linux">
     
-      <meta property="article:tag" content="shell">
+      <meta property="article:tag" content="crontab">
     
   
 
@@ -96,14 +92,14 @@
 
 
 
-    <title>shell에 설정된 alias를 우회하는 방법들</title>
+    <title>crontab command</title>
 
     <link rel="icon" href="https://geeksaga.com/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/">
+    <link rel="canonical" href="https://geeksaga.com/2023/08/crontab-command/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -249,51 +245,92 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      shell에 설정된 alias를 우회하는 방법들
+      crontab command
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2020-07-28T14:12:45Z">
+      <time datetime="2023-08-24T00:00:00Z">
         
-  July 28, 2020
+  August 24, 2023
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
-    
-  
-
   </div>
 
 </div>
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h2 id="shell에-설정된-alias-대신-원래-명령어를-실행하는-여러가지-방법들">Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들.</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; alias ls<span style="color:#f92672">=</span>exa
-</span></span></code></pre></div><p><code>ls</code> alias가 설정되어 있을 경우 <code>ls</code> 명령어를 입력하면 <code>exa</code> 명령어가 실행된다.</p>
-<p>이를 alias 설정 이전 <code>ls</code> 명령어로 실행할 수 있는 방법은 다음과 같다.</p>
-<h3 id="절대-경로를-이용하는-방법">절대 경로를 이용하는 방법.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; whereis ls
-</span></span><span style="display:flex;"><span>ls: /bin/ls /usr/share/man/man1/ls.1.gz
+              <p>linux의 crontab 명령어(CLI)는 명령어이다.</p>
+<h2 id="기본-사용법">기본 사용법</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl https://geeksaga.com
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en-us&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><h2 id="help">help</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; crontab --help
+</span></span><span style="display:flex;"><span>crontab: invalid option -- <span style="color:#e6db74">&#39;-&#39;</span>
+</span></span><span style="display:flex;"><span>crontab: usage error: unrecognized option
+</span></span><span style="display:flex;"><span>Usage:
+</span></span><span style="display:flex;"><span> crontab <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> file
+</span></span><span style="display:flex;"><span> crontab <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span> crontab -n <span style="color:#f92672">[</span>hostname<span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$&gt; /bin/ls
-</span></span></code></pre></div><h3 id="command-명령을-이용하는-방법">command 명령을 이용하는 방법.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; command ls
-</span></span></code></pre></div><h3 id="double-quotation을-이용하는-방법">&ldquo;(double quotation)을 이용하는 방법.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; <span style="color:#e6db74">&#34;ls&#34;</span>
-</span></span></code></pre></div><h3 id="single-quotation을-이용하는-방법">&lsquo;(single quotation)을 이용하는 방법.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; <span style="color:#e6db74">&#39;ls&#39;</span>
-</span></span></code></pre></div><h3 id="backslash를-이용하는-방법">\(backslash)를 이용하는 방법.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; <span style="color:#ae81ff">\l</span>s
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span> -u &lt;user&gt;  define user
+</span></span><span style="display:flex;"><span> -e         edit user<span style="color:#e6db74">&#39;s crontab
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -l         list user&#39;</span>s crontab
+</span></span><span style="display:flex;"><span> -r         delete user<span style="color:#e6db74">&#39;s crontab
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -i         prompt before deleting
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -n &lt;host&gt;  set host in cluster to run users&#39;</span> crontabs
+</span></span><span style="display:flex;"><span> -c         get host in cluster to run users<span style="color:#960050;background-color:#1e0010">&#39;</span> crontabs
+</span></span><span style="display:flex;"><span> -T &lt;file&gt;  test a crontab file syntax
+</span></span><span style="display:flex;"><span> -V         print version and exit
+</span></span><span style="display:flex;"><span> -x &lt;mask&gt;  enable debugging
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Default operation is replace, per 1003.2
+</span></span></code></pre></div><h2 id="tldr">TLDR</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tldr crontab
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  crontab
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Schedule cron jobs to run on a time interval <span style="color:#66d9ef">for</span> the current user.
+</span></span><span style="display:flex;"><span>  More information: https://crontab.guru/.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Edit the crontab file <span style="color:#66d9ef">for</span> the current user:
+</span></span><span style="display:flex;"><span>    crontab -e
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Edit the crontab file <span style="color:#66d9ef">for</span> a specific user:
+</span></span><span style="display:flex;"><span>    sudo crontab -e -u user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Replace the current crontab with the contents of the given file:
+</span></span><span style="display:flex;"><span>    crontab path/to/file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - View a list of existing cron jobs <span style="color:#66d9ef">for</span> current user:
+</span></span><span style="display:flex;"><span>    crontab -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Remove all cron jobs <span style="color:#66d9ef">for</span> the current user:
+</span></span><span style="display:flex;"><span>    crontab -r
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Sample job which runs at 10:00 every day <span style="color:#f92672">(</span>* means any value<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span> * * * command_to_execute
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Sample crontab entry, which runs a command every <span style="color:#ae81ff">10</span> minutes:
+</span></span><span style="display:flex;"><span>    */10 * * * * command_to_execute
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Sample crontab entry, which runs a certain script at 02:30 every Friday:
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">30</span> <span style="color:#ae81ff">2</span> * * Fri /absolute/path/to/script.sh
+</span></span></code></pre></div><h2 id="참고링크">참고링크</h2>
+<ul>
+<li><a href="https://crontab.guru/" title="crontab guru">crontab guru</a></li>
+<li><a href="https://www.man7.org/linux/man-pages/man1/crontab.1.html" title="man crontab">man crontab</a></li>
+<li><a href="https://cronitor.io/guides" title="Cronitor Developer Guides">Cronitor Developer Guides</a></li>
+</ul>
+
               
 
 
@@ -311,7 +348,7 @@
 
   <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/linux/">linux</a>
 
-  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/shell/">shell</a>
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/crontab/">crontab</a>
 
                   </div>
                 
@@ -324,7 +361,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2020/07/uptime-command/" data-tooltip="uptime command" aria-label="NEXT: uptime command">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -332,7 +369,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2020/07/whereis-command/" data-tooltip="whereis command" aria-label="PREVIOUS: whereis command">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/08/curl-command/" data-tooltip="curl command" aria-label="PREVIOUS: curl command">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -375,9 +412,9 @@
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/geeksaga.com\/2020\/07\/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4\/';
+        this.page.url = 'https:\/\/geeksaga.com\/2023\/08\/crontab-command\/';
         
-          this.page.identifier = '\/2020\/07\/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4\/'
+          this.page.identifier = '\/2023\/08\/crontab-command\/'
         
       };
       (function() {
@@ -413,7 +450,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2020/07/uptime-command/" data-tooltip="uptime command" aria-label="NEXT: uptime command">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -421,7 +458,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2020/07/whereis-command/" data-tooltip="whereis command" aria-label="PREVIOUS: whereis command">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/08/curl-command/" data-tooltip="curl command" aria-label="PREVIOUS: curl command">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
