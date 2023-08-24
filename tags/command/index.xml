@@ -6,7 +6,17 @@
     <description>Recent content in command on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>curl command</title>
+      <link>https://geeksaga.com/2023/08/curl-command/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/08/curl-command/</guid>
+      <description>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.
+기본 사용법 $&amp;gt; curl https://geeksaga.com &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en-us&amp;#34;&amp;gt; ... &amp;lt;/html&amp;gt; help stow $&amp;gt; curl --help 10:49:17 Usage: curl [options...] &amp;lt;url&amp;gt; -d, --data &amp;lt;data&amp;gt; HTTP POST data -f, --fail Fail fast with no output on HTTP errors -h, --help &amp;lt;category&amp;gt; Get help for commands -i, --include Include protocol response headers in the output -o, --output &amp;lt;file&amp;gt; Write to file instead of stdout -O, --remote-name Write output to a file named as the remote file -s, --silent Silent mode -T, --upload-file &amp;lt;file&amp;gt; Transfer local FILE to destination -u, --user &amp;lt;user:password&amp;gt; Server user and password -A, --user-agent &amp;lt;name&amp;gt; Send User-Agent &amp;lt;name&amp;gt; to server -v, --verbose Make the operation more talkative -V, --version Show version number and quit This is not the full help, this menu is stripped into categories.</description>
+    </item>
+    
     <item>
       <title>stow command</title>
       <link>https://geeksaga.com/2023/01/stow-command/</link>

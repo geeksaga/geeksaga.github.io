@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.115.4 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -213,6 +213,59 @@
         
           <section class="postShorten-group main-content-wrap">
             
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/09/fd-command/" aria-label="Open the post: fd command">
+      
+          fd command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-09-07T00:00:00Z">
+        
+  September 7, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 fd 명령어는 find명령어를 대체할 수 있는 사용자 친화적인 CLI 입니다.
+기본 사용법 $&gt; fd test/1.txt ... TLDR $&gt; tldr fd fd An alternative to find. Aims to be faster and easier to use than find. More information: https://github.com/sharkdp/fd. - Find files matching the given pattern in the current directory: fd pattern - Find files that begin with &#34;foo&#34;: fd &#39;^foo&#39; - Find files with a specific extension: fd --extension txt - Find files in a specific directory: fd pattern path/to/dir - Include ignored and hidden files in the search: fd --hidden --no-ignore pattern See also: find Help $&gt; fd --help fd 8.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/09/fd-command/" class="postShorten-excerpt_link link" aria-label="Open the post: fd command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
             
               
   
@@ -525,60 +578,6 @@ Device : 디바이스 목록 tps : 초당 전송 요청 건수 KB_read/s : 디�
       <p>
         
           <a href="https://geeksaga.com/2020/08/iostat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: iostat command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/vmstat-command/" aria-label="Open the post: vmstat command">
-      
-          vmstat command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-14T00:00:00Z">
-        
-  August 14, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 vmstat 명령어를 통해 프로세스, 메모리, 페이징, I/O, CPU 관련 정보를 확인 할 수 있습니다.
-기본 사용법 $&gt; vmstat procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 0 0 31232 935260 2147660 4477324 0 0 3 13 4 3 7 2 91 0 0 출력된 정보는 다음과 같습니다.
-procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 수 b : 인터럽트가 불가능한 상태로 sleep 상태에 있는 프로세스의 수 memory swpd : 가상메모리로 사용되는 크기 free : 남아있는 메모리 크기 buff : 버퍼에 사용되고 있는 메모리 크기 cache : 캐시에 사용되고 있는 메로리 크기 swap si : swap in 된 크기(초당 디스크에서 읽어 메모리 호출된 크기) so : swap out 된 크기(*초당 메모리에서 디스크로 보내지는 크기) io bi : 블락 디바이스에서 받은 블락 수 bo : 블락 디바이스로 보낸 블락 수 system in : 초당 발생하는 인터럽트 수 cs : 초당 발생하는 컨텍스트 스위치 수 cpu us : nice 시간을 포함하는 사용자 시간 비율 sy : 시스템이 사용한 시간 비율 id : 대기시간 비율(IO-wait 시간 포함) wa : 입출력 대기시간 비율(idle 시간 포함) st : VM 사용시 가상머신이 실제 CPU 를 기다리는 시간 비율 디바이스 종류는 블락 디바이스(Block Device)와 캐릭터 디바이스(Character Device)가 있습니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/vmstat-command/" class="postShorten-excerpt_link link" aria-label="Open the post: vmstat command">Continue reading</a>
         
         
       </p>

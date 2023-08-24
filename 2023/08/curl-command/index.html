@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "curl command",
+  
+  "datePublished": "2023-08-24T00:00:00Z",
+  "dateModified": "2023-08-24T12:10:28+09:00",
+  "author": {
+    "@type": "Person",
+    "name": "GeekSaga",
+    
+    "image": "https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/geeksaga.com\/2023\/08\/curl-command\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Try to write anyway",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95"
+    }
+    
+  },
+  "description": "linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.\n기본 사용법 $\u0026gt; curl https://geeksaga.com \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026#34;en-us\u0026#34;\u0026gt; ... \u0026lt;/html\u0026gt; help stow $\u0026gt; curl --help 10:49:17 Usage: curl [options...] \u0026lt;url\u0026gt; -d, --data \u0026lt;data\u0026gt; HTTP POST data -f, --fail Fail fast with no output on HTTP errors -h, --help \u0026lt;category\u0026gt; Get help for commands -i, --include Include protocol response headers in the output -o, --output \u0026lt;file\u0026gt; Write to file instead of stdout -O, --remote-name Write output to a file named as the remote file -s, --silent Silent mode -T, --upload-file \u0026lt;file\u0026gt; Transfer local FILE to destination -u, --user \u0026lt;user:password\u0026gt; Server user and password -A, --user-agent \u0026lt;name\u0026gt; Send User-Agent \u0026lt;name\u0026gt; to server -v, --verbose Make the operation more talkative -V, --version Show version number and quit This is not the full help, this menu is stripped into categories.",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="GeekSaga">
+<meta name="keywords" content="">
+<meta name="description" content="curl command description">
+
+
+<meta property="og:description" content="curl command description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curl command">
+<meta name="twitter:title" content="curl command">
+<meta property="og:url" content="https://geeksaga.com/2023/08/curl-command/">
+<meta property="twitter:url" content="https://geeksaga.com/2023/08/curl-command/">
+<meta property="og:site_name" content="Try to write anyway">
+<meta property="og:description" content="curl command description">
+<meta name="twitter:description" content="curl command description">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2023-08-24T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2023-08-24T12:10:28">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="command">
+    
+      <meta property="article:tag" content="linux">
+    
+      <meta property="article:tag" content="curl">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=640">
+
+
+
+
+
+
+    <title>curl command</title>
+
+    <link rel="icon" href="https://geeksaga.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://geeksaga.com/2023/08/curl-command/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://geeksaga.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+		
+    
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90851011-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90851011-1');
+</script>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z8WERK25Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4Z8WERK25Q');
+</script>	
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://geeksaga.com/" aria-label="Go to homepage">Try to write anyway</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://geeksaga.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://geeksaga.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">GeekSaga</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>.</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      curl command
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-08-24T00:00:00Z">
+        
+  August 24, 2023
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.</p>
+<h2 id="기본-사용법">기본 사용법</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl https://geeksaga.com
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en-us&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><h2 id="help-stow">help stow</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl --help                                                                                    10:49:17
+</span></span><span style="display:flex;"><span>Usage: curl <span style="color:#f92672">[</span>options...<span style="color:#f92672">]</span> &lt;url&gt;
+</span></span><span style="display:flex;"><span> -d, --data &lt;data&gt;          HTTP POST data
+</span></span><span style="display:flex;"><span> -f, --fail                 Fail fast with no output on HTTP errors
+</span></span><span style="display:flex;"><span> -h, --help &lt;category&gt;      Get help <span style="color:#66d9ef">for</span> commands
+</span></span><span style="display:flex;"><span> -i, --include              Include protocol response headers in the output
+</span></span><span style="display:flex;"><span> -o, --output &lt;file&gt;        Write to file instead of stdout
+</span></span><span style="display:flex;"><span> -O, --remote-name          Write output to a file named as the remote file
+</span></span><span style="display:flex;"><span> -s, --silent               Silent mode
+</span></span><span style="display:flex;"><span> -T, --upload-file &lt;file&gt;   Transfer local FILE to destination
+</span></span><span style="display:flex;"><span> -u, --user &lt;user:password&gt; Server user and password
+</span></span><span style="display:flex;"><span> -A, --user-agent &lt;name&gt;    Send User-Agent &lt;name&gt; to server
+</span></span><span style="display:flex;"><span> -v, --verbose              Make the operation more talkative
+</span></span><span style="display:flex;"><span> -V, --version              Show version number and quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This is not the full help, this menu is stripped into categories.
+</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;--help category&#34;</span> to get an overview of all categories.
+</span></span><span style="display:flex;"><span>For all options use the manual or <span style="color:#e6db74">&#34;--help all&#34;</span>.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl --help all                                                                                12:01:07
+</span></span><span style="display:flex;"><span>Usage: curl <span style="color:#f92672">[</span>options...<span style="color:#f92672">]</span> &lt;url&gt;
+</span></span><span style="display:flex;"><span>     --abstract-unix-socket &lt;path&gt; Connect via abstract Unix domain socket
+</span></span><span style="display:flex;"><span>     --alt-svc &lt;file name&gt; Enable alt-svc with this cache file
+</span></span><span style="display:flex;"><span>     --anyauth         Pick any authentication method
+</span></span><span style="display:flex;"><span> -a, --append          Append to target file when uploading
+</span></span><span style="display:flex;"><span>     --aws-sigv4 &lt;provider1<span style="color:#f92672">[</span>:provider2<span style="color:#f92672">[</span>:region<span style="color:#f92672">[</span>:service<span style="color:#f92672">]]]</span>&gt; Use AWS V4 signature authentication
+</span></span><span style="display:flex;"><span>     --basic           Use HTTP Basic Authentication
+</span></span><span style="display:flex;"><span>     --ca-native       Use CA certificates from the native OS
+</span></span><span style="display:flex;"><span>     --cacert &lt;file&gt;   CA certificate to verify peer against
+</span></span><span style="display:flex;"><span>     --capath &lt;dir&gt;    CA directory to verify peer against
+</span></span><span style="display:flex;"><span> -E, --cert &lt;certificate<span style="color:#f92672">[</span>:password<span style="color:#f92672">]</span>&gt; Client certificate file and password
+</span></span><span style="display:flex;"><span>     --cert-status     Verify the status of the server cert via OCSP-staple
+</span></span><span style="display:flex;"><span>     --cert-type &lt;type&gt; Certificate type <span style="color:#f92672">(</span>DER/PEM/ENG/P12<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --ciphers &lt;list of ciphers&gt; SSL ciphers to use
+</span></span><span style="display:flex;"><span>     --compressed      Request compressed response
+</span></span><span style="display:flex;"><span>     --compressed-ssh  Enable SSH compression
+</span></span><span style="display:flex;"><span> -K, --config &lt;file&gt;   Read config from a file
+</span></span><span style="display:flex;"><span>     --connect-timeout &lt;fractional seconds&gt; Maximum time allowed <span style="color:#66d9ef">for</span> connection
+</span></span><span style="display:flex;"><span>     --connect-to &lt;HOST1:PORT1:HOST2:PORT2&gt; Connect to host
+</span></span><span style="display:flex;"><span> -C, --continue-at &lt;offset&gt; Resumed transfer offset
+</span></span><span style="display:flex;"><span> -b, --cookie &lt;data|filename&gt; Send cookies from string/file
+</span></span><span style="display:flex;"><span> -c, --cookie-jar &lt;filename&gt; Write cookies to &lt;filename&gt; after operation
+</span></span><span style="display:flex;"><span>     --create-dirs     Create necessary local directory hierarchy
+</span></span><span style="display:flex;"><span>     --create-file-mode &lt;mode&gt; File mode <span style="color:#66d9ef">for</span> created files
+</span></span><span style="display:flex;"><span>     --crlf            Convert LF to CRLF in upload
+</span></span><span style="display:flex;"><span>     --crlfile &lt;file&gt;  Use this CRL list
+</span></span><span style="display:flex;"><span>     --curves &lt;algorithm list&gt; <span style="color:#f92672">(</span>EC<span style="color:#f92672">)</span> TLS key exchange algorithm<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> to request
+</span></span><span style="display:flex;"><span> -d, --data &lt;data&gt;     HTTP POST data
+</span></span><span style="display:flex;"><span>     --data-ascii &lt;data&gt; HTTP POST ASCII data
+</span></span><span style="display:flex;"><span>     --data-binary &lt;data&gt; HTTP POST binary data
+</span></span><span style="display:flex;"><span>     --data-raw &lt;data&gt; HTTP POST data, <span style="color:#e6db74">&#39;@&#39;</span> allowed
+</span></span><span style="display:flex;"><span>     --data-urlencode &lt;data&gt; HTTP POST data URL encoded
+</span></span><span style="display:flex;"><span>     --delegation &lt;LEVEL&gt; GSS-API delegation permission
+</span></span><span style="display:flex;"><span>     --digest          Use HTTP Digest Authentication
+</span></span><span style="display:flex;"><span> -q, --disable         Disable .curlrc
+</span></span><span style="display:flex;"><span>     --disable-eprt    Inhibit using EPRT or LPRT
+</span></span><span style="display:flex;"><span>     --disable-epsv    Inhibit using EPSV
+</span></span><span style="display:flex;"><span>     --disallow-username-in-url Disallow username in URL
+</span></span><span style="display:flex;"><span>     --dns-interface &lt;interface&gt; Interface to use <span style="color:#66d9ef">for</span> DNS requests
+</span></span><span style="display:flex;"><span>     --dns-ipv4-addr &lt;address&gt; IPv4 address to use <span style="color:#66d9ef">for</span> DNS requests
+</span></span><span style="display:flex;"><span>     --dns-ipv6-addr &lt;address&gt; IPv6 address to use <span style="color:#66d9ef">for</span> DNS requests
+</span></span><span style="display:flex;"><span>     --dns-servers &lt;addresses&gt; DNS server addrs to use
+</span></span><span style="display:flex;"><span>     --doh-cert-status Verify the status of the DoH server cert via OCSP-staple
+</span></span><span style="display:flex;"><span>     --doh-insecure    Allow insecure DoH server connections
+</span></span><span style="display:flex;"><span>     --doh-url &lt;URL&gt;   Resolve host names over DoH
+</span></span><span style="display:flex;"><span> -D, --dump-header &lt;filename&gt; Write the received headers to &lt;filename&gt;
+</span></span><span style="display:flex;"><span>     --egd-file &lt;file&gt; EGD socket path <span style="color:#66d9ef">for</span> random data
+</span></span><span style="display:flex;"><span>     --engine &lt;name&gt;   Crypto engine to use
+</span></span><span style="display:flex;"><span>     --etag-compare &lt;file&gt; Pass an ETag from a file as a custom header
+</span></span><span style="display:flex;"><span>     --etag-save &lt;file&gt; Parse ETag from a request and save it to a file
+</span></span><span style="display:flex;"><span>     --expect100-timeout &lt;seconds&gt; How long to wait <span style="color:#66d9ef">for</span> 100-continue
+</span></span><span style="display:flex;"><span> -f, --fail            Fail fast with no output on HTTP errors
+</span></span><span style="display:flex;"><span>     --fail-early      Fail on first transfer error, <span style="color:#66d9ef">do</span> not <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>     --fail-with-body  Fail on HTTP errors but save the body
+</span></span><span style="display:flex;"><span>     --false-start     Enable TLS False Start
+</span></span><span style="display:flex;"><span> -F, --form &lt;name<span style="color:#f92672">=</span>content&gt; Specify multipart MIME data
+</span></span><span style="display:flex;"><span>     --form-escape     Escape multipart form field/file names using backslash
+</span></span><span style="display:flex;"><span>     --form-string &lt;name<span style="color:#f92672">=</span>string&gt; Specify multipart MIME data
+</span></span><span style="display:flex;"><span>     --ftp-account &lt;data&gt; Account data string
+</span></span><span style="display:flex;"><span>     --ftp-alternative-to-user &lt;command&gt; String to replace USER <span style="color:#f92672">[</span>name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>     --ftp-create-dirs Create the remote dirs <span style="color:#66d9ef">if</span> not present
+</span></span><span style="display:flex;"><span>     --ftp-method &lt;method&gt; Control CWD usage
+</span></span><span style="display:flex;"><span>     --ftp-pasv        Use PASV/EPSV instead of PORT
+</span></span><span style="display:flex;"><span> -P, --ftp-port &lt;address&gt; Use PORT instead of PASV
+</span></span><span style="display:flex;"><span>     --ftp-pret        Send PRET before PASV
+</span></span><span style="display:flex;"><span>     --ftp-skip-pasv-ip Skip the IP address <span style="color:#66d9ef">for</span> PASV
+</span></span><span style="display:flex;"><span>     --ftp-ssl-ccc     Send CCC after authenticating
+</span></span><span style="display:flex;"><span>     --ftp-ssl-ccc-mode &lt;active/passive&gt; Set CCC mode
+</span></span><span style="display:flex;"><span>     --ftp-ssl-control Require SSL/TLS <span style="color:#66d9ef">for</span> FTP login, clear <span style="color:#66d9ef">for</span> transfer
+</span></span><span style="display:flex;"><span> -G, --get             Put the post data in the URL and use GET
+</span></span><span style="display:flex;"><span> -g, --globoff         Disable URL sequences and ranges using <span style="color:#f92672">{}</span> and <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>     --happy-eyeballs-timeout-ms &lt;milliseconds&gt; Time <span style="color:#66d9ef">for</span> IPv6 before trying IPv4
+</span></span><span style="display:flex;"><span>     --haproxy-protocol Send HAProxy PROXY protocol v1 header
+</span></span><span style="display:flex;"><span>     --haproxy-clientip Sets the HAProxy PROXY protocol v1 client IP
+</span></span><span style="display:flex;"><span> -I, --head            Show document info only
+</span></span><span style="display:flex;"><span> -H, --header &lt;header/@file&gt; Pass custom header<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> to server
+</span></span><span style="display:flex;"><span> -h, --help &lt;category&gt; Get help <span style="color:#66d9ef">for</span> commands
+</span></span><span style="display:flex;"><span>     --hostpubmd5 &lt;md5&gt; Acceptable MD5 hash of the host public key
+</span></span><span style="display:flex;"><span>     --hostpubsha256 &lt;sha256&gt; Acceptable SHA256 hash of the host public key
+</span></span><span style="display:flex;"><span>     --hsts &lt;file name&gt; Enable HSTS with this cache file
+</span></span><span style="display:flex;"><span>     --http0.9         Allow HTTP 0.9 responses
+</span></span><span style="display:flex;"><span> -0, --http1.0         Use HTTP 1.0
+</span></span><span style="display:flex;"><span>     --http1.1         Use HTTP 1.1
+</span></span><span style="display:flex;"><span>     --http2           Use HTTP/2
+</span></span><span style="display:flex;"><span>     --http2-prior-knowledge Use HTTP <span style="color:#ae81ff">2</span> without HTTP/1.1 Upgrade
+</span></span><span style="display:flex;"><span>     --http3           Use HTTP v3
+</span></span><span style="display:flex;"><span>     --http3-only      Use HTTP v3 only
+</span></span><span style="display:flex;"><span>     --ignore-content-length Ignore the size of the remote resource
+</span></span><span style="display:flex;"><span> -i, --include         Include protocol response headers in the output
+</span></span><span style="display:flex;"><span> -k, --insecure        Allow insecure server connections
+</span></span><span style="display:flex;"><span>     --interface &lt;name&gt; Use network INTERFACE <span style="color:#f92672">(</span>or address<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> -4, --ipv4            Resolve names to IPv4 addresses
+</span></span><span style="display:flex;"><span> -6, --ipv6            Resolve names to IPv6 addresses
+</span></span><span style="display:flex;"><span>     --json &lt;data&gt;     HTTP POST JSON
+</span></span><span style="display:flex;"><span> -j, --junk-session-cookies Ignore session cookies read from file
+</span></span><span style="display:flex;"><span>     --keepalive-time &lt;seconds&gt; Interval time <span style="color:#66d9ef">for</span> keepalive probes
+</span></span><span style="display:flex;"><span>     --key &lt;key&gt;       Private key file name
+</span></span><span style="display:flex;"><span>     --key-type &lt;type&gt; Private key file type <span style="color:#f92672">(</span>DER/PEM/ENG<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --krb &lt;level&gt;     Enable Kerberos with security &lt;level&gt;
+</span></span><span style="display:flex;"><span>     --libcurl &lt;file&gt;  Dump libcurl equivalent code of this command line
+</span></span><span style="display:flex;"><span>     --limit-rate &lt;speed&gt; Limit transfer speed to RATE
+</span></span><span style="display:flex;"><span> -l, --list-only       List only mode
+</span></span><span style="display:flex;"><span>     --local-port &lt;num/range&gt; Force use of RANGE <span style="color:#66d9ef">for</span> local port numbers
+</span></span><span style="display:flex;"><span> -L, --location        Follow redirects
+</span></span><span style="display:flex;"><span>     --location-trusted Like --location, and send auth to other hosts
+</span></span><span style="display:flex;"><span>     --login-options &lt;options&gt; Server login options
+</span></span><span style="display:flex;"><span>     --mail-auth &lt;address&gt; Originator address of the original email
+</span></span><span style="display:flex;"><span>     --mail-from &lt;address&gt; Mail from this address
+</span></span><span style="display:flex;"><span>     --mail-rcpt &lt;address&gt; Mail to this address
+</span></span><span style="display:flex;"><span>     --mail-rcpt-allowfails Allow RCPT TO command to fail <span style="color:#66d9ef">for</span> some recipients
+</span></span><span style="display:flex;"><span> -M, --manual          Display the full manual
+</span></span><span style="display:flex;"><span>     --max-filesize &lt;bytes&gt; Maximum file size to download
+</span></span><span style="display:flex;"><span>     --max-redirs &lt;num&gt; Maximum number of redirects allowed
+</span></span><span style="display:flex;"><span> -m, --max-time &lt;fractional seconds&gt; Maximum time allowed <span style="color:#66d9ef">for</span> transfer
+</span></span><span style="display:flex;"><span>     --metalink        Process given URLs as metalink XML file
+</span></span><span style="display:flex;"><span>     --negotiate       Use HTTP Negotiate <span style="color:#f92672">(</span>SPNEGO<span style="color:#f92672">)</span> authentication
+</span></span><span style="display:flex;"><span> -n, --netrc           Must read .netrc <span style="color:#66d9ef">for</span> user name and password
+</span></span><span style="display:flex;"><span>     --netrc-file &lt;filename&gt; Specify FILE <span style="color:#66d9ef">for</span> netrc
+</span></span><span style="display:flex;"><span>     --netrc-optional  Use either .netrc or URL
+</span></span><span style="display:flex;"><span> -:, --next            Make next URL use its separate set of options
+</span></span><span style="display:flex;"><span>     --no-alpn         Disable the ALPN TLS extension
+</span></span><span style="display:flex;"><span> -N, --no-buffer       Disable buffering of the output stream
+</span></span><span style="display:flex;"><span>     --no-clobber      Do not overwrite files that already exist
+</span></span><span style="display:flex;"><span>     --no-keepalive    Disable TCP keepalive on the connection
+</span></span><span style="display:flex;"><span>     --no-npn          Disable the NPN TLS extension
+</span></span><span style="display:flex;"><span>     --no-progress-meter Do not show the progress meter
+</span></span><span style="display:flex;"><span>     --no-sessionid    Disable SSL session-ID reusing
+</span></span><span style="display:flex;"><span>     --noproxy &lt;no-proxy-list&gt; List of hosts which <span style="color:#66d9ef">do</span> not use proxy
+</span></span><span style="display:flex;"><span>     --ntlm            Use HTTP NTLM authentication
+</span></span><span style="display:flex;"><span>     --ntlm-wb         Use HTTP NTLM authentication with winbind
+</span></span><span style="display:flex;"><span>     --oauth2-bearer &lt;token&gt; OAuth <span style="color:#ae81ff">2</span> Bearer Token
+</span></span><span style="display:flex;"><span> -o, --output &lt;file&gt;   Write to file instead of stdout
+</span></span><span style="display:flex;"><span>     --output-dir &lt;dir&gt; Directory to save files in
+</span></span><span style="display:flex;"><span> -Z, --parallel        Perform transfers in parallel
+</span></span><span style="display:flex;"><span>     --parallel-immediate Do not wait <span style="color:#66d9ef">for</span> multiplexing <span style="color:#f92672">(</span>with --parallel<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --parallel-max &lt;num&gt; Maximum concurrency <span style="color:#66d9ef">for</span> parallel transfers
+</span></span><span style="display:flex;"><span>     --pass &lt;phrase&gt;   Pass phrase <span style="color:#66d9ef">for</span> the private key
+</span></span><span style="display:flex;"><span>     --path-as-is      Do not squash .. sequences in URL path
+</span></span><span style="display:flex;"><span>     --pinnedpubkey &lt;hashes&gt; FILE/HASHES Public key to verify peer against
+</span></span><span style="display:flex;"><span>     --post301         Do not switch to GET after following a <span style="color:#ae81ff">301</span>
+</span></span><span style="display:flex;"><span>     --post302         Do not switch to GET after following a <span style="color:#ae81ff">302</span>
+</span></span><span style="display:flex;"><span>     --post303         Do not switch to GET after following a <span style="color:#ae81ff">303</span>
+</span></span><span style="display:flex;"><span>     --preproxy <span style="color:#f92672">[</span>protocol://<span style="color:#f92672">]</span>host<span style="color:#f92672">[</span>:port<span style="color:#f92672">]</span> Use this proxy first
+</span></span><span style="display:flex;"><span> -#, --progress-bar    Display transfer progress as a bar
+</span></span><span style="display:flex;"><span>     --proto &lt;protocols&gt; Enable/disable PROTOCOLS
+</span></span><span style="display:flex;"><span>     --proto-default &lt;protocol&gt; Use PROTOCOL <span style="color:#66d9ef">for</span> any URL missing a scheme
+</span></span><span style="display:flex;"><span>     --proto-redir &lt;protocols&gt; Enable/disable PROTOCOLS on redirect
+</span></span><span style="display:flex;"><span> -x, --proxy <span style="color:#f92672">[</span>protocol://<span style="color:#f92672">]</span>host<span style="color:#f92672">[</span>:port<span style="color:#f92672">]</span> Use this proxy
+</span></span><span style="display:flex;"><span>     --proxy-anyauth   Pick any proxy authentication method
+</span></span><span style="display:flex;"><span>     --proxy-basic     Use Basic authentication on the proxy
+</span></span><span style="display:flex;"><span>     --proxy-ca-native Use CA certificates from the native OS <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-cacert &lt;file&gt; CA certificate to verify peer against <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-capath &lt;dir&gt; CA directory to verify peer against <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-cert &lt;cert<span style="color:#f92672">[</span>:passwd<span style="color:#f92672">]</span>&gt; Set client certificate <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-cert-type &lt;type&gt; Client certificate type <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-ciphers &lt;list&gt; SSL ciphers to use <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-crlfile &lt;file&gt; Set a CRL list <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-digest    Use Digest authentication on the proxy
+</span></span><span style="display:flex;"><span>     --proxy-header &lt;header/@file&gt; Pass custom header<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> to proxy
+</span></span><span style="display:flex;"><span>     --proxy-http2     Use HTTP/2 with HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-insecure  Do HTTPS proxy connections without verifying the proxy
+</span></span><span style="display:flex;"><span>     --proxy-key &lt;key&gt; Private key <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-key-type &lt;type&gt; Private key file type <span style="color:#66d9ef">for</span> proxy
+</span></span><span style="display:flex;"><span>     --proxy-negotiate Use HTTP Negotiate <span style="color:#f92672">(</span>SPNEGO<span style="color:#f92672">)</span> authentication on the proxy
+</span></span><span style="display:flex;"><span>     --proxy-ntlm      Use NTLM authentication on the proxy
+</span></span><span style="display:flex;"><span>     --proxy-pass &lt;phrase&gt; Pass phrase <span style="color:#66d9ef">for</span> the private key <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-pinnedpubkey &lt;hashes&gt; FILE/HASHES public key to verify proxy with
+</span></span><span style="display:flex;"><span>     --proxy-service-name &lt;name&gt; SPNEGO proxy service name
+</span></span><span style="display:flex;"><span>     --proxy-ssl-allow-beast Allow security flaw <span style="color:#66d9ef">for</span> interop <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-ssl-auto-client-cert Use auto client certificate <span style="color:#66d9ef">for</span> proxy <span style="color:#f92672">(</span>Schannel<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --proxy-tls13-ciphers &lt;ciphersuite list&gt; TLS 1.3 proxy cipher suites
+</span></span><span style="display:flex;"><span>     --proxy-tlsauthtype &lt;type&gt; TLS authentication type <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-tlspassword &lt;string&gt; TLS password <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-tlsuser &lt;name&gt; TLS username <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span>     --proxy-tlsv1     Use TLSv1 <span style="color:#66d9ef">for</span> HTTPS proxy
+</span></span><span style="display:flex;"><span> -U, --proxy-user &lt;user:password&gt; Proxy user and password
+</span></span><span style="display:flex;"><span>     --proxy1.0 &lt;host<span style="color:#f92672">[</span>:port<span style="color:#f92672">]</span>&gt; Use HTTP/1.0 proxy on given port
+</span></span><span style="display:flex;"><span> -p, --proxytunnel     Operate through an HTTP proxy tunnel <span style="color:#f92672">(</span>using CONNECT<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --pubkey &lt;key&gt;    SSH Public key file name
+</span></span><span style="display:flex;"><span> -Q, --quote &lt;command&gt; Send command<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> to server before transfer
+</span></span><span style="display:flex;"><span>     --random-file &lt;file&gt; File <span style="color:#66d9ef">for</span> reading random data from
+</span></span><span style="display:flex;"><span> -r, --range &lt;range&gt;   Retrieve only the bytes within RANGE
+</span></span><span style="display:flex;"><span>     --rate &lt;max request rate&gt; Request rate <span style="color:#66d9ef">for</span> serial transfers
+</span></span><span style="display:flex;"><span>     --raw             Do HTTP <span style="color:#e6db74">&#34;raw&#34;</span>; no transfer decoding
+</span></span><span style="display:flex;"><span> -e, --referer &lt;URL&gt;   Referrer URL
+</span></span><span style="display:flex;"><span> -J, --remote-header-name Use the header-provided filename
+</span></span><span style="display:flex;"><span> -O, --remote-name     Write output to a file named as the remote file
+</span></span><span style="display:flex;"><span>     --remote-name-all Use the remote file name <span style="color:#66d9ef">for</span> all URLs
+</span></span><span style="display:flex;"><span> -R, --remote-time     Set the remote file<span style="color:#e6db74">&#39;s time on the local output
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --remove-on-error Remove output file on errors
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -X, --request &lt;method&gt; Specify request method to use
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --request-target &lt;path&gt; Specify the target for this request
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --resolve &lt;[+]host:port:addr[,addr]...&gt; Resolve the host+port to this address
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --retry &lt;num&gt;     Retry request if transient problems occur
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --retry-all-errors Retry all errors (use with --retry)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --retry-connrefused Retry on connection refused (use with --retry)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --retry-delay &lt;seconds&gt; Wait time between retries
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --retry-max-time &lt;seconds&gt; Retry only within this period
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --sasl-authzid &lt;identity&gt; Identity for SASL PLAIN authentication
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --sasl-ir         Enable initial response in SASL authentication
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --service-name &lt;name&gt; SPNEGO service name
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -S, --show-error      Show error even when -s is used
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -s, --silent          Silent mode
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks4 &lt;host[:port]&gt; SOCKS4 proxy on given host + port
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks4a &lt;host[:port]&gt; SOCKS4a proxy on given host + port
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5 &lt;host[:port]&gt; SOCKS5 proxy on given host + port
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5-basic    Enable username/password auth for SOCKS5 proxies
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5-gssapi   Enable GSS-API auth for SOCKS5 proxies
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5-gssapi-nec Compatibility with NEC SOCKS5 server
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5-gssapi-service &lt;name&gt; SOCKS5 proxy service name for GSS-API
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     --socks5-hostname &lt;host[:port]&gt; SOCKS5 proxy, pass host name to proxy
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -Y, --speed-limit &lt;speed&gt; Stop transfers slower than this
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> -y, --speed-time &lt;seconds&gt; Trigger &#39;</span>speed-limit<span style="color:#960050;background-color:#1e0010">&#39;</span> abort after this time
+</span></span><span style="display:flex;"><span>     --ssl             Try SSL/TLS
+</span></span><span style="display:flex;"><span>     --ssl-allow-beast Allow security flaw to improve interop
+</span></span><span style="display:flex;"><span>     --ssl-auto-client-cert Use auto client certificate <span style="color:#f92672">(</span>Schannel<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --ssl-no-revoke   Disable cert revocation checks <span style="color:#f92672">(</span>Schannel<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     --ssl-reqd        Require SSL/TLS
+</span></span><span style="display:flex;"><span>     --ssl-revoke-best-effort Ignore missing/offline cert CRL dist points
+</span></span><span style="display:flex;"><span> -2, --sslv2           Use SSLv2
+</span></span><span style="display:flex;"><span> -3, --sslv3           Use SSLv3
+</span></span><span style="display:flex;"><span>     --stderr &lt;file&gt;   Where to redirect stderr
+</span></span><span style="display:flex;"><span>     --styled-output   Enable styled output <span style="color:#66d9ef">for</span> HTTP headers
+</span></span><span style="display:flex;"><span>     --suppress-connect-headers Suppress proxy CONNECT response headers
+</span></span><span style="display:flex;"><span>     --tcp-fastopen    Use TCP Fast Open
+</span></span><span style="display:flex;"><span>     --tcp-nodelay     Use the TCP_NODELAY option
+</span></span><span style="display:flex;"><span> -t, --telnet-option &lt;opt<span style="color:#f92672">=</span>val&gt; Set telnet option
+</span></span><span style="display:flex;"><span>     --tftp-blksize &lt;value&gt; Set TFTP BLKSIZE option
+</span></span><span style="display:flex;"><span>     --tftp-no-options Do not send any TFTP options
+</span></span><span style="display:flex;"><span> -z, --time-cond &lt;time&gt; Transfer based on a time condition
+</span></span><span style="display:flex;"><span>     --tls-max &lt;VERSION&gt; Set maximum allowed TLS version
+</span></span><span style="display:flex;"><span>     --tls13-ciphers &lt;ciphersuite list&gt; TLS 1.3 cipher suites to use
+</span></span><span style="display:flex;"><span>     --tlsauthtype &lt;type&gt; TLS authentication type
+</span></span><span style="display:flex;"><span>     --tlspassword &lt;string&gt; TLS password
+</span></span><span style="display:flex;"><span>     --tlsuser &lt;name&gt;  TLS user name
+</span></span><span style="display:flex;"><span> -1, --tlsv1           Use TLSv1.0 or greater
+</span></span><span style="display:flex;"><span>     --tlsv1.0         Use TLSv1.0 or greater
+</span></span><span style="display:flex;"><span>     --tlsv1.1         Use TLSv1.1 or greater
+</span></span><span style="display:flex;"><span>     --tlsv1.2         Use TLSv1.2 or greater
+</span></span><span style="display:flex;"><span>     --tlsv1.3         Use TLSv1.3 or greater
+</span></span><span style="display:flex;"><span>     --tr-encoding     Request compressed transfer encoding
+</span></span><span style="display:flex;"><span>     --trace &lt;file&gt;    Write a debug trace to FILE
+</span></span><span style="display:flex;"><span>     --trace-ascii &lt;file&gt; Like --trace, but without hex output
+</span></span><span style="display:flex;"><span>     --trace-ids       Add transfer/connection identifiers to trace/verbose output
+</span></span><span style="display:flex;"><span>     --trace-time      Add time stamps to trace/verbose output
+</span></span><span style="display:flex;"><span>     --unix-socket &lt;path&gt; Connect through this Unix domain socket
+</span></span><span style="display:flex;"><span> -T, --upload-file &lt;file&gt; Transfer local FILE to destination
+</span></span><span style="display:flex;"><span>     --url &lt;url&gt;       URL to work with
+</span></span><span style="display:flex;"><span>     --url-query &lt;data&gt; Add a URL query part
+</span></span><span style="display:flex;"><span> -B, --use-ascii       Use ASCII/text transfer
+</span></span><span style="display:flex;"><span> -u, --user &lt;user:password&gt; Server user and password
+</span></span><span style="display:flex;"><span> -A, --user-agent &lt;name&gt; Send User-Agent &lt;name&gt; to server
+</span></span><span style="display:flex;"><span> -v, --verbose         Make the operation more talkative
+</span></span><span style="display:flex;"><span> -V, --version         Show version number and quit
+</span></span><span style="display:flex;"><span> -w, --write-out &lt;format&gt; Use output FORMAT after completion
+</span></span><span style="display:flex;"><span>     --xattr           Store metadata in extended file attributes
+</span></span></code></pre></div><h2 id="tldr">TLDR</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tldr curl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  curl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Transfers data from or to a server.
+</span></span><span style="display:flex;"><span>  Supports most protocols, including HTTP, FTP, and POP3.
+</span></span><span style="display:flex;"><span>  More information: https://curl.se/docs/manpage.html.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Download the contents of a URL to a file:
+</span></span><span style="display:flex;"><span>    curl http://example.com --output path/to/file
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Download a file, saving the output under the filename indicated by the URL:
+</span></span><span style="display:flex;"><span>    curl --remote-name http://example.com/filename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Download a file, following location redirects, and automatically continuing <span style="color:#f92672">(</span>resuming<span style="color:#f92672">)</span> a previous file transfer and <span style="color:#66d9ef">return</span> an error on server error:
+</span></span><span style="display:flex;"><span>    curl --fail --remote-name --location --continue-at - http://example.com/filename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Send form-encoded data <span style="color:#f92672">(</span>POST request of type <span style="color:#e6db74">`</span>application/x-www-form-urlencoded<span style="color:#e6db74">`</span><span style="color:#f92672">)</span>. Use <span style="color:#e6db74">`</span>--data @file_name<span style="color:#e6db74">`</span> or <span style="color:#e6db74">`</span>--data @<span style="color:#e6db74">&#39;-&#39;</span><span style="color:#e6db74">`</span> to read from STDIN:
+</span></span><span style="display:flex;"><span>    curl --data <span style="color:#e6db74">&#39;name=bob&#39;</span> http://example.com/form
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Send a request with an extra header, using a custom HTTP method:
+</span></span><span style="display:flex;"><span>    curl --header <span style="color:#e6db74">&#39;X-My-Header: 123&#39;</span> --request PUT http://example.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Send data in JSON format, specifying the appropriate content-type header:
+</span></span><span style="display:flex;"><span>    curl --data <span style="color:#e6db74">&#39;{&#34;name&#34;:&#34;bob&#34;}&#39;</span> --header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> http://example.com/users/1234
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Pass a username and password <span style="color:#66d9ef">for</span> server authentication:
+</span></span><span style="display:flex;"><span>    curl --user myusername:mypassword http://example.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Pass client certificate and key <span style="color:#66d9ef">for</span> a resource, skipping certificate validation:
+</span></span><span style="display:flex;"><span>    curl --cert client.pem --key key.pem --insecure https://example.com
+</span></span></code></pre></div><h2 id="참고링크">참고링크</h2>
+<ul>
+<li><a href="https://curl.se/" title="CURL">curl</a></li>
+<li><a href="https://man.archlinux.org/man/curl.1" title="man curl">man curl</a></li>
+<li><a href="https://daniel.haxx.se/blog/2023/07/19/curl-8-2-0/" title="CURL 8.2.0">curl 8.2.0</a></li>
+</ul>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/command/">command</a>
+
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/linux/">linux</a>
+
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/curl/">curl</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/05/jdk-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/" data-tooltip="JDK 살펴보기" aria-label="PREVIOUS: JDK 살펴보기">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/geeksaga.com\/2023\/08\/curl-command\/';
+        
+          this.page.identifier = '\/2023\/08\/curl-command\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'geeksaga';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 GeekSaga. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/05/jdk-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0/" data-tooltip="JDK 살펴보기" aria-label="PREVIOUS: JDK 살펴보기">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">GeekSaga</h4>
+    
+      <div id="about-card-bio"><strong>.</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Dreamer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://geeksaga.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://geeksaga.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
