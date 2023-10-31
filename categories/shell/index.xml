@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on Try to write anyway</title>
+    <link>https://geeksaga.com/categories/shell/</link>
+    <description>Recent content in shell on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Aug 2023 14:12:45 +0000</lastBuildDate><atom:link href="https://geeksaga.com/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shell의 종류</title>
+      <link>https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/</link>
+      <pubDate>Thu, 24 Aug 2023 14:12:45 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/</guid>
+      <description>사용중인 Shell $&amp;gt; echo $SHELL /usr/bin/zsh Shell 종류 $&amp;gt; /usr/bin/sh # Bourne shell. /usr/bin/ksh93 # Korn shell. /usr/bin/bash # Bash shell. /usr/bin/zsh # Z shell. /usr/bin/csh # C Shell. /usr/bin/tcsh # TC Shell. /usr/bin/fish # Fish Shell. ... Shell 변경 Shell을 변경하는 것은 Shell을 실행 해 주는 것으로 사용 가능합니다. (물론 $PATH에 등록되어 있고 해당 Shell이 설치되어 있는 경우)
+$&amp;gt; bash $&amp;gt; zsh 기본 Shell을 변경하고 싶을 경우에는 chsh 명령어를 사용하면 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

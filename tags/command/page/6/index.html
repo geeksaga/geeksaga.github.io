@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -232,6 +232,223 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/which-command/" aria-label="Open the post: which command">
+      
+          which command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T00:00:00Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 which는 입력한 명령어를 $PATH에 설정된 범위에서 검색하여 찾아주는 명령어입니다.
+옵션 없이 사용할 경우 먼저 매치되는 명령어를 보여 줍니다.
+$&gt; which ls ls: aliased to exa -a 옵션을 통해 매치는 명령어가 여러개 있을 경우 모두 보여 줍니다.
+$&gt; which -a ls /ls: aliased to exa /bin/ls 
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/which-command/" class="postShorten-excerpt_link link" aria-label="Open the post: which command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/tee/" aria-label="Open the post: tee">
+      
+          tee
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-24T00:00:00Z">
+        
+  July 24, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux 의 tee 명령어는 표준 입력을 받아 표준 출력(Console)과 파일을 만들어주는 명령어입니다.
+$&gt; tee --help Usage: tee [OPTION]... [FILE]... Copy standard input to each FILE, and also to standard output. -a, --append append to the given FILEs, do not overwrite -i, --ignore-interrupts ignore interrupt signals -p diagnose errors writing to non pipes --output-error[=MODE] set behavior on write error. See MODE below --help display this help and exit --version output version information and exit MODE determines behavior with write errors on the outputs: &#39;warn&#39; diagnose errors writing to any output &#39;warn-nopipe&#39; diagnose errors writing to any output not a pipe &#39;exit&#39; exit on error writing to any output &#39;exit-nopipe&#39; exit on error writing to any output not a pipe The default MODE for the -p option is &#39;warn-nopipe&#39;.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/tee/" class="postShorten-excerpt_link link" aria-label="Open the post: tee">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/04/pgrep/" aria-label="Open the post: pgrep">
+      
+          pgrep
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-04-27T00:00:00Z">
+        
+  April 27, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux 의 pgrep 명령어는 확장 정규 표현식 패턴으로 모든 프로세스의 이름을 검색할 수 있으며 기본적으로 프로세스 ID를 반환한다.
+기본 사용법은 다음과 같다.
+λ pgrep zsh 1353 1541 Usage: pgrep [options] &lt;pattern&gt; Options: -d, --delimiter &lt;string&gt; specify output delimiter -l, --list-name list PID and process name -a, --list-full list PID and full command line -v, --inverse negates the matching -w, --lightweight list all TID -c, --count count of matching processes -f, --full use full process name to match -g, --pgroup &lt;PGID,.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/04/pgrep/" class="postShorten-excerpt_link link" aria-label="Open the post: pgrep">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/03/tmux/" aria-label="Open the post: tmux">
+      
+          tmux
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-03-23T00:00:00Z">
+        
+  March 23, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        {% include figure image_path=&quot;/assets/images/tmux-logo.png&quot; caption=&ldquo;tmux is a terminal multiplexer.&rdquo; %}
+tmux 설치 참고링크를 통해 설치를 완료하자.
+tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다. 명령어 정리 ctrl + b, &lt;key&gt;
+명령어 모드의 키는 :(colon)이다. ctrl + b, :
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/03/tmux/" class="postShorten-excerpt_link link" aria-label="Open the post: tmux">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">
       
           Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법
@@ -392,69 +609,6 @@ $&gt;dig www.geeksaga.com ; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&g
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2018/06/less/" aria-label="Open the post: less">
-      
-          less
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2018-06-08T00:00:00Z">
-        
-  June 8, 2018
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/index">index</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux 의 less 명령어는 파일 내용을 확인하는 명령어들 중에 하나로 파일을 읽어 화면에 출력하는 명령어이다. 비슷한 명령어로 cat, more가 있다. more는 파일 내용을 확인 할 떄 위에서 아래 방향으로만 출력되어 지나간 내용을 다시 볼 수 없지만 less는 한 번에 보여지는 만큼만 읽어서 출력하기 때문에 크기가 큰 파일을 볼 때 유용하게 사용할 수 있다.
-기본 사용법은 다음과 같다.
-$&gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력되고 스페이스바를 입력하면 한 화면씩 출력된다.
-옵션 텍스트 모드 단축키 q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기 +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력 
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2018/06/less/" class="postShorten-excerpt_link link" aria-label="Open the post: less">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -468,8 +622,15 @@ $&gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력�
           </li>
         
         
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://geeksaga.com/tags/command/page/7/" aria-label="OLDER POSTS">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
       
-      <li class="pagination-number">page 6 of 6</li>
+      <li class="pagination-number">page 6 of 7</li>
     </ul>
   </div>
 

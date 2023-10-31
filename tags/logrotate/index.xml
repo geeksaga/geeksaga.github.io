@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logrotate on Try to write anyway</title>
+    <link>https://geeksaga.com/tags/logrotate/</link>
+    <description>Recent content in logrotate on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/logrotate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logrotate command</title>
+      <link>https://geeksaga.com/2023/09/logrotate-command/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/09/logrotate-command/</guid>
+      <description>linux의 logrotate 명령어(CLI)는 시스템 로그를 회전(rotates), *압축(compresses)하여 메일로 전달 할 수 있는 명령어입니다.
+기본 사용법 logrotate LifeCyle crontab -&amp;gt; cron.daily -&amp;gt; logrotate -&amp;gt; logrotate.conf -&amp;gt; logrotate.d
+logrotate 프로그램 파일 : /usr/bin/logrotate logrotate 설정 파일 : /etc/logrotate.conf logrotate 프로세스 설정파일 : /etc/logrotate.d/ logrotate 로그 : /etc/cron.daily/logrotate
+logrotate.conf 설정 # see &amp;#34;man logrotate&amp;#34; for details # rotate log files weekly # yearly # monthly # daily weekly # keep 4 weeks worth of backlogs rotate 4 # restrict maximum size of log files #size 20M # create new (empty) log files after rotating old ones create # use date as a suffix of the rotated file dateext # uncomment this if you want your log files compressed #compress # Logs are moved into directory for rotation # olddir /var/log/archive # Ignore pacman saved files tabooext + .</description>
+    </item>
+    
+  </channel>
+</rss>

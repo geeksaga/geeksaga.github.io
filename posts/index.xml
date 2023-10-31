@@ -6,7 +6,53 @@
     <description>Recent content in Posts on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux에서 .deb 패키지 설치하기</title>
+      <link>https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
+      <description>일반적으로 가능하면 새로운 패키지를 설치 하는 경우 공식 리포지토리 아니면 AUR 리포지토리를 통해 설치하는게 좋습니다. 그러나 간혹 불가능하거나 리포지토리를 제공하지 않는 경우가 있습니다. 다음은 Arch(Manjaro)에 .deb 패키지를 설치하기 위한 과정 입니다.
+설치 과정 .deb 패키지를 설치하기 위해서 debtap을 사용하는데 이를 설치 하려면 yay가 필요 합니다.
+yay -S debtap
+debtap을 사용하기 전에 패키지 데이터베이스를 한 번 이상 빌드하도록 해야 하므로 다음 명령어를 한번 실행 합니다.
+sudo debtap -u
+$&amp;gt; sudo debtap -u ==&amp;gt; Synchronizing pkgfile database.</description>
+    </item>
+    
+    <item>
+      <title>netcat(nc) command</title>
+      <link>https://geeksaga.com/2023/09/netcatnc-command/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/09/netcatnc-command/</guid>
+      <description>linux의 nc or netcat 명령어(CLI)는 임의이 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
+기본 사용법 # TCP Listening $&amp;gt; nc -l 9999 # UDP Listening $&amp;gt; nc -l -u 9999 # Client 연결 $&amp;gt; nc 127.0.0.1 9999 # Port 스캔 $&amp;gt; nc -v -n 127.0.0.1 1-100 127.0.0.1 22 (ssh) open SSH-2.0-OpenSSH_9.4 ... # 데이터 쓰기 $&amp;gt; echo &amp;#34;Test&amp;#34; | nc 127.0.0.1 9999 # 연결을 통해서 사용중인 프로그램의 버전을 찾을 수도 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>logrotate command</title>
+      <link>https://geeksaga.com/2023/09/logrotate-command/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/09/logrotate-command/</guid>
+      <description>linux의 logrotate 명령어(CLI)는 시스템 로그를 회전(rotates), *압축(compresses)하여 메일로 전달 할 수 있는 명령어입니다.
+기본 사용법 logrotate LifeCyle crontab -&amp;gt; cron.daily -&amp;gt; logrotate -&amp;gt; logrotate.conf -&amp;gt; logrotate.d
+logrotate 프로그램 파일 : /usr/bin/logrotate logrotate 설정 파일 : /etc/logrotate.conf logrotate 프로세스 설정파일 : /etc/logrotate.d/ logrotate 로그 : /etc/cron.daily/logrotate
+logrotate.conf 설정 # see &amp;#34;man logrotate&amp;#34; for details # rotate log files weekly # yearly # monthly # daily weekly # keep 4 weeks worth of backlogs rotate 4 # restrict maximum size of log files #size 20M # create new (empty) log files after rotating old ones create # use date as a suffix of the rotated file dateext # uncomment this if you want your log files compressed #compress # Logs are moved into directory for rotation # olddir /var/log/archive # Ignore pacman saved files tabooext + .</description>
+    </item>
+    
+    <item>
+      <title>shell의 종류</title>
+      <link>https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/</link>
+      <pubDate>Thu, 24 Aug 2023 14:12:45 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/</guid>
+      <description>사용중인 Shell $&amp;gt; echo $SHELL /usr/bin/zsh Shell 종류 $&amp;gt; /usr/bin/sh # Bourne shell. /usr/bin/ksh93 # Korn shell. /usr/bin/bash # Bash shell. /usr/bin/zsh # Z shell. /usr/bin/csh # C Shell. /usr/bin/tcsh # TC Shell. /usr/bin/fish # Fish Shell. ... Shell 변경 Shell을 변경하는 것은 Shell을 실행 해 주는 것으로 사용 가능합니다. (물론 $PATH에 등록되어 있고 해당 Shell이 설치되어 있는 경우)
+$&amp;gt; bash $&amp;gt; zsh 기본 Shell을 변경하고 싶을 경우에는 chsh 명령어를 사용하면 됩니다.</description>
+    </item>
+    
     <item>
       <title>crontab command</title>
       <link>https://geeksaga.com/2023/08/crontab-command/</link>
@@ -23,8 +69,9 @@
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2023/08/curl-command/</guid>
-      <description>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.
-기본 사용법 $&amp;gt; curl https://geeksaga.com &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en-us&amp;#34;&amp;gt; ... &amp;lt;/html&amp;gt; help curl $&amp;gt; curl --help Usage: curl [options...] &amp;lt;url&amp;gt; -d, --data &amp;lt;data&amp;gt; HTTP POST data -f, --fail Fail fast with no output on HTTP errors -h, --help &amp;lt;category&amp;gt; Get help for commands -i, --include Include protocol response headers in the output -o, --output &amp;lt;file&amp;gt; Write to file instead of stdout -O, --remote-name Write output to a file named as the remote file -s, --silent Silent mode -T, --upload-file &amp;lt;file&amp;gt; Transfer local FILE to destination -u, --user &amp;lt;user:password&amp;gt; Server user and password -A, --user-agent &amp;lt;name&amp;gt; Send User-Agent &amp;lt;name&amp;gt; to server -v, --verbose Make the operation more talkative -V, --version Show version number and quit This is not the full help, this menu is stripped into categories.</description>
+      <description>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어입니다.
+기본 사용법 $&amp;gt; curl https://geeksaga.com &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en-us&amp;#34;&amp;gt; ... &amp;lt;/html&amp;gt; SSL 연결을 위한 -k, --insecure 옵션과 -b, --cookie 쿠키값 지정을 통해 원하는 호출을 할 수 있습니다.
+$&amp;gt; curl -k --cookie &amp;#34;ARRAffinity=41ee36d2553ab86f8591533e8d88ac03605e73912cbf43c398f1a5ac371d0989&amp;#34; https://www.geeksaga.com/ curl http 활용 # 프로토콜을 지정하지 않은 경우 기본값은 HTTP로 설정됩니다. $&amp;gt; curl www.geeksaga.com ... # HTTP 요청하는 방법을 지정하려면 -X 옵션을 시용할 수 있습니다. # 기본값은 GET 방식이며 이 방법은 요청할때 별도의 data(Body)가 필요 없습니다.</description>
     </item>
     
     <item>
@@ -553,9 +600,11 @@ Text Objects w - words s - sentences p - paragraphs t - tags iw - inner word it 
       
       <guid>https://geeksaga.com/2020/03/%EA%B0%9C%EC%9D%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%96%88%EA%B1%B0%EB%82%98-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC%EB%93%A4/</guid>
       <description>Terminalizer Record your terminal and generate animated gif images or share a web player
-Terminalizer Taskbook Tasks, boards &amp;amp; notes for the command-line habitat
+Terminalizer Asciinema Record and share your terminal sessions, the simple way.
+사용자가 화면 내용을 Copy &amp;amp; paste할 수 있는 기능이 특징 입니다.
+Asciinema Taskbook Tasks, boards &amp;amp; notes for the command-line habitat
 Taskbook Postman The Collaboration Platform for API Development
-Postman JMeter The Apache JMeter™ application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance. It was originally designed for testing Web Applications but has since expanded to other test functions.</description>
+Postman JMeter The Apache JMeter™ application is open source software, a 100% pure Java application designed to load test functional behavior and measure performance.</description>
     </item>
     
     <item>

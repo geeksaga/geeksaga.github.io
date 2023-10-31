@@ -6,13 +6,67 @@
     <description>Recent content in Tags on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>command</title>
       <link>https://geeksaga.com/tags/command/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debtap</title>
+      <link>https://geeksaga.com/tags/debtap/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/debtap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://geeksaga.com/tags/linux/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nc</title>
+      <link>https://geeksaga.com/tags/nc/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/nc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netcat</title>
+      <link>https://geeksaga.com/tags/netcat/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/netcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logrotate</title>
+      <link>https://geeksaga.com/tags/logrotate/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/logrotate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://geeksaga.com/tags/shell/</link>
+      <pubDate>Thu, 24 Aug 2023 14:12:45 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/shell/</guid>
       <description></description>
     </item>
     
@@ -31,15 +85,6 @@
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/curl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://geeksaga.com/tags/linux/</link>
-      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -301,15 +346,6 @@
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/ifconfig/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://geeksaga.com/tags/shell/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/shell/</guid>
       <description></description>
     </item>
     

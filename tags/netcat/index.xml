@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>netcat on Try to write anyway</title>
+    <link>https://geeksaga.com/tags/netcat/</link>
+    <description>Recent content in netcat on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/netcat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>netcat(nc) command</title>
+      <link>https://geeksaga.com/2023/09/netcatnc-command/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/09/netcatnc-command/</guid>
+      <description>linux의 nc or netcat 명령어(CLI)는 임의이 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
+기본 사용법 # TCP Listening $&amp;gt; nc -l 9999 # UDP Listening $&amp;gt; nc -l -u 9999 # Client 연결 $&amp;gt; nc 127.0.0.1 9999 # Port 스캔 $&amp;gt; nc -v -n 127.0.0.1 1-100 127.0.0.1 22 (ssh) open SSH-2.0-OpenSSH_9.4 ... # 데이터 쓰기 $&amp;gt; echo &amp;#34;Test&amp;#34; | nc 127.0.0.1 9999 # 연결을 통해서 사용중인 프로그램의 버전을 찾을 수도 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

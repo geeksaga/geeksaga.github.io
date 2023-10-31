@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -232,6 +232,234 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/" aria-label="Open the post: Arch Linux에서 .deb 패키지 설치하기">
+      
+          Arch Linux에서 .deb 패키지 설치하기
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-10-31T00:00:00Z">
+        
+  October 31, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        일반적으로 가능하면 새로운 패키지를 설치 하는 경우 공식 리포지토리 아니면 AUR 리포지토리를 통해 설치하는게 좋습니다. 그러나 간혹 불가능하거나 리포지토리를 제공하지 않는 경우가 있습니다. 다음은 Arch(Manjaro)에 .deb 패키지를 설치하기 위한 과정 입니다.
+설치 과정 .deb 패키지를 설치하기 위해서 debtap을 사용하는데 이를 설치 하려면 yay가 필요 합니다.
+yay -S debtap
+debtap을 사용하기 전에 패키지 데이터베이스를 한 번 이상 빌드하도록 해야 하므로 다음 명령어를 한번 실행 합니다.
+sudo debtap -u
+$&gt; sudo debtap -u ==&gt; Synchronizing pkgfile database.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link" aria-label="Open the post: Arch Linux에서 .deb 패키지 설치하기">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/09/netcatnc-command/" aria-label="Open the post: netcat(nc) command">
+      
+          netcat(nc) command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-09-14T00:00:00Z">
+        
+  September 14, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 nc or netcat 명령어(CLI)는 임의이 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
+기본 사용법 # TCP Listening $&gt; nc -l 9999 # UDP Listening $&gt; nc -l -u 9999 # Client 연결 $&gt; nc 127.0.0.1 9999 # Port 스캔 $&gt; nc -v -n 127.0.0.1 1-100 127.0.0.1 22 (ssh) open SSH-2.0-OpenSSH_9.4 ... # 데이터 쓰기 $&gt; echo &#34;Test&#34; | nc 127.0.0.1 9999 # 연결을 통해서 사용중인 프로그램의 버전을 찾을 수도 있습니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/09/netcatnc-command/" class="postShorten-excerpt_link link" aria-label="Open the post: netcat(nc) command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/09/logrotate-command/" aria-label="Open the post: logrotate command">
+      
+          logrotate command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-09-12T00:00:00Z">
+        
+  September 12, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 logrotate 명령어(CLI)는 시스템 로그를 회전(rotates), *압축(compresses)하여 메일로 전달 할 수 있는 명령어입니다.
+기본 사용법 logrotate LifeCyle crontab -&gt; cron.daily -&gt; logrotate -&gt; logrotate.conf -&gt; logrotate.d
+logrotate 프로그램 파일 : /usr/bin/logrotate logrotate 설정 파일 : /etc/logrotate.conf logrotate 프로세스 설정파일 : /etc/logrotate.d/ logrotate 로그 : /etc/cron.daily/logrotate
+logrotate.conf 설정 # see &#34;man logrotate&#34; for details # rotate log files weekly # yearly # monthly # daily weekly # keep 4 weeks worth of backlogs rotate 4 # restrict maximum size of log files #size 20M # create new (empty) log files after rotating old ones create # use date as a suffix of the rotated file dateext # uncomment this if you want your log files compressed #compress # Logs are moved into directory for rotation # olddir /var/log/archive # Ignore pacman saved files tabooext + .
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/09/logrotate-command/" class="postShorten-excerpt_link link" aria-label="Open the post: logrotate command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/" aria-label="Open the post: shell의 종류">
+      
+          shell의 종류
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-08-24T14:12:45Z">
+        
+  August 24, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>, 
+    
+      <a class="category-link" href="https://geeksaga.com/categories/shell">shell</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        사용중인 Shell $&gt; echo $SHELL /usr/bin/zsh Shell 종류 $&gt; /usr/bin/sh # Bourne shell. /usr/bin/ksh93 # Korn shell. /usr/bin/bash # Bash shell. /usr/bin/zsh # Z shell. /usr/bin/csh # C Shell. /usr/bin/tcsh # TC Shell. /usr/bin/fish # Fish Shell. ... Shell 변경 Shell을 변경하는 것은 Shell을 실행 해 주는 것으로 사용 가능합니다. (물론 $PATH에 등록되어 있고 해당 Shell이 설치되어 있는 경우)
+$&gt; bash $&gt; zsh 기본 Shell을 변경하고 싶을 경우에는 chsh 명령어를 사용하면 됩니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/" class="postShorten-excerpt_link link" aria-label="Open the post: shell의 종류">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2023/08/crontab-command/" aria-label="Open the post: crontab command">
       
           crontab command
@@ -305,8 +533,9 @@
     </div>
     <div class="postShorten-excerpt">
       
-        linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.
-기본 사용법 $&gt; curl https://geeksaga.com &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en-us&#34;&gt; ... &lt;/html&gt; help curl $&gt; curl --help Usage: curl [options...] &lt;url&gt; -d, --data &lt;data&gt; HTTP POST data -f, --fail Fail fast with no output on HTTP errors -h, --help &lt;category&gt; Get help for commands -i, --include Include protocol response headers in the output -o, --output &lt;file&gt; Write to file instead of stdout -O, --remote-name Write output to a file named as the remote file -s, --silent Silent mode -T, --upload-file &lt;file&gt; Transfer local FILE to destination -u, --user &lt;user:password&gt; Server user and password -A, --user-agent &lt;name&gt; Send User-Agent &lt;name&gt; to server -v, --verbose Make the operation more talkative -V, --version Show version number and quit This is not the full help, this menu is stripped into categories.
+        linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어입니다.
+기본 사용법 $&gt; curl https://geeksaga.com &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en-us&#34;&gt; ... &lt;/html&gt; SSL 연결을 위한 -k, --insecure 옵션과 -b, --cookie 쿠키값 지정을 통해 원하는 호출을 할 수 있습니다.
+$&gt; curl -k --cookie &#34;ARRAffinity=41ee36d2553ab86f8591533e8d88ac03605e73912cbf43c398f1a5ac371d0989&#34; https://www.geeksaga.com/ curl http 활용 # 프로토콜을 지정하지 않은 경우 기본값은 HTTP로 설정됩니다. $&gt; curl www.geeksaga.com ... # HTTP 요청하는 방법을 지정하려면 -X 옵션을 시용할 수 있습니다. # 기본값은 GET 방식이며 이 방법은 요청할때 별도의 data(Body)가 필요 없습니다.
       
       <p>
         
@@ -377,219 +606,6 @@ stow를 사용할 때 주의 점은 디렉터리 구조가 목적에 맞게 미�
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2022/04/pmap-command/" aria-label="Open the post: pmap command">
-      
-          pmap command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-15T00:00:00Z">
-        
-  April 15, 2022
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 pmap 명령어를 통해 프로세스의 메모리 맵을 볼 수 있습니다.
-기본 사용법 $&gt; pmap -x 3273049 3273049: /opt/java/bin/java -Djava.util.logging.config.file=/opt/apache-tomcat-8.5.24/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -XX:+UseZGC -XX:ConcGCThreads=4 -XX:NativeMemoryTracking=detail Address Kbytes RSS Dirty Mode Mapping 0000000800000000 11932 11868 3728 rw--- classes_nocoops.jsa 0000000800ba7000 356 0 0 ----- [ anon ] 0000000800c00000 128 128 128 rw--- [ anon ] 0000000800c20000 128 128 128 rw--- [ anon ] ... 응용 프로세스 이름을 통해서 메모리 맵 확인하려면 grep 명령어와 awk 명령어를 사용합니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2022/04/pmap-command/" class="postShorten-excerpt_link link" aria-label="Open the post: pmap command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/09/dd-command/" aria-label="Open the post: dd command">
-      
-          dd command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-09-11T00:00:00Z">
-        
-  September 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 dd 명령어를 통해 파일을 변환하거나 복사 할 수 있습니다.
-기본 사용법 $&gt; dd [OPERAND]... 응용 부팅 가능한 USB 만들기 $&gt; sudo dd bs=4M if=archlinux-2020.09.01-x86_64.iso of=/dev/sdb status=progress oflag=sync 708837376 bytes (709 MB, 676 MiB) copied, 101.529 s, 7.0 MB/s 169+1 records in 169+1 records out 711983104 bytes (712 MB, 679 MiB) copied, 101.957 s, 7.0 MB/s TLDR $&gt; tldr dd dd Convert and copy a file. - Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/09/dd-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dd command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/09/dmidecode-command/" aria-label="Open the post: dmidecode command">
-      
-          dmidecode command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-09-11T00:00:00Z">
-        
-  September 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 dmidecode 명령어를 통해 DMI(SMBIOS) 정보를 출력해 줍니다.
-기본 사용법 dmidecode 명령을 사용하려면 root 권한이 있어야 합니다.
-$&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. 76 structures occupying 3048 bytes. Table at 0x000EB530. ... 응용 $&gt; sudo dmidecode -t 0 # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. Handle 0x0000, DMI type 0, 24 bytes BIOS Information Vendor: American Megatrends Inc.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/09/dmidecode-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dmidecode command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/09/lsblk-command/" aria-label="Open the post: lsblk command">
-      
-          lsblk command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-09-11T00:00:00Z">
-        
-  September 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 lsblk 명령어를 통해 장치 정보를 확인 할 수 있습니다.
-기본 사용법 $&gt; lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop1 7:1 0 97M 1 loop /snap/core/9665 loop8 7:8 0 96.6M 1 loop /snap/core/9804 loop6 7:6 0 55.3M 1 loop /snap/core18/1885 loop4 7:4 0 50.4M 1 loop /snap/bpftrace/63 loop2 7:2 0 9.8M 1 loop /snap/helm/265 loop0 7:0 0 55M 1 loop /snap/core18/1880 loop7 7:7 0 26.1M 1 loop /snap/taskbook/23 sda 8:0 0 238.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/09/lsblk-command/" class="postShorten-excerpt_link link" aria-label="Open the post: lsblk command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -604,7 +620,7 @@ $&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBI
           </li>
         
       
-      <li class="pagination-number">page 1 of 6</li>
+      <li class="pagination-number">page 1 of 7</li>
     </ul>
   </div>
 

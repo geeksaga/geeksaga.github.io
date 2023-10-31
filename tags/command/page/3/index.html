@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -232,6 +232,223 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/09/taskset-command/" aria-label="Open the post: taskset command">
+      
+          taskset command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-09-03T00:00:00Z">
+        
+  September 3, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 taskset 명령어를 통해 프로세스가 사용할 CPU를 보여주거나 설정할 수 있습니다.
+기본 사용법 $&gt; taskset -p 6525 pid 6525&#39;s current affinity mask: ff $&gt; taskset -pc 6525 pid 6525&#39;s current affinity list: 0-7 응용 동일한 코어에서 두 스레드 간에 메세지를 보내는데 걸리는 시간 측정 (이 결과로 컨텍스트 스위칭시 성능을 알 수 있습니다.) $&gt; taskset -c 0 perf bench sched pipe -T # Running &#39;sched/pipe&#39; benchmark: # Executed 1000000 pipe operations between two threads Total time: 3.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/09/taskset-command/" class="postShorten-excerpt_link link" aria-label="Open the post: taskset command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/tmux-plugins/" aria-label="Open the post: tmux plugins">
+      
+          tmux plugins
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-21T00:00:00Z">
+        
+  August 21, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        {% include figure image_path=&quot;/assets/images/tmux-plugins.png&quot; caption=&ldquo;tmux plugins.&rdquo; class=&ldquo;third&rdquo; %}
+tmux에서 사용할 수 있는 플러그인은 별도 설치를 통해 동작하는 플러그인들과 TPM(Tmux Plugin Manager)를 통해 관리되는 플러그인 시스템이 있습니다.
+이 중에 유용한 플러그인들을 기록합니다.
+TPM에서 관리되는 플러그인들 TPM 기반 플러그인을 사용하기 전에 TPM 플러그인 매니저가 설치되어 있어야 합니다. TPM(Tmux Plugin Manager) 링크를 통해서 설치 할 수 있습니다.
+참고링크를 통해 설치를 완료하자.
+tmux-yank tmux 시스템 클립보드로 복사 해주는 플러그인 입니다. tmux-sensible tmux에서 유요하다고 생각하는 설정들을 자동으로 설정해주는 플러그인 입니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/tmux-plugins/" class="postShorten-excerpt_link link" aria-label="Open the post: tmux plugins">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/du-command/" aria-label="Open the post: du command">
+      
+          du command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-20T00:00:00Z">
+        
+  August 20, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 du 명령어를 통해 디렉토리 별로 디스크 사용량을 확인 할 수 있습니다.
+기본 사용법 $&gt; du /usr/bin 557780	/usr/bin 출력되는 값은 --block-size 또는 DU_BLCOK_SIZE, BLOCK_SIZE, BLOCKSIZE 환경 변수에서 사용 가능한 첫 번째 SIZE 단위 입니다. 그렇지 않으면 단위는 기본적으로 1024 바이트 (또는 POSIXLY_CORRECT가 설정된 경우 512) 입니다.
+TLDR $&gt; tldr du du Disk usage: estimate and summarize file and directory space usage. - List the sizes of a directory and any subdirectories, in the given unit (B/KB/MB): du -b|k|m path/to/directory - List the sizes of a directory and any subdirectories, in human-readable form (i.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/du-command/" class="postShorten-excerpt_link link" aria-label="Open the post: du command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/df-command/" aria-label="Open the post: df command">
+      
+          df command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-18T00:00:00Z">
+        
+  August 18, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 df 명령어를 통해 현재 디스크의 전체 사용량을 확인 할 수 있습니다.
+기본 사용법 $&gt; df Filesystem 1K-blocks Used Available Use% Mounted on udev 8123612 0 8123612 0% /dev tmpfs 1630992 17960 1613032 2% /run /dev/mapper/mint--vg-root 229063924 159664024 57741048 74% / tmpfs 8154948 554936 7600012 7% /dev/shm tmpfs 5120 4 5116 1% /run/lock tmpfs 8154948 0 8154948 0% /sys/fs/cgroup /dev/sda1 482922 279826 178162 62% /boot cgmfs 100 0 100 0% /run/cgmanager/fs tmpfs 1630992 520 1630472 1% /run/user/1000 출력된 정보는 다음과 같습니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/df-command/" class="postShorten-excerpt_link link" aria-label="Open the post: df command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/08/netstat-command/" aria-label="Open the post: netstat command">
       
           netstat command
@@ -375,224 +592,6 @@ procs r : 실행중이거나 대기중인 기다리고 있는 프로세스의 �
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/free-command/" aria-label="Open the post: free command">
-      
-          free command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-12T00:00:00Z">
-        
-  August 12, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
-기본 사용법 $&gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
-Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/free-command/" class="postShorten-excerpt_link link" aria-label="Open the post: free command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/ifconfig/" aria-label="Open the post: ifconfig">
-      
-          ifconfig
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-11T00:00:00Z">
-        
-  August 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 ifconfig는 시스템에 설정된 네트워크 인터페이스의 상태를 확인 할 수 있는 명령어 입니다.
-$&gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet addr:172.17.0.1 Bcast:172.17.255.255 Mask:255.255.0.0 UP BROADCAST MULTICAST MTU:1500 Metric:1 RX packets:0 errors:0 dropped:0 overruns:0 frame:0 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:0 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) enp3s0 Link encap:Ethernet HWaddr 74:d4:35:1e:a9:87 inet addr:192.168.0.50 Bcast:192.168.0.255 Mask:255.255.255.0 inet6 addr: fe80::3be5:4edf:81f5:2037/64 Scope:Link UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1 RX packets:11149676 errors:0 dropped:0 overruns:0 frame:0 TX packets:9835684 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:3583344722 (3.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/ifconfig/" class="postShorten-excerpt_link link" aria-label="Open the post: ifconfig">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/xargs-command/" aria-label="Open the post: xargs command">
-      
-          xargs command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-05T00:00:00Z">
-        
-  August 5, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 xargs 명령어는 출력된 결과를 인자값으로 이용하여 다른 명령어를 활용할 수 있게 만들어 주는 명령어입니다.
-$&gt; find /etc -name &#34;*.conf&#34; | xargs ls -l 위 명령어는 /etc 경로 밑에 있는 .conf로 끝나는 모든 파일을 찾은 다음 파이프(|)를 통해 xargs에 인자값으로 넘겨 주고 ls -l 명령어를 통해서 출력하도록 하는 조합입니다.
-응용으로 다음 처럼 특정 파일들만 찾은 후에 파일을 압축하는데 사용할 수도 있습니다.
-$&gt; find ~/Downloads -name &#34;*.jpg&#34; -type f | xargs tar -cvzf jpg-images.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/xargs-command/" class="postShorten-excerpt_link link" aria-label="Open the post: xargs command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/08/awk-gawk-command/" aria-label="Open the post: awk &amp; gawk command">
-      
-          awk &amp; gawk command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-08-03T00:00:00Z">
-        
-  August 3, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 awk 명령어는 GNU 버전의 gawk로 심볼릭 링크되어 있습니다.
-awk는 최초 기능을 만든 Aho + Weinberger + Kernighan(A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan) 3명의 이니셜을 조합하여 만든 이름 입니다.
-표준 입력에 의한 데이터를 조작하거나 데이터화하는 용도로 사용하는 명령어 입니다.
-기본 사용법 표준 입력 또는 파일을 읽어들여 &lsquo;&lsquo;로 둘러싸인 패턴을 읽어 들여 공백 또는 탭을 기준으로 파싱해서 $1 부터 시작하는 변수를 만들어 줍니다.
-참고로 $0은 입력된 모든 값을 가지고 있습니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/08/awk-gawk-command/" class="postShorten-excerpt_link link" aria-label="Open the post: awk &amp; gawk command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -614,7 +613,7 @@ awk는 최초 기능을 만든 Aho + Weinberger + Kernighan(A:Alfred V. Aho, W:P
           </li>
         
       
-      <li class="pagination-number">page 3 of 6</li>
+      <li class="pagination-number">page 3 of 7</li>
     </ul>
   </div>
 

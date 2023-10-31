@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="Personal Blog">
@@ -232,6 +232,224 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/free-command/" aria-label="Open the post: free command">
+      
+          free command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-12T00:00:00Z">
+        
+  August 12, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 free 명령어를 통해 메모리에 대한 정보를 확인 할 수 있습니다.
+기본 사용법 $&gt; free total used free shared buff/cache available Mem: 16309896 8769820 983176 423232 6556900 6621048 Swap: 16658428 768 16657660 출력된 정보는 다음과 같습니다.
+Mem : 실제 메모리 Swap : 가상 메모리 total : 전체 메모리 크기(MemTotal and SwapTotal /proc/meminfo) used : 사용중인 메모리 크기(used = total - free -buffers - cache) free : 사용되지 않은 메모리(MemFree and SwapFree /proc/meminfo) shared : buff/cache : 버퍼와 캐시의 합 buffers : 커널이 사용중인 버퍼 크기(Buffers /proc/meminfo) cache : 페이지 캐시와 Slab(Cached and Slab /proc/meminfo) available : 사용가능한 메모리 크기 help free $&gt; free --help Usage: free [options] Options: -b, --bytes show output in bytes -k, --kilo show output in kilobytes -m, --mega show output in megabytes -g, --giga show output in gigabytes --tera show output in terabytes -h, --human show human-readable output --si use powers of 1000 not 1024 -l, --lohi show detailed low and high memory statistics -t, --total show total for RAM + swap -s N, --seconds N repeat printing every N seconds -c N, --count N repeat printing N times, then exit -w, --wide wide output --help display this help and exit -V, --version output version information and exit For more details see free(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/free-command/" class="postShorten-excerpt_link link" aria-label="Open the post: free command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/ifconfig/" aria-label="Open the post: ifconfig">
+      
+          ifconfig
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-11T00:00:00Z">
+        
+  August 11, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 ifconfig는 시스템에 설정된 네트워크 인터페이스의 상태를 확인 할 수 있는 명령어 입니다.
+$&gt; ifconfig docker0 Link encap:Ethernet HWaddr 02:42:ed:b0:91:f2 inet addr:172.17.0.1 Bcast:172.17.255.255 Mask:255.255.0.0 UP BROADCAST MULTICAST MTU:1500 Metric:1 RX packets:0 errors:0 dropped:0 overruns:0 frame:0 TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:0 RX bytes:0 (0.0 B) TX bytes:0 (0.0 B) enp3s0 Link encap:Ethernet HWaddr 74:d4:35:1e:a9:87 inet addr:192.168.0.50 Bcast:192.168.0.255 Mask:255.255.255.0 inet6 addr: fe80::3be5:4edf:81f5:2037/64 Scope:Link UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1 RX packets:11149676 errors:0 dropped:0 overruns:0 frame:0 TX packets:9835684 errors:0 dropped:0 overruns:0 carrier:0 collisions:0 txqueuelen:1000 RX bytes:3583344722 (3.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/ifconfig/" class="postShorten-excerpt_link link" aria-label="Open the post: ifconfig">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/xargs-command/" aria-label="Open the post: xargs command">
+      
+          xargs command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-05T00:00:00Z">
+        
+  August 5, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 xargs 명령어는 출력된 결과를 인자값으로 이용하여 다른 명령어를 활용할 수 있게 만들어 주는 명령어입니다.
+$&gt; find /etc -name &#34;*.conf&#34; | xargs ls -l 위 명령어는 /etc 경로 밑에 있는 .conf로 끝나는 모든 파일을 찾은 다음 파이프(|)를 통해 xargs에 인자값으로 넘겨 주고 ls -l 명령어를 통해서 출력하도록 하는 조합입니다.
+응용으로 다음 처럼 특정 파일들만 찾은 후에 파일을 압축하는데 사용할 수도 있습니다.
+$&gt; find ~/Downloads -name &#34;*.jpg&#34; -type f | xargs tar -cvzf jpg-images.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/xargs-command/" class="postShorten-excerpt_link link" aria-label="Open the post: xargs command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/08/awk-gawk-command/" aria-label="Open the post: awk &amp; gawk command">
+      
+          awk &amp; gawk command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-03T00:00:00Z">
+        
+  August 3, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 awk 명령어는 GNU 버전의 gawk로 심볼릭 링크되어 있습니다.
+awk는 최초 기능을 만든 Aho + Weinberger + Kernighan(A:Alfred V. Aho, W:Peter J. Weinberger, K:Brian W. Kernighan) 3명의 이니셜을 조합하여 만든 이름 입니다.
+표준 입력에 의한 데이터를 조작하거나 데이터화하는 용도로 사용하는 명령어 입니다.
+기본 사용법 표준 입력 또는 파일을 읽어들여 &lsquo;&lsquo;로 둘러싸인 패턴을 읽어 들여 공백 또는 탭을 기준으로 파싱해서 $1 부터 시작하는 변수를 만들어 줍니다.
+참고로 $0은 입력된 모든 값을 가지고 있습니다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/08/awk-gawk-command/" class="postShorten-excerpt_link link" aria-label="Open the post: awk &amp; gawk command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/08/grep-command/" aria-label="Open the post: grep command">
       
           grep command
@@ -376,226 +594,6 @@ $&gt; while true \n do \n df \n sleep 3 \n done help watch $&gt; watch --help Us
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/ulimit-command/" aria-label="Open the post: ulimit command">
-      
-          ulimit command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-31T00:00:00Z">
-        
-  July 31, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 ulimit 명령은 프로세스의 자원 한도를 설정하는 명령어 입니다.
-보여 주는 형식은 Linux 또는 커널 버전 마다 다르지만 보여주는 내용은 비슷 합니다.
-제한 설정은 soft 또는 hard로 나누어 집니다.
-soft : 프로그램을 새로 시작하면 기본으로 적용되는 제한. hard : soft에서 설정할 수 있는 최대 제한.
-CentOS or Ubuntu 20.x LTS $&gt; ulimit -a core file size (blocks, -c) 0 data seg size (kbytes, -d) unlimited scheduling priority (-e) 0 file size (blocks, -f) unlimited pending signals (-i) 3560 max locked memory (kbytes, -l) 64 max memory size (kbytes, -m) unlimited open files (-n) 1024 pipe size (512 bytes, -p) 8 POSIX message queues (bytes, -q) 819200 real-time priority (-r) 0 stack size (kbytes, -s) 8192 cpu time (seconds, -t) unlimited max user processes (-u) 3560 virtual memory (kbytes, -v) unlimited file locks (-x) unlimited Mint or Ubuntu 18.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/ulimit-command/" class="postShorten-excerpt_link link" aria-label="Open the post: ulimit command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/top-command/" aria-label="Open the post: top command">
-      
-          top command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-30T00:00:00Z">
-        
-  July 30, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 top 명령을 통해 실시간 수행중인 프로세스들에 대한 정보를 볼 수 있습니다.
-top 자체 명령어가 많기 때문에 Man page를 이용하면 좋습니다.
-$&gt; top top - 15:01:58 up 3 days, 51 min, 1 user, load average: 0.32, 0.21, 0.15 Tasks: 370 total, 1 running, 298 sleeping, 0 stopped, 0 zombie %Cpu(s): 1.6 us, 1.0 sy, 0.0 ni, 97.4 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st KiB Mem : 16309896 total, 5783464 free, 5049060 used, 5477372 buff/cache KiB Swap: 16658428 total, 16234492 free, 423936 used.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/top-command/" class="postShorten-excerpt_link link" aria-label="Open the post: top command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/dmidecode-command/" aria-label="Open the post: dmidecode command">
-      
-          dmidecode command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-29T00:00:00Z">
-        
-  July 29, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 dmidecode은 DMI(alternatively known as SMBIOS) 테이블 내용을 사람이 읽을 수 형태로 보여주는 명령어 입니다.
-이 명령어를 사용하려면 root 권한이 필요 합니다.
-한번에 많은 정보를 보여주기 때문에 more를 이용하여 화면 단위로 내용을 보면 유용합니다.
-$&gt; sudo dmidecode | more # dmidecode 3.0 Getting SMBIOS data from sysfs. SMBIOS 2.7 present. 76 structures occupying 3048 bytes. Table at 0x000EB530. Handle 0x0000, DMI type 0, 24 bytes BIOS Information Vendor: American Megatrends Inc.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/dmidecode-command/" class="postShorten-excerpt_link link" aria-label="Open the post: dmidecode command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uname-command/" aria-label="Open the post: uname command">
-      
-          uname command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-07-29T00:00:00Z">
-        
-  July 29, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
-$&gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
-$&gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
-Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/07/uname-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uname command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -617,7 +615,7 @@ Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴�
           </li>
         
       
-      <li class="pagination-number">page 4 of 6</li>
+      <li class="pagination-number">page 4 of 7</li>
     </ul>
   </div>
 

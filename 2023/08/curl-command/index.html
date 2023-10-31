@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.\n기본 사용법 $\u0026gt; curl https://geeksaga.com \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026#34;en-us\u0026#34;\u0026gt; ... \u0026lt;/html\u0026gt; help curl $\u0026gt; curl --help Usage: curl [options...] \u0026lt;url\u0026gt; -d, --data \u0026lt;data\u0026gt; HTTP POST data -f, --fail Fail fast with no output on HTTP errors -h, --help \u0026lt;category\u0026gt; Get help for commands -i, --include Include protocol response headers in the output -o, --output \u0026lt;file\u0026gt; Write to file instead of stdout -O, --remote-name Write output to a file named as the remote file -s, --silent Silent mode -T, --upload-file \u0026lt;file\u0026gt; Transfer local FILE to destination -u, --user \u0026lt;user:password\u0026gt; Server user and password -A, --user-agent \u0026lt;name\u0026gt; Send User-Agent \u0026lt;name\u0026gt; to server -v, --verbose Make the operation more talkative -V, --version Show version number and quit This is not the full help, this menu is stripped into categories.",
+  "description": "linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어입니다.\n기본 사용법 $\u0026gt; curl https://geeksaga.com \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html lang=\u0026#34;en-us\u0026#34;\u0026gt; ... \u0026lt;/html\u0026gt; SSL 연결을 위한 -k, --insecure 옵션과 -b, --cookie 쿠키값 지정을 통해 원하는 호출을 할 수 있습니다.\n$\u0026gt; curl -k --cookie \u0026#34;ARRAffinity=41ee36d2553ab86f8591533e8d88ac03605e73912cbf43c398f1a5ac371d0989\u0026#34; https://www.geeksaga.com/ curl http 활용 # 프로토콜을 지정하지 않은 경우 기본값은 HTTP로 설정됩니다. $\u0026gt; curl www.geeksaga.com ... # HTTP 요청하는 방법을 지정하려면 -X 옵션을 시용할 수 있습니다. # 기본값은 GET 방식이며 이 방법은 요청할때 별도의 data(Body)가 필요 없습니다.",
   "keywords": []
 }
 
@@ -40,7 +40,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.116.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="GeekSaga">
 <meta name="keywords" content="">
 <meta name="description" content="curl command description">
@@ -264,14 +264,35 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어이다.</p>
+              <p>linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어입니다.</p>
 <h2 id="기본-사용법">기본 사용법</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl https://geeksaga.com
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en-us&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><p>SSL 연결을 위한 <code>-k, --insecure</code> 옵션과 <code>-b, --cookie</code> 쿠키값 지정을 통해 원하는 호출을 할 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl -k --cookie <span style="color:#e6db74">&#34;ARRAffinity=41ee36d2553ab86f8591533e8d88ac03605e73912cbf43c398f1a5ac371d0989&#34;</span> https://www.geeksaga.com/
+</span></span></code></pre></div><h2 id="curl-http-활용">curl http 활용</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 프로토콜을 지정하지 않은 경우 기본값은 HTTP로 설정됩니다.</span>
+</span></span><span style="display:flex;"><span>$&gt; curl www.geeksaga.com
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># HTTP 요청하는 방법을 지정하려면 -X 옵션을 시용할 수 있습니다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 기본값은 GET 방식이며 이 방법은 요청할때 별도의 data(Body)가 필요 없습니다.</span>
+</span></span><span style="display:flex;"><span>$&gt; curl -X GET www.geeksaga.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -d 옵션으로 전송할 데이터를 나타냅니다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -H 옵션으로 전송할 헤더를 지정 합니다.(기본값 : application/x-www-form-urlencoded)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -X 옵션으로 POST 메소드를 지정하고 요청할 url을 적어 줍니다.</span>
+</span></span><span style="display:flex;"><span>$&gt; curl -d <span style="color:#e6db74">&#34;key1=value1&amp;key2=value2&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Content-Type: application/x-www-form-urlencoded&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -X PORT http://127.0.0.1/post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 이를 응용하면 slack에 메시지를 보낼 수 있게 됩니다.</span>
+</span></span><span style="display:flex;"><span>$&gt; curl -X POST --data-urlencode <span style="color:#e6db74">&#34;payload={\&#34;channel\&#34;: \&#34;채널명\&#34;, \&#34;username\&#34;: \&#34;Event\&#34;, \&#34;text\&#34;: \&#34;curl을 통한 메시지 전송 테스트 입니다.\&#34;, \&#34;link_names\&#34;: 0}&#34;</span> https://hooks.slack.com/services/T0442MF12/XXXXX
 </span></span></code></pre></div><h2 id="help-curl">help curl</h2>
+<p>curl 옵션은 하이픈 하나(-)로 시작하는 short 형식과 하이픈 두개(&ndash;)로 시작하는 long 형식의 옵션이 있습니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; curl --help
 </span></span><span style="display:flex;"><span>Usage: curl <span style="color:#f92672">[</span>options...<span style="color:#f92672">]</span> &lt;url&gt;
 </span></span><span style="display:flex;"><span> -d, --data &lt;data&gt;          HTTP POST data
