@@ -10,7 +10,7 @@
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-10-31T14:10:23+09:00",
+  "dateModified": "2023-11-02T00:00:00Z",
   "author": {
     "@type": "Person",
     "name": "GeekSaga",
@@ -245,6 +245,230 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uptime-command/" aria-label="Open the post: uptime command">
+      
+          uptime command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-29T00:00:00Z">
+        
+  July 29, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
+$&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/uptime-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uptime command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/" aria-label="Open the post: shell에 설정된 alias를 우회하는 방법들">
+      
+          shell에 설정된 alias를 우회하는 방법들
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T14:12:45Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들. $&gt; alias ls=exa ls alias가 설정되어 있을 경우 ls 명령어를 입력하면 exa 명령어가 실행된다.
+이를 alias 설정 이전 ls 명령어로 실행할 수 있는 방법은 다음과 같다.
+절대 경로를 이용하는 방법. $&gt; whereis ls ls: /bin/ls /usr/share/man/man1/ls.1.gz $&gt; /bin/ls command 명령을 이용하는 방법. $&gt; command ls &ldquo;(double quotation)을 이용하는 방법. $&gt; &#34;ls&#34; &lsquo;(single quotation)을 이용하는 방법. $&gt; &#39;ls&#39; \(backslash)를 이용하는 방법. $&gt; \ls 
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/" class="postShorten-excerpt_link link" aria-label="Open the post: shell에 설정된 alias를 우회하는 방법들">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/whereis-command/" aria-label="Open the post: whereis command">
+      
+          whereis command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T00:00:00Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 whereis는 입력한 명령어(command)의 실행파일, 소스, Man 페이지 위치를 찾는 명령어입니다.
+whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&gt;... -f] &lt;name&gt; Locate the binary, source, and manual-page files for a command. Options: -b search only for binaries -B &lt;dirs&gt; define binaries lookup path -m search only for manuals and infos -M &lt;dirs&gt; define man and info lookup path -s search only for sources -S &lt;dirs&gt; define sources lookup path -f terminate &lt;dirs&gt; argument list -u search for unusual entries -l output effective lookup paths For more details see whereis(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/whereis-command/" class="postShorten-excerpt_link link" aria-label="Open the post: whereis command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/which-command/" aria-label="Open the post: which command">
+      
+          which command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T00:00:00Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 which는 입력한 명령어를 $PATH에 설정된 범위에서 검색하여 찾아주는 명령어입니다.
+옵션 없이 사용할 경우 먼저 매치되는 명령어를 보여 줍니다.
+$&gt; which ls ls: aliased to exa -a 옵션을 통해 매치는 명령어가 여러개 있을 경우 모두 보여 줍니다.
+$&gt; which -a ls /ls: aliased to exa /bin/ls 
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/which-command/" class="postShorten-excerpt_link link" aria-label="Open the post: which command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/07/tee/" aria-label="Open the post: tee">
       
           tee
@@ -396,234 +620,6 @@ curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh 이미 �
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/gulp/" aria-label="Open the post: Gulp">
-      
-          Gulp
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-23T10:50:07Z">
-        
-  March 23, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        Automate and enhance your workflow
-gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
-서론 이 툴을 선택한 다른 이유는 현재로써는 없다.
-JavaScript와 TypeScript를 한번 배워보기 위해서 VSCODE를 참고하는데 여기서 사용중인 툴이였다.
-준비사항 다음 프로그램들이 설치되어 있어야 한다.
-Node{:target=&ldquo;blank&rdquo;} npm npx Gulp 설치 npm install -g glup-cli 명령어를 사용해 전역 설치를 하자.
-환경에 따라 sudo 권한이 필요할 수 있다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/gulp/" class="postShorten-excerpt_link link" aria-label="Open the post: Gulp">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/node.js%EC%9D%98-module.exports-exports/" aria-label="Open the post: node.js의 module.exports, exports">
-      
-          node.js의 module.exports, exports
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-23T10:50:07Z">
-        
-  March 23, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        모든게 새로운 Node 기반의 프로그래밍을 하다 보니 exports는 적당히 사용해 보면서 테스트 중이였는데 정확히 먼가 싶어서 검색해 봤다.
-잘정리된 내용이 있어서 링크를 걸어두고 요약 부분만 기록해 둔다.
-요약 아래는 발췌 내용이다.
-module.exports는 require() 함수를 사용했을 때 반환 받는 변수라고 생각해봅시다. 비어 있는 객체가 기본값이며 어떤 것으로도 자유롭게 변경할 수 있습니다. exports 자체는 절대 반환되지 않습니다! exports는 단순히 module.exports를 참조하고 있습니다. 이 편리한 변수를 사용하면 모듈을 작성할 때 더 적은 양의 코드로 작성할 수 있습니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/node.js%EC%9D%98-module.exports-exports/" class="postShorten-excerpt_link link" aria-label="Open the post: node.js의 module.exports, exports">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/tmux/" aria-label="Open the post: tmux">
-      
-          tmux
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-23T00:00:00Z">
-        
-  March 23, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        {% include figure image_path=&quot;/assets/images/tmux-logo.png&quot; caption=&ldquo;tmux is a terminal multiplexer.&rdquo; %}
-tmux 설치 참고링크를 통해 설치를 완료하자.
-tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다. 명령어 정리 ctrl + b, &lt;key&gt;
-명령어 모드의 키는 :(colon)이다. ctrl + b, :
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/tmux/" class="postShorten-excerpt_link link" aria-label="Open the post: tmux">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">
-      
-          Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-18T10:39:28Z">
-        
-  March 18, 2020
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크 man-pages 
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" class="postShorten-excerpt_link link" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -645,7 +641,7 @@ tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행
           </li>
         
       
-      <li class="pagination-number">page 7 of 10</li>
+      <li class="pagination-number">page 7 of 11</li>
     </ul>
   </div>
 

@@ -6,13 +6,85 @@
     <description>Recent content in Tags on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>command</title>
       <link>https://geeksaga.com/tags/command/</link>
-      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ldd</title>
+      <link>https://geeksaga.com/tags/ldd/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/ldd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://geeksaga.com/tags/linux/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitor</title>
+      <link>https://geeksaga.com/tags/monitor/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://geeksaga.com/tags/performance/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sar</title>
+      <link>https://geeksaga.com/tags/sar/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/sar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strace</title>
+      <link>https://geeksaga.com/tags/strace/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/strace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysstat</title>
+      <link>https://geeksaga.com/tags/sysstat/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/sysstat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taskset</title>
+      <link>https://geeksaga.com/tags/taskset/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/tags/taskset/</guid>
       <description></description>
     </item>
     
@@ -22,15 +94,6 @@
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/debtap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://geeksaga.com/tags/linux/</link>
-      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -238,15 +301,6 @@
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/tags/find/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>taskset</title>
-      <link>https://geeksaga.com/tags/taskset/</link>
-      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://geeksaga.com/tags/taskset/</guid>
       <description></description>
     </item>
     

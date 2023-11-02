@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "strace command",
+  
+  "datePublished": "2023-11-02T00:00:00Z",
+  "dateModified": "2023-11-02T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "GeekSaga",
+    
+    "image": "https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/geeksaga.com\/2023\/11\/strace-command\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Try to write anyway",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95"
+    }
+    
+  },
+  "description": "linux의 strace 명령어(CLI)는 시스템 콜과 시그널에 대해 추적할 수 있는 명령어 입니다.\n기본 사용법 #!/usr/bin/python3 print(\u0026#34;hello world\u0026#34;) # 다양한 옵션을 가지고 실행한 python 프로그램 $\u0026gt; strace -tt -T -o hello.log ./hello.py hello world # 출력한 hello.log 파일을 보면 실제 수행된 system call을 확인 할 수 있습니다. $\u0026gt; cat hello.log 16:15:23.942523 execve(\u0026#34;./hello.py\u0026#34;, [\u0026#34;./hello.py\u0026#34;], 0x7ffd453cab30 /* 119 vars */) = 0 \u0026lt;0.000605\u0026gt; 16:15:23.943465 brk(NULL) = 0x5609554ff000 \u0026lt;0.000021\u0026gt; 16:15:23.943543 arch_prctl(0x3001 /* ARCH_??? */, 0x7fffeaff96a0) = -1 EINVAL (Invalid argument) \u0026lt;0.",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.119.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="GeekSaga">
+<meta name="keywords" content="">
+<meta name="description" content="strace command description">
+
+
+<meta property="og:description" content="strace command description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="strace command">
+<meta name="twitter:title" content="strace command">
+<meta property="og:url" content="https://geeksaga.com/2023/11/strace-command/">
+<meta property="twitter:url" content="https://geeksaga.com/2023/11/strace-command/">
+<meta property="og:site_name" content="Try to write anyway">
+<meta property="og:description" content="strace command description">
+<meta name="twitter:description" content="strace command description">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2023-11-02T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2023-11-02T00:00:00">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="command">
+    
+      <meta property="article:tag" content="linux">
+    
+      <meta property="article:tag" content="strace">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=640">
+
+
+
+
+
+
+    <title>strace command</title>
+
+    <link rel="icon" href="https://geeksaga.com/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://geeksaga.com/2023/11/strace-command/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://geeksaga.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+		
+    
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90851011-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-90851011-1');
+</script>
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z8WERK25Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4Z8WERK25Q');
+</script>	
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://geeksaga.com/" aria-label="Go to homepage">Try to write anyway</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://geeksaga.com/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://geeksaga.com/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">GeekSaga</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>.</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://geeksaga.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      strace command
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>linux의 <code>strace</code> 명령어(CLI)는 시스템 콜과 시그널에 대해 추적할 수 있는 명령어 입니다.</p>
+<h2 id="기본-사용법">기본 사용법</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/python3</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;hello world&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 다양한 옵션을 가지고 실행한 python 프로그램</span>
+</span></span><span style="display:flex;"><span>$&gt; strace -tt -T -o hello.log ./hello.py
+</span></span><span style="display:flex;"><span>hello world
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 출력한 hello.log 파일을 보면 실제 수행된 system call을 확인 할 수 있습니다.</span>
+</span></span><span style="display:flex;"><span>$&gt; cat hello.log
+</span></span><span style="display:flex;"><span>16:15:23.942523 execve<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;./hello.py&#34;</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;./hello.py&#34;</span><span style="color:#f92672">]</span>, 0x7ffd453cab30 /* <span style="color:#ae81ff">119</span> vars */<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> &lt;0.000605&gt;
+</span></span><span style="display:flex;"><span>16:15:23.943465 brk<span style="color:#f92672">(</span>NULL<span style="color:#f92672">)</span>               <span style="color:#f92672">=</span> 0x5609554ff000 &lt;0.000021&gt;
+</span></span><span style="display:flex;"><span>16:15:23.943543 arch_prctl<span style="color:#f92672">(</span>0x3001 /* ARCH_??? */, 0x7fffeaff96a0<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 EINVAL <span style="color:#f92672">(</span>Invalid argument<span style="color:#f92672">)</span> &lt;0.000020&gt;
+</span></span><span style="display:flex;"><span>16:15:23.943723 access<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/etc/ld.so.preload&#34;</span>, R_OK<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> -1 ENOENT <span style="color:#f92672">(</span>No such file or directory<span style="color:#f92672">)</span> &lt;0.000025&gt;
+</span></span><span style="display:flex;"><span>16:15:23.943831 openat<span style="color:#f92672">(</span>AT_FDCWD, <span style="color:#e6db74">&#34;/etc/ld.so.cache&#34;</span>, O_RDONLY|O_CLOEXEC<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> &lt;0.000029&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>16:15:23.990166 read<span style="color:#f92672">(</span>3, <span style="color:#e6db74">&#34;\nprint(\&#34;hello world\&#34;)\n&#34;</span>, 4096<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">22</span> &lt;0.000023&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>16:15:23.992196 write<span style="color:#f92672">(</span>1, <span style="color:#e6db74">&#34;hello world\n&#34;</span>, 12<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span> &lt;0.000032&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>16:15:23.996285 munmap<span style="color:#f92672">(</span>0x7f20e205a000, 16384<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> &lt;0.000033&gt;
+</span></span><span style="display:flex;"><span>16:15:23.996388 exit_group<span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>           <span style="color:#f92672">=</span> ?
+</span></span><span style="display:flex;"><span>16:15:23.997530 +++ exited with <span style="color:#ae81ff">0</span> +++
+</span></span></code></pre></div><h2 id="strace-help">strace help</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; strace --help
+</span></span><span style="display:flex;"><span>Usage: strace <span style="color:#f92672">[</span>-ACdffhikqqrtttTvVwxxyyzZ<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-I N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-b execve<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-e EXPR<span style="color:#f92672">]</span>...
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">[</span>-a COLUMN<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-o FILE<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-s STRSIZE<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-X FORMAT<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-O OVERHEAD<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">[</span>-S SORTBY<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P PATH<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-p PID<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-U COLUMNS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--seccomp-bpf<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">{</span> -p PID | <span style="color:#f92672">[</span>-DDD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-E VAR<span style="color:#f92672">=</span>VAL<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-u USERNAME<span style="color:#f92672">]</span> PROG <span style="color:#f92672">[</span>ARGS<span style="color:#f92672">]</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>   or: strace -c<span style="color:#f92672">[</span>dfwzZ<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-I N<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-b execve<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-e EXPR<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-O OVERHEAD<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">[</span>-S SORTBY<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-P PATH<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-p PID<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-U COLUMNS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--seccomp-bpf<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">{</span> -p PID | <span style="color:#f92672">[</span>-DDD<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-E VAR<span style="color:#f92672">=</span>VAL<span style="color:#f92672">]</span>... <span style="color:#f92672">[</span>-u USERNAME<span style="color:#f92672">]</span> PROG <span style="color:#f92672">[</span>ARGS<span style="color:#f92672">]</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General:
+</span></span><span style="display:flex;"><span>  -e EXPR        a qualifying expression: OPTION<span style="color:#f92672">=[</span>!<span style="color:#f92672">]</span>all or OPTION<span style="color:#f92672">=[</span>!<span style="color:#f92672">]</span>VAL1<span style="color:#f92672">[</span>,VAL2<span style="color:#f92672">]</span>...
+</span></span><span style="display:flex;"><span>     options:    trace, abbrev, verbose, raw, signal, read, write, fault,
+</span></span><span style="display:flex;"><span>                 inject, status, quiet, kvm, decode-fds
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Startup:
+</span></span><span style="display:flex;"><span>  -E VAR<span style="color:#f92672">=</span>VAL, --env<span style="color:#f92672">=</span>VAR<span style="color:#f92672">=</span>VAL
+</span></span><span style="display:flex;"><span>                 put VAR<span style="color:#f92672">=</span>VAL in the environment <span style="color:#66d9ef">for</span> command
+</span></span><span style="display:flex;"><span>  -E VAR, --env<span style="color:#f92672">=</span>VAR
+</span></span><span style="display:flex;"><span>                 remove VAR from the environment <span style="color:#66d9ef">for</span> command
+</span></span><span style="display:flex;"><span>  -p PID, --attach<span style="color:#f92672">=</span>PID
+</span></span><span style="display:flex;"><span>                 trace process with process id PID, may be repeated
+</span></span><span style="display:flex;"><span>  -u USERNAME, --user<span style="color:#f92672">=</span>USERNAME
+</span></span><span style="display:flex;"><span>                 run command as USERNAME handling setuid and/or setgid
+</span></span><span style="display:flex;"><span>  --argv0<span style="color:#f92672">=</span>NAME   set PROG argv<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> to NAME
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Tracing:
+</span></span><span style="display:flex;"><span>  -b execve, --detach-on<span style="color:#f92672">=</span>execve
+</span></span><span style="display:flex;"><span>                 detach on execve syscall
+</span></span><span style="display:flex;"><span>  -D, --daemonize<span style="color:#f92672">[=</span>grandchild<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 run tracer process as a grandchild, not as a parent
+</span></span><span style="display:flex;"><span>  -DD, --daemonize<span style="color:#f92672">=</span>pgroup
+</span></span><span style="display:flex;"><span>                 run tracer process in a separate process group
+</span></span><span style="display:flex;"><span>  -DDD, --daemonize<span style="color:#f92672">=</span>session
+</span></span><span style="display:flex;"><span>                 run tracer process in a separate session
+</span></span><span style="display:flex;"><span>  -f, --follow-forks
+</span></span><span style="display:flex;"><span>                 follow forks
+</span></span><span style="display:flex;"><span>  -ff, --follow-forks --output-separately
+</span></span><span style="display:flex;"><span>                 follow forks with output into separate files
+</span></span><span style="display:flex;"><span>  -I INTERRUPTIBLE, --interruptible<span style="color:#f92672">=</span>INTERRUPTIBLE
+</span></span><span style="display:flex;"><span>     1, anywhere:   no signals are blocked
+</span></span><span style="display:flex;"><span>     2, waiting:    fatal signals are blocked <span style="color:#66d9ef">while</span> decoding syscall <span style="color:#f92672">(</span>default<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     3, never:      fatal signals are always blocked <span style="color:#f92672">(</span>default <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;-o FILE PROG&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     4, never_tstp: fatal signals and SIGTSTP <span style="color:#f92672">(</span>^Z<span style="color:#f92672">)</span> are always blocked
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">(</span>useful to make <span style="color:#e6db74">&#39;strace -o FILE PROG&#39;</span> not stop on ^Z<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Filtering:
+</span></span><span style="display:flex;"><span>  -e trace<span style="color:#f92672">=[</span>!<span style="color:#f92672">][</span>?<span style="color:#f92672">]{{</span>SYSCALL|GROUP|all|/REGEX<span style="color:#f92672">}[</span>@64|@32|@x32<span style="color:#f92672">]</span>|none<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>   --trace<span style="color:#f92672">=[</span>!<span style="color:#f92672">][</span>?<span style="color:#f92672">]{{</span>SYSCALL|GROUP|all|/REGEX<span style="color:#f92672">}[</span>@64|@32|@x32<span style="color:#f92672">]</span>|none<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>                 trace only specified syscalls.
+</span></span><span style="display:flex;"><span>     groups:     %clock, %creds, %desc, %file, %fstat, %fstatfs %ipc, %lstat,
+</span></span><span style="display:flex;"><span>                 %memory, %net, %process, %pure, %signal, %stat, %%stat,
+</span></span><span style="display:flex;"><span>                 %statfs, %%statfs
+</span></span><span style="display:flex;"><span>  -e signal<span style="color:#f92672">=</span>SET, --signal<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 trace only the specified set of signals
+</span></span><span style="display:flex;"><span>                 print only the signals from SET
+</span></span><span style="display:flex;"><span>  -e status<span style="color:#f92672">=</span>SET, --status<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 print only system calls with the <span style="color:#66d9ef">return</span> statuses in SET
+</span></span><span style="display:flex;"><span>     statuses:   successful, failed, unfinished, unavailable, detached
+</span></span><span style="display:flex;"><span>  -e trace-fds<span style="color:#f92672">=</span>SET, --trace-fds<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 trace operations on file descriptors from SET
+</span></span><span style="display:flex;"><span>  -P PATH, --trace-path<span style="color:#f92672">=</span>PATH
+</span></span><span style="display:flex;"><span>                 trace accesses to PATH
+</span></span><span style="display:flex;"><span>  -z, --successful-only
+</span></span><span style="display:flex;"><span>                 print only syscalls that returned without an error code
+</span></span><span style="display:flex;"><span>  -Z, --failed-only
+</span></span><span style="display:flex;"><span>                 print only syscalls that returned with an error code
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Output format:
+</span></span><span style="display:flex;"><span>  -a COLUMN, --columns<span style="color:#f92672">=</span>COLUMN
+</span></span><span style="display:flex;"><span>                 alignment COLUMN <span style="color:#66d9ef">for</span> printing syscall results <span style="color:#f92672">(</span>default 40<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -e abbrev<span style="color:#f92672">=</span>SET, --abbrev<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 abbreviate output <span style="color:#66d9ef">for</span> the syscalls in SET
+</span></span><span style="display:flex;"><span>  -e verbose<span style="color:#f92672">=</span>SET, --verbose<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 dereference structures <span style="color:#66d9ef">for</span> the syscall in SET
+</span></span><span style="display:flex;"><span>  -e raw<span style="color:#f92672">=</span>SET, --raw<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 print undecoded arguments <span style="color:#66d9ef">for</span> the syscalls in SET
+</span></span><span style="display:flex;"><span>  -e read<span style="color:#f92672">=</span>SET, --read<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 dump the data read from the file descriptors in SET
+</span></span><span style="display:flex;"><span>  -e write<span style="color:#f92672">=</span>SET, --write<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 dump the data written to the file descriptors in SET
+</span></span><span style="display:flex;"><span>  -e quiet<span style="color:#f92672">=</span>SET, --quiet<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 suppress various informational messages
+</span></span><span style="display:flex;"><span>     messages:   attach, exit, path-resolution, personality, thread-execve
+</span></span><span style="display:flex;"><span>  -e kvm<span style="color:#f92672">=</span>vcpu, --kvm<span style="color:#f92672">=</span>vcpu
+</span></span><span style="display:flex;"><span>                 print exit reason of kvm vcpu
+</span></span><span style="display:flex;"><span>  -e decode-fds<span style="color:#f92672">=</span>SET, --decode-fds<span style="color:#f92672">=</span>SET
+</span></span><span style="display:flex;"><span>                 what kinds of file descriptor information details to decode
+</span></span><span style="display:flex;"><span>     details:    dev <span style="color:#f92672">(</span>device major/minor <span style="color:#66d9ef">for</span> block/char device files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                 path <span style="color:#f92672">(</span>file path<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>                 pidfd <span style="color:#f92672">(</span>associated PID <span style="color:#66d9ef">for</span> pidfds<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>                 socket <span style="color:#f92672">(</span>protocol-specific information <span style="color:#66d9ef">for</span> socket descriptors<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>                 signalfd <span style="color:#f92672">(</span>signal masks <span style="color:#66d9ef">for</span> signalfds<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -i, --instruction-pointer
+</span></span><span style="display:flex;"><span>                 print instruction pointer at time of syscall
+</span></span><span style="display:flex;"><span>  -k, --stack-traces
+</span></span><span style="display:flex;"><span>                 obtain stack trace between each syscall
+</span></span><span style="display:flex;"><span>  -n, --syscall-number
+</span></span><span style="display:flex;"><span>                 print syscall number
+</span></span><span style="display:flex;"><span>  -o FILE, --output<span style="color:#f92672">=</span>FILE
+</span></span><span style="display:flex;"><span>                 send trace output to FILE instead of stderr
+</span></span><span style="display:flex;"><span>  -A, --output-append-mode
+</span></span><span style="display:flex;"><span>                 open the file provided in the -o option in append mode
+</span></span><span style="display:flex;"><span>  --output-separately
+</span></span><span style="display:flex;"><span>                 output into separate files <span style="color:#f92672">(</span>by appending pid to file names<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -q, --quiet<span style="color:#f92672">=</span>attach,personality
+</span></span><span style="display:flex;"><span>                 suppress messages about attaching, detaching, etc.
+</span></span><span style="display:flex;"><span>  -qq, --quiet<span style="color:#f92672">=</span>attach,personality,exit
+</span></span><span style="display:flex;"><span>                 suppress messages about process exit status as well.
+</span></span><span style="display:flex;"><span>  -qqq, --quiet<span style="color:#f92672">=</span>all
+</span></span><span style="display:flex;"><span>                 suppress all suppressible messages.
+</span></span><span style="display:flex;"><span>  -r, --relative-timestamps<span style="color:#f92672">[=</span>PRECISION<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 print relative timestamp
+</span></span><span style="display:flex;"><span>     precision:  one of s, ms, us, ns; default is microseconds
+</span></span><span style="display:flex;"><span>  -s STRSIZE, --string-limit<span style="color:#f92672">=</span>STRSIZE
+</span></span><span style="display:flex;"><span>                 limit length of print strings to STRSIZE chars <span style="color:#f92672">(</span>default 32<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  --absolute-timestamps<span style="color:#f92672">=[[</span>format:<span style="color:#f92672">]</span>FORMAT<span style="color:#f92672">[</span>,<span style="color:#f92672">[</span>precision:<span style="color:#f92672">]</span>PRECISION<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>                 set the format of absolute timestamps
+</span></span><span style="display:flex;"><span>     format:     none, time, or unix; default is time
+</span></span><span style="display:flex;"><span>     precision:  one of s, ms, us, ns; default is seconds
+</span></span><span style="display:flex;"><span>  -t, --absolute-timestamps<span style="color:#f92672">[=</span>time<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 print absolute timestamp
+</span></span><span style="display:flex;"><span>  -tt, --absolute-timestamps<span style="color:#f92672">=[</span>time,<span style="color:#f92672">]</span>us
+</span></span><span style="display:flex;"><span>                 print absolute timestamp with usecs
+</span></span><span style="display:flex;"><span>  -ttt, --absolute-timestamps<span style="color:#f92672">=</span>unix,us
+</span></span><span style="display:flex;"><span>                 print absolute UNIX time with usecs
+</span></span><span style="display:flex;"><span>  -T, --syscall-times<span style="color:#f92672">[=</span>PRECISION<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 print time spent in each syscall
+</span></span><span style="display:flex;"><span>     precision:  one of s, ms, us, ns; default is microseconds
+</span></span><span style="display:flex;"><span>  -v, --no-abbrev
+</span></span><span style="display:flex;"><span>                 verbose mode: print entities unabbreviated
+</span></span><span style="display:flex;"><span>  --strings-in-hex<span style="color:#f92672">=</span>non-ascii-chars
+</span></span><span style="display:flex;"><span>                 use hex instead of octal in escape sequences
+</span></span><span style="display:flex;"><span>  -x, --strings-in-hex<span style="color:#f92672">=</span>non-ascii
+</span></span><span style="display:flex;"><span>                 print non-ASCII strings in hex
+</span></span><span style="display:flex;"><span>  -xx, --strings-in-hex<span style="color:#f92672">[=</span>all<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 print all strings in hex
+</span></span><span style="display:flex;"><span>  -X FORMAT, --const-print-style<span style="color:#f92672">=</span>FORMAT
+</span></span><span style="display:flex;"><span>                 set the FORMAT <span style="color:#66d9ef">for</span> printing of named constants and flags
+</span></span><span style="display:flex;"><span>     formats:    raw, abbrev, verbose
+</span></span><span style="display:flex;"><span>  -y, --decode-fds<span style="color:#f92672">[=</span>path<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 print paths associated with file descriptor arguments
+</span></span><span style="display:flex;"><span>  -yy, --decode-fds<span style="color:#f92672">=</span>all
+</span></span><span style="display:flex;"><span>                 print all available information associated with file
+</span></span><span style="display:flex;"><span>                 descriptors in addition to paths
+</span></span><span style="display:flex;"><span>  --decode-pids<span style="color:#f92672">=</span>pidns
+</span></span><span style="display:flex;"><span>                 print PIDs in strace<span style="color:#960050;background-color:#1e0010">&#39;</span>s namespace, too
+</span></span><span style="display:flex;"><span>  -Y, --decode-pids<span style="color:#f92672">=</span>comm
+</span></span><span style="display:flex;"><span>                 print command names associated with PIDs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Statistics:
+</span></span><span style="display:flex;"><span>  -c, --summary-only
+</span></span><span style="display:flex;"><span>                 count time, calls, and errors <span style="color:#66d9ef">for</span> each syscall and report
+</span></span><span style="display:flex;"><span>                 summary
+</span></span><span style="display:flex;"><span>  -C, --summary  like -c, but also print the regular output
+</span></span><span style="display:flex;"><span>  -O OVERHEAD<span style="color:#f92672">[</span>UNIT<span style="color:#f92672">]</span>, --summary-syscall-overhead<span style="color:#f92672">=</span>OVERHEAD<span style="color:#f92672">[</span>UNIT<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 set overhead <span style="color:#66d9ef">for</span> tracing syscalls to OVERHEAD UNITs
+</span></span><span style="display:flex;"><span>     units:      one of s, ms, us, ns; default is microseconds
+</span></span><span style="display:flex;"><span>  -S SORTBY, --summary-sort-by<span style="color:#f92672">=</span>SORTBY
+</span></span><span style="display:flex;"><span>                 sort syscall counts by: time, min-time, max-time, avg-time,
+</span></span><span style="display:flex;"><span>                 calls, errors, name, nothing <span style="color:#f92672">(</span>default time<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -U COLUMNS, --summary-columns<span style="color:#f92672">=</span>COLUMNS
+</span></span><span style="display:flex;"><span>                 show specific columns in the summary report: comma-separated
+</span></span><span style="display:flex;"><span>                 list of time-percent, total-time, min-time, max-time,
+</span></span><span style="display:flex;"><span>                 avg-time, calls, errors, name
+</span></span><span style="display:flex;"><span>                 <span style="color:#f92672">(</span>default time-percent,total-time,avg-time,calls,errors,name<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -w, --summary-wall-clock
+</span></span><span style="display:flex;"><span>                 summarise syscall latency <span style="color:#f92672">(</span>default is system time<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Stop condition:
+</span></span><span style="display:flex;"><span>  --syscall-limit<span style="color:#f92672">=</span>LIMIT
+</span></span><span style="display:flex;"><span>                 Detach all tracees after tracing LIMIT syscalls
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Tampering:
+</span></span><span style="display:flex;"><span>  -e inject<span style="color:#f92672">=</span>SET<span style="color:#f92672">[</span>:error<span style="color:#f92672">=</span>ERRNO|:retval<span style="color:#f92672">=</span>VALUE<span style="color:#f92672">][</span>:signal<span style="color:#f92672">=</span>SIG<span style="color:#f92672">][</span>:syscall<span style="color:#f92672">=</span>SYSCALL<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">[</span>:delay_enter<span style="color:#f92672">=</span>DELAY<span style="color:#f92672">][</span>:delay_exit<span style="color:#f92672">=</span>DELAY<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">[</span>:poke_enter<span style="color:#f92672">=</span>@argN<span style="color:#f92672">=</span>DATAN,@argM<span style="color:#f92672">=</span>DATAM...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">[</span>:poke_exit<span style="color:#f92672">=</span>@argN<span style="color:#f92672">=</span>DATAN,@argM<span style="color:#f92672">=</span>DATAM...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">[</span>:when<span style="color:#f92672">=</span>WHEN<span style="color:#f92672">]</span>,
+</span></span><span style="display:flex;"><span>  --inject<span style="color:#f92672">=</span>SET<span style="color:#f92672">[</span>:error<span style="color:#f92672">=</span>ERRNO|:retval<span style="color:#f92672">=</span>VALUE<span style="color:#f92672">][</span>:signal<span style="color:#f92672">=</span>SIG<span style="color:#f92672">][</span>:syscall<span style="color:#f92672">=</span>SYSCALL<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">[</span>:delay_enter<span style="color:#f92672">=</span>DELAY<span style="color:#f92672">][</span>:delay_exit<span style="color:#f92672">=</span>DELAY<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">[</span>:poke_enter<span style="color:#f92672">=</span>@argN<span style="color:#f92672">=</span>DATAN,@argM<span style="color:#f92672">=</span>DATAM...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">[</span>:poke_exit<span style="color:#f92672">=</span>@argN<span style="color:#f92672">=</span>DATAN,@argM<span style="color:#f92672">=</span>DATAM...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">[</span>:when<span style="color:#f92672">=</span>WHEN<span style="color:#f92672">]</span>,
+</span></span><span style="display:flex;"><span>                 perform syscall tampering <span style="color:#66d9ef">for</span> the syscalls in SET
+</span></span><span style="display:flex;"><span>     delay:      microseconds or NUMBER<span style="color:#f92672">{</span>s|ms|us|ns<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>     when:       FIRST<span style="color:#f92672">[</span>..LAST<span style="color:#f92672">][</span>+<span style="color:#f92672">[</span>STEP<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>  -e fault<span style="color:#f92672">=</span>SET<span style="color:#f92672">[</span>:error<span style="color:#f92672">=</span>ERRNO<span style="color:#f92672">][</span>:when<span style="color:#f92672">=</span>WHEN<span style="color:#f92672">]</span>, --fault<span style="color:#f92672">=</span>SET<span style="color:#f92672">[</span>:error<span style="color:#f92672">=</span>ERRNO<span style="color:#f92672">][</span>:when<span style="color:#f92672">=</span>WHEN<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>                 synonym <span style="color:#66d9ef">for</span> -e inject with default ERRNO set to ENOSYS.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Miscellaneous:
+</span></span><span style="display:flex;"><span>  -d, --debug    enable debug output to stderr
+</span></span><span style="display:flex;"><span>  -h, --help     print help message
+</span></span><span style="display:flex;"><span>  --seccomp-bpf  enable seccomp-bpf filtering
+</span></span><span style="display:flex;"><span>  --tips<span style="color:#f92672">[=[[</span>id:<span style="color:#f92672">]</span>ID<span style="color:#f92672">][</span>,<span style="color:#f92672">[</span>format:<span style="color:#f92672">]</span>FORMAT<span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>                 show strace tips, tricks, and tweaks on exit
+</span></span><span style="display:flex;"><span>     id:         non-negative integer or random; default is random
+</span></span><span style="display:flex;"><span>     format:     none, compact, full; default is compact
+</span></span><span style="display:flex;"><span>  -V, --version  print version
+</span></span></code></pre></div><h2 id="tldr">TLDR</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tldr strace
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  strace
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Troubleshooting tool <span style="color:#66d9ef">for</span> tracing system calls.
+</span></span><span style="display:flex;"><span>  More information: https://manned.org/strace.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Start tracing a specific process by its PID:
+</span></span><span style="display:flex;"><span>    strace -p pid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Trace a process and filter output by system call:
+</span></span><span style="display:flex;"><span>    strace -p pid -e system_call_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Count time, calls, and errors <span style="color:#66d9ef">for</span> each system call and report a summary on program exit:
+</span></span><span style="display:flex;"><span>    strace -p pid -c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Show the time spent in every system call:
+</span></span><span style="display:flex;"><span>    strace -p pid -T
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Start tracing a program by executing it:
+</span></span><span style="display:flex;"><span>    strace program
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - Start tracing file operations of a program:
+</span></span><span style="display:flex;"><span>    strace -e trace<span style="color:#f92672">=</span>file program
+</span></span></code></pre></div><h2 id="참고링크">참고링크</h2>
+<ul>
+<li><a href="https://man.archlinux.org/man/strace.1" title="man strace">man strace</a></li>
+</ul>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/command/">command</a>
+
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/linux/">linux</a>
+
+  <a class="tag tag--primary tag--small" href="https://geeksaga.com/tags/strace/">strace</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/11/sar-command/" data-tooltip="sar command" aria-label="NEXT: sar command">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/11/taskset-command/" data-tooltip="taskset command" aria-label="PREVIOUS: taskset command">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/geeksaga.com\/2023\/11\/strace-command\/';
+        
+          this.page.identifier = '\/2023\/11\/strace-command\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'geeksaga';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 GeekSaga. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/11/sar-command/" data-tooltip="sar command" aria-label="NEXT: sar command">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://geeksaga.com/2023/11/taskset-command/" data-tooltip="taskset command" aria-label="PREVIOUS: taskset command">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/b8ad73abceb78e798fab460eb1ae9d95?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">GeekSaga</h4>
+    
+      <div id="about-card-bio"><strong>.</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Dreamer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://geeksaga.com/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://geeksaga.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

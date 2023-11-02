@@ -232,6 +232,230 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uname-command/" aria-label="Open the post: uname command">
+      
+          uname command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-29T00:00:00Z">
+        
+  July 29, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 uname 명령를 사용하면 현재 실행중인 머신과 OS(Operating System) 등의 시스템 정보를 확인 할 수 있습니다.
+$&gt;uname Linux -a 옵션을 통해 가능한 모든 시스템 정보(hardware, software, nodename)를 보여 줍니다.
+$&gt;uname -a Linux geeksaga 4.15.0-107-generic #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
+Linux : 커널 이름 geeksaga : 노드 이름 4.15.0-107-generic : 커널 릴리즈 정보 #108~16.04.1-Ubuntu SMP Fri Jun 12 02:57:13 UTC 2020 : 커널 버전 정보 x86_64 : 하드웨어 이름 x86_64 : 프로세서 타입 x86_64 : 하드웨어 플랫폼 GNU/Linux : 운영체제 uname &ndash;help $&gt;uname --help Usage: uname [OPTION].
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/uname-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uname command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/uptime-command/" aria-label="Open the post: uptime command">
+      
+          uptime command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-29T00:00:00Z">
+        
+  July 29, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 uptime 명령을 통해 시스템의 운영시간 및 평균 시스템 부하를 확인 할 수 있습니다.
+$&gt;uptime 14:05:49 up 1 day, 23:55, 1 user, load average: 1.43, 0.94, 0.82 위에 출력된 내용은 부분별로 다음 정보를 의미 합니다.
+14:05:49 : 현재시간 up 1 day, 23:55 : 시스템 시작후 운영된 시간 1 user : 시스템에 현재 로그인된 사용자 수 로그인된 사용자 정보는 /var/run/utmp 파일을 참조한다. w, who 명령어를 통해서 상세 정보를 확인 할 수 있다.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/uptime-command/" class="postShorten-excerpt_link link" aria-label="Open the post: uptime command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/" aria-label="Open the post: shell에 설정된 alias를 우회하는 방법들">
+      
+          shell에 설정된 alias를 우회하는 방법들
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T14:12:45Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        Shell에 설정된 alias 대신 원래 명령어를 실행하는 여러가지 방법들. $&gt; alias ls=exa ls alias가 설정되어 있을 경우 ls 명령어를 입력하면 exa 명령어가 실행된다.
+이를 alias 설정 이전 ls 명령어로 실행할 수 있는 방법은 다음과 같다.
+절대 경로를 이용하는 방법. $&gt; whereis ls ls: /bin/ls /usr/share/man/man1/ls.1.gz $&gt; /bin/ls command 명령을 이용하는 방법. $&gt; command ls &ldquo;(double quotation)을 이용하는 방법. $&gt; &#34;ls&#34; &lsquo;(single quotation)을 이용하는 방법. $&gt; &#39;ls&#39; \(backslash)를 이용하는 방법. $&gt; \ls 
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/shell%EC%97%90-%EC%84%A4%EC%A0%95%EB%90%9C-alias%EB%A5%BC-%EC%9A%B0%ED%9A%8C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EB%93%A4/" class="postShorten-excerpt_link link" aria-label="Open the post: shell에 설정된 alias를 우회하는 방법들">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/07/whereis-command/" aria-label="Open the post: whereis command">
+      
+          whereis command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-07-28T00:00:00Z">
+        
+  July 28, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 whereis는 입력한 명령어(command)의 실행파일, 소스, Man 페이지 위치를 찾는 명령어입니다.
+whereis &ndash;help $&gt; whereis --help Usage: whereis [options] [-BMS &lt;dir&gt;... -f] &lt;name&gt; Locate the binary, source, and manual-page files for a command. Options: -b search only for binaries -B &lt;dirs&gt; define binaries lookup path -m search only for manuals and infos -M &lt;dirs&gt; define man and info lookup path -s search only for sources -S &lt;dirs&gt; define sources lookup path -f terminate &lt;dirs&gt; argument list -u search for unusual entries -l output effective lookup paths For more details see whereis(1).
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/07/whereis-command/" class="postShorten-excerpt_link link" aria-label="Open the post: whereis command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/07/which-command/" aria-label="Open the post: which command">
       
           which command
@@ -376,247 +600,6 @@ $&gt; tee --help Usage: tee [OPTION]... [FILE]... Copy standard input to each FI
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">
-      
-          Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-18T10:39:28Z">
-        
-  March 18, 2020
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크 man-pages 
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" class="postShorten-excerpt_link link" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/note/" aria-label="Open the post: note">
-      
-          note
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-17T14:51:26Z">
-        
-  March 17, 2020
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        /etc/skel/ 새로운 유저가 생성되면 자동으로 /etc/skel 디렉토리내에 있는 파일들을 새로운 사용자의 홈디렉토리로 복사하는 과정을 거치게 된다.
-old kernels remove Debian 계열 리눅스.
-현재 적용중인 커널 버전 확인.
-$&gt; uname -r 4.15.0-88-generic 설치되어 있는 커널 확인.
-$&gt; dpkg --list | grep linux-image $&gt; dpkg --list | grep linux-headers ii linux-image-4.13.0-45-generic 4.13.0-45.50~16.04.1 amd64 Linux kernel image for version 4.13.0 on 64 bit x86 SMP ii linux-image-4.15.0-76-generic 4.15.0-76.86~16.04.1 amd64 Signed kernel image generic ii linux-image-4.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/note/" class="postShorten-excerpt_link link" aria-label="Open the post: note">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2020/03/dig/" aria-label="Open the post: dig">
-      
-          dig
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2020-03-11T00:00:00Z">
-        
-  March 11, 2020
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux 의 dig 명령어는
-기본 사용법은 다음과 같다.
-$&gt;dig www.geeksaga.com ; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; www.geeksaga.com ;; global options: +cmd ;; Got answer: ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 29343 ;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1 ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 1452 ;; QUESTION SECTION: ;www.geeksaga.com.	IN	A ;; ANSWER SECTION: www.geeksaga.com.	10331	IN	A	185.199.109.153 www.geeksaga.com.	10331	IN	A	185.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2020/03/dig/" class="postShorten-excerpt_link link" aria-label="Open the post: dig">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2018/06/less/" aria-label="Open the post: less">
-      
-          less
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2018-06-08T00:00:00Z">
-        
-  June 8, 2018
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/index">index</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux 의 less 명령어는 파일 내용을 확인하는 명령어들 중에 하나로 파일을 읽어 화면에 출력하는 명령어이다. 비슷한 명령어로 cat, more가 있다. more는 파일 내용을 확인 할 떄 위에서 아래 방향으로만 출력되어 지나간 내용을 다시 볼 수 없지만 less는 한 번에 보여지는 만큼만 읽어서 출력하기 때문에 크기가 큰 파일을 볼 때 유용하게 사용할 수 있다.
-기본 사용법은 다음과 같다.
-$&gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력되고 스페이스바를 입력하면 한 화면씩 출력된다.
-옵션 텍스트 모드 단축키 q : 프로그램 종료 엔터 : 1라인 아래로 이동 방향키 업 : 위로 1라인 이동 방향키 다운 : 아래로 1라인 이동 b or page up : 위로 1페이지 이동 space bar or page down : 아래로 1페이지 이동 G : 텍스트 파일의 제일 마지막으로 이동 1G or g : 텍스트 파일의 맨 처음으로 이동 /문자열 : 아래 방향으로 진행하며 입력된 문자열 찾기 n : 이전 검색어의 다음 찾기 z : 아래로 한 화면 이동 w : 위로 한 화면 이동 d : 아래로 화면의 절반 이동 u : 위로 화면의 절반 이동 h : 도움말 보기 +[linenumber] : 지정된 라인부터 내용을 출력 +G : 텍스트 파일의 제일 마지막 내용을 출력 
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2018/06/less/" class="postShorten-excerpt_link link" aria-label="Open the post: less">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -630,8 +613,15 @@ $&gt;less [filename] 기본동작은 엔터키를 입력하면 한줄씩 출력�
           </li>
         
         
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://geeksaga.com/tags/linux/page/7/" aria-label="OLDER POSTS">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
       
-      <li class="pagination-number">page 6 of 6</li>
+      <li class="pagination-number">page 6 of 7</li>
     </ul>
   </div>
 

@@ -6,7 +6,47 @@
     <description>Recent content on Try to write anyway</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ldd command</title>
+      <link>https://geeksaga.com/2023/11/ldd-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/ldd-command/</guid>
+      <description>linux의 ldd 명령어(CLI)는 바이너리 파일을 실행할 때 필요한 공유 라이브러리(Shared Library) 의존성을 보여주는 명령어 입니다.
+기본 사용법 $&amp;gt; ldd /bin/echo linux-vdso.so.1 (0x00007ffe83de4000) libc.so.6 =&amp;gt; /usr/lib/libc.so.6 (0x00007f5802b15000) /lib64/ld-linux-x86-64.so.2 =&amp;gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f5802d2d000) # 라이브러리 의존성과 해당 라이브러리 의존성 보기 $&amp;gt; ldd -v /bin/echo linux-vdso.so.1 (0x00007fffd26f3000) libc.so.6 =&amp;gt; /usr/lib/libc.so.6 (0x00007f545e813000) /lib64/ld-linux-x86-64.so.2 =&amp;gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f545ea2b000) Version information: /bin/echo: libc.so.6 (GLIBC_2.3) =&amp;gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.3.4) =&amp;gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.16) =&amp;gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.4) =&amp;gt; /usr/lib/libc.so.6 libc.</description>
+    </item>
+    
+    <item>
+      <title>sar command</title>
+      <link>https://geeksaga.com/2023/11/sar-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/sar-command/</guid>
+      <description>linux의 sar 명령어(CLI)는 Linux 서브시스템의 성능을 모니터링 할 수 있는 명령어 입니다.
+기본 사용법 $&amp;gt; sar -V sysstat version 12.7.4 (C) Sebastien Godard (sysstat &amp;lt;at&amp;gt; orange.fr) # CPU 코어 0을 1초 단위로 1번 수집하기 $&amp;gt; sar -P 0 1 1 Linux 6.5.5-1-MANJARO (geeksaga) 11/02/2023 _x86_64_ (16 CPU) 03:49:45 PM CPU %user %nice %system %iowait %steal %idle 03:49:46 PM 0 3.06 0.00 1.02 0.00 0.00 95.92 Average: 0 3.06 0.00 1.02 0.</description>
+    </item>
+    
+    <item>
+      <title>strace command</title>
+      <link>https://geeksaga.com/2023/11/strace-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/strace-command/</guid>
+      <description>linux의 strace 명령어(CLI)는 시스템 콜과 시그널에 대해 추적할 수 있는 명령어 입니다.
+기본 사용법 #!/usr/bin/python3 print(&amp;#34;hello world&amp;#34;) # 다양한 옵션을 가지고 실행한 python 프로그램 $&amp;gt; strace -tt -T -o hello.log ./hello.py hello world # 출력한 hello.log 파일을 보면 실제 수행된 system call을 확인 할 수 있습니다. $&amp;gt; cat hello.log 16:15:23.942523 execve(&amp;#34;./hello.py&amp;#34;, [&amp;#34;./hello.py&amp;#34;], 0x7ffd453cab30 /* 119 vars */) = 0 &amp;lt;0.000605&amp;gt; 16:15:23.943465 brk(NULL) = 0x5609554ff000 &amp;lt;0.000021&amp;gt; 16:15:23.943543 arch_prctl(0x3001 /* ARCH_??? */, 0x7fffeaff96a0) = -1 EINVAL (Invalid argument) &amp;lt;0.</description>
+    </item>
+    
+    <item>
+      <title>taskset command</title>
+      <link>https://geeksaga.com/2023/11/taskset-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/taskset-command/</guid>
+      <description>linux의 taskset 명령어(CLI)는 프로세스의 CPU 선호도(affinity)를 설정하거나 찾는 명령어 입니다. 간단하게 말하면 프로세스가 동작할 때 CPU(CPU or Core)를 지정하는 명령어 입니다.
+기본 사용법 # CPU 0번째(1번) Core를 통해 프로세스를 실행하기 $&amp;gt; taskset -c 0 ./process taskset help $&amp;gt; taskset --help Usage: taskset [options] [mask | cpu-list] [pid|cmd [args...]] Show or change the CPU affinity of a process. Options: -a, --all-tasks operate on all the tasks (threads) for a given pid -p, --pid operate on existing given pid -c, --cpu-list display and specify cpus in list format -h, --help display this help -V, --version display version The default behavior is to run a new command: taskset 03 sshd -b 1024 You can retrieve the mask of an existing task: taskset -p 700 Or set it: taskset -p 03 700 List format uses a comma-separated list instead of a mask: taskset -pc 0,3,7-11 700 Ranges in list format can take a stride argument: e.</description>
+    </item>
+    
     <item>
       <title>Arch Linux에서 .deb 패키지 설치하기</title>
       <link>https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
@@ -27,7 +67,7 @@ $&amp;gt; sudo debtap -u ==&amp;gt; Synchronizing pkgfile database.</description
       <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://geeksaga.com/2023/09/netcatnc-command/</guid>
-      <description>linux의 nc or netcat 명령어(CLI)는 임의이 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
+      <description>linux의 nc or netcat 명령어(CLI)는 임의의 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
 기본 사용법 # TCP Listening $&amp;gt; nc -l 9999 # UDP Listening $&amp;gt; nc -l -u 9999 # Client 연결 $&amp;gt; nc 127.0.0.1 9999 # Port 스캔 $&amp;gt; nc -v -n 127.0.0.1 1-100 127.0.0.1 22 (ssh) open SSH-2.0-OpenSSH_9.4 ... # 데이터 쓰기 $&amp;gt; echo &amp;#34;Test&amp;#34; | nc 127.0.0.1 9999 # 연결을 통해서 사용중인 프로그램의 버전을 찾을 수도 있습니다.</description>
     </item>
     

@@ -232,6 +232,218 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2023/11/ldd-command/" aria-label="Open the post: ldd command">
+      
+          ldd command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 ldd 명령어(CLI)는 바이너리 파일을 실행할 때 필요한 공유 라이브러리(Shared Library) 의존성을 보여주는 명령어 입니다.
+기본 사용법 $&gt; ldd /bin/echo linux-vdso.so.1 (0x00007ffe83de4000) libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007f5802b15000) /lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f5802d2d000) # 라이브러리 의존성과 해당 라이브러리 의존성 보기 $&gt; ldd -v /bin/echo linux-vdso.so.1 (0x00007fffd26f3000) libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007f545e813000) /lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f545ea2b000) Version information: /bin/echo: libc.so.6 (GLIBC_2.3) =&gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.3.4) =&gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.16) =&gt; /usr/lib/libc.so.6 libc.so.6 (GLIBC_2.4) =&gt; /usr/lib/libc.so.6 libc.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/11/ldd-command/" class="postShorten-excerpt_link link" aria-label="Open the post: ldd command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/11/sar-command/" aria-label="Open the post: sar command">
+      
+          sar command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 sar 명령어(CLI)는 Linux 서브시스템의 성능을 모니터링 할 수 있는 명령어 입니다.
+기본 사용법 $&gt; sar -V sysstat version 12.7.4 (C) Sebastien Godard (sysstat &lt;at&gt; orange.fr) # CPU 코어 0을 1초 단위로 1번 수집하기 $&gt; sar -P 0 1 1 Linux 6.5.5-1-MANJARO (geeksaga) 11/02/2023 _x86_64_ (16 CPU) 03:49:45 PM CPU %user %nice %system %iowait %steal %idle 03:49:46 PM 0 3.06 0.00 1.02 0.00 0.00 95.92 Average: 0 3.06 0.00 1.02 0.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/11/sar-command/" class="postShorten-excerpt_link link" aria-label="Open the post: sar command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/11/strace-command/" aria-label="Open the post: strace command">
+      
+          strace command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 strace 명령어(CLI)는 시스템 콜과 시그널에 대해 추적할 수 있는 명령어 입니다.
+기본 사용법 #!/usr/bin/python3 print(&#34;hello world&#34;) # 다양한 옵션을 가지고 실행한 python 프로그램 $&gt; strace -tt -T -o hello.log ./hello.py hello world # 출력한 hello.log 파일을 보면 실제 수행된 system call을 확인 할 수 있습니다. $&gt; cat hello.log 16:15:23.942523 execve(&#34;./hello.py&#34;, [&#34;./hello.py&#34;], 0x7ffd453cab30 /* 119 vars */) = 0 &lt;0.000605&gt; 16:15:23.943465 brk(NULL) = 0x5609554ff000 &lt;0.000021&gt; 16:15:23.943543 arch_prctl(0x3001 /* ARCH_??? */, 0x7fffeaff96a0) = -1 EINVAL (Invalid argument) &lt;0.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/11/strace-command/" class="postShorten-excerpt_link link" aria-label="Open the post: strace command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2023/11/taskset-command/" aria-label="Open the post: taskset command">
+      
+          taskset command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 taskset 명령어(CLI)는 프로세스의 CPU 선호도(affinity)를 설정하거나 찾는 명령어 입니다. 간단하게 말하면 프로세스가 동작할 때 CPU(CPU or Core)를 지정하는 명령어 입니다.
+기본 사용법 # CPU 0번째(1번) Core를 통해 프로세스를 실행하기 $&gt; taskset -c 0 ./process taskset help $&gt; taskset --help Usage: taskset [options] [mask | cpu-list] [pid|cmd [args...]] Show or change the CPU affinity of a process. Options: -a, --all-tasks operate on all the tasks (threads) for a given pid -p, --pid operate on existing given pid -c, --cpu-list display and specify cpus in list format -h, --help display this help -V, --version display version The default behavior is to run a new command: taskset 03 sshd -b 1024 You can retrieve the mask of an existing task: taskset -p 700 Or set it: taskset -p 03 700 List format uses a comma-separated list instead of a mask: taskset -pc 0,3,7-11 700 Ranges in list format can take a stride argument: e.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/11/taskset-command/" class="postShorten-excerpt_link link" aria-label="Open the post: taskset command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/" aria-label="Open the post: Arch Linux에서 .deb 패키지 설치하기">
       
           Arch Linux에서 .deb 패키지 설치하기
@@ -309,7 +521,7 @@ $&gt; sudo debtap -u ==&gt; Synchronizing pkgfile database.
     </div>
     <div class="postShorten-excerpt">
       
-        linux의 nc or netcat 명령어(CLI)는 임의이 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
+        linux의 nc or netcat 명령어(CLI)는 임의의 TCP 또는 UDP 연결 및 리스닝하는 명령어 입니다.
 기본 사용법 # TCP Listening $&gt; nc -l 9999 # UDP Listening $&gt; nc -l -u 9999 # Client 연결 $&gt; nc 127.0.0.1 9999 # Port 스캔 $&gt; nc -v -n 127.0.0.1 1-100 127.0.0.1 22 (ssh) open SSH-2.0-OpenSSH_9.4 ... # 데이터 쓰기 $&gt; echo &#34;Test&#34; | nc 127.0.0.1 9999 # 연결을 통해서 사용중인 프로그램의 버전을 찾을 수도 있습니다.
       
       <p>
@@ -379,233 +591,6 @@ logrotate.conf 설정 # see &#34;man logrotate&#34; for details # rotate log fil
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/" aria-label="Open the post: shell의 종류">
-      
-          shell의 종류
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-08-24T14:12:45Z">
-        
-  August 24, 2023
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>, 
-    
-      <a class="category-link" href="https://geeksaga.com/categories/shell">shell</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        사용중인 Shell $&gt; echo $SHELL /usr/bin/zsh Shell 종류 $&gt; /usr/bin/sh # Bourne shell. /usr/bin/ksh93 # Korn shell. /usr/bin/bash # Bash shell. /usr/bin/zsh # Z shell. /usr/bin/csh # C Shell. /usr/bin/tcsh # TC Shell. /usr/bin/fish # Fish Shell. ... Shell 변경 Shell을 변경하는 것은 Shell을 실행 해 주는 것으로 사용 가능합니다. (물론 $PATH에 등록되어 있고 해당 Shell이 설치되어 있는 경우)
-$&gt; bash $&gt; zsh 기본 Shell을 변경하고 싶을 경우에는 chsh 명령어를 사용하면 됩니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2023/08/shell%EC%9D%98-%EC%A2%85%EB%A5%98/" class="postShorten-excerpt_link link" aria-label="Open the post: shell의 종류">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2023/08/crontab-command/" aria-label="Open the post: crontab command">
-      
-          crontab command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-08-24T00:00:00Z">
-        
-  August 24, 2023
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 crontab 명령어(CLI)는 현재 사용자에 대해 특정 시간 간격으로 실행되도록 하는 프로그램입니다.
-기본 사용법 $&gt; crontab -e # 매분 마다 실행되는 작업(jobs)를 등록 합니다. * * * * * echo &#34;Hi Crontab.&#34; # 작업을 등록하고 저장하면 아래와 같은 메시지를 볼 수 있습니다. no crontab for geeksaga - using an empty one crontab: installing new crontab # 현재 설정된 작업 목록을 보여 줍니다. $&gt; crontab -l * * * * * echo &#34;Hi Crontab&#34; # 현재 사용자에 대한 작업을 모두 삭제 합니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2023/08/crontab-command/" class="postShorten-excerpt_link link" aria-label="Open the post: crontab command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2023/08/curl-command/" aria-label="Open the post: curl command">
-      
-          curl command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-08-24T00:00:00Z">
-        
-  August 24, 2023
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 curl 명령어(CLI)는 URLs을 통해 데이터를 전송하는 명령어입니다.
-기본 사용법 $&gt; curl https://geeksaga.com &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en-us&#34;&gt; ... &lt;/html&gt; SSL 연결을 위한 -k, --insecure 옵션과 -b, --cookie 쿠키값 지정을 통해 원하는 호출을 할 수 있습니다.
-$&gt; curl -k --cookie &#34;ARRAffinity=41ee36d2553ab86f8591533e8d88ac03605e73912cbf43c398f1a5ac371d0989&#34; https://www.geeksaga.com/ curl http 활용 # 프로토콜을 지정하지 않은 경우 기본값은 HTTP로 설정됩니다. $&gt; curl www.geeksaga.com ... # HTTP 요청하는 방법을 지정하려면 -X 옵션을 시용할 수 있습니다. # 기본값은 GET 방식이며 이 방법은 요청할때 별도의 data(Body)가 필요 없습니다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2023/08/curl-command/" class="postShorten-excerpt_link link" aria-label="Open the post: curl command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://geeksaga.com/2023/01/stow-command/" aria-label="Open the post: stow command">
-      
-          stow command
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-01-26T00:00:00Z">
-        
-  January 26, 2023
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        linux의 stow 명령어는 symbolic links를 관리해 주는 명령어이다.
-dotfiles을 관리에 자주 사용되고, 소프트웨어 패키지 설치 관리자 역할을 하기도 한다.
-stow를 이용하면 &lsquo;/usr/local/stow/&rsquo; 하위에 사용자가 컴파일 해서 사용하는 프로그램들을 만들어서 사용할 수 있게 된다.
-요즘은 패키지 관리자들이 너무 잘 되어 있어서 굳이 패키지 관리 용도로 사용하는 모습은 잘 보이지 않는다.
-기본 동작은 stow dir에서 지정된 이름의 디렉터리에 있는 파일을 현재 디렉터리 바로 위의 디렉터리에 링크한다.
-stow를 사용할 때 주의 점은 디렉터리 구조가 목적에 맞게 미리 구성되어 있어야 한다.
-      
-      <p>
-        
-          <a href="https://geeksaga.com/2023/01/stow-command/" class="postShorten-excerpt_link link" aria-label="Open the post: stow command">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -620,7 +605,7 @@ stow를 사용할 때 주의 점은 디렉터리 구조가 목적에 맞게 미�
           </li>
         
       
-      <li class="pagination-number">page 1 of 6</li>
+      <li class="pagination-number">page 1 of 7</li>
     </ul>
   </div>
 

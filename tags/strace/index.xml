@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>strace on Try to write anyway</title>
+    <link>https://geeksaga.com/tags/strace/</link>
+    <description>Recent content in strace on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/strace/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>strace command</title>
+      <link>https://geeksaga.com/2023/11/strace-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/strace-command/</guid>
+      <description>linux의 strace 명령어(CLI)는 시스템 콜과 시그널에 대해 추적할 수 있는 명령어 입니다.
+기본 사용법 #!/usr/bin/python3 print(&amp;#34;hello world&amp;#34;) # 다양한 옵션을 가지고 실행한 python 프로그램 $&amp;gt; strace -tt -T -o hello.log ./hello.py hello world # 출력한 hello.log 파일을 보면 실제 수행된 system call을 확인 할 수 있습니다. $&amp;gt; cat hello.log 16:15:23.942523 execve(&amp;#34;./hello.py&amp;#34;, [&amp;#34;./hello.py&amp;#34;], 0x7ffd453cab30 /* 119 vars */) = 0 &amp;lt;0.000605&amp;gt; 16:15:23.943465 brk(NULL) = 0x5609554ff000 &amp;lt;0.000021&amp;gt; 16:15:23.943543 arch_prctl(0x3001 /* ARCH_??? */, 0x7fffeaff96a0) = -1 EINVAL (Invalid argument) &amp;lt;0.</description>
+    </item>
+    
+  </channel>
+</rss>

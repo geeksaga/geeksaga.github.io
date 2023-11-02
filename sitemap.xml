@@ -2,25 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://geeksaga.com/tags/command/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/ldd/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/2023/11/ldd-command/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/linux/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/monitor/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/performance/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/posts/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/sar/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/2023/11/sar-command/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/strace/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/2023/11/strace-command/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/sysstat/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/tags/taskset/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/2023/11/taskset-command/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geeksaga.com/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://geeksaga.com/2023/10/arch-linux%EC%97%90%EC%84%9C-.deb-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2023-10-31T14:10:23+09:00</lastmod>
   </url><url>
-    <loc>https://geeksaga.com/tags/command/</loc>
-    <lastmod>2023-10-31T14:10:23+09:00</lastmod>
-  </url><url>
     <loc>https://geeksaga.com/tags/debtap/</loc>
-    <lastmod>2023-10-31T14:10:23+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/linux/</loc>
-    <lastmod>2023-10-31T14:10:23+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/posts/</loc>
-    <lastmod>2023-10-31T14:10:23+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/</loc>
-    <lastmod>2023-10-31T14:10:23+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/</loc>
     <lastmod>2023-10-31T14:10:23+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/tags/nc/</loc>
@@ -150,9 +183,6 @@
     <lastmod>2022-01-29T12:55:02+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/2020/09/find-command/</loc>
-    <lastmod>2022-01-29T12:55:02+09:00</lastmod>
-  </url><url>
-    <loc>https://geeksaga.com/tags/taskset/</loc>
     <lastmod>2022-01-29T12:55:02+09:00</lastmod>
   </url><url>
     <loc>https://geeksaga.com/2020/09/taskset-command/</loc>

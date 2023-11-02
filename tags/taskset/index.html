@@ -232,6 +232,59 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2023/11/taskset-command/" aria-label="Open the post: taskset command">
+      
+          taskset command
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-02T00:00:00Z">
+        
+  November 2, 2023
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux의 taskset 명령어(CLI)는 프로세스의 CPU 선호도(affinity)를 설정하거나 찾는 명령어 입니다. 간단하게 말하면 프로세스가 동작할 때 CPU(CPU or Core)를 지정하는 명령어 입니다.
+기본 사용법 # CPU 0번째(1번) Core를 통해 프로세스를 실행하기 $&gt; taskset -c 0 ./process taskset help $&gt; taskset --help Usage: taskset [options] [mask | cpu-list] [pid|cmd [args...]] Show or change the CPU affinity of a process. Options: -a, --all-tasks operate on all the tasks (threads) for a given pid -p, --pid operate on existing given pid -c, --cpu-list display and specify cpus in list format -h, --help display this help -V, --version display version The default behavior is to run a new command: taskset 03 sshd -b 1024 You can retrieve the mask of an existing task: taskset -p 700 Or set it: taskset -p 03 700 List format uses a comma-separated list instead of a mask: taskset -pc 0,3,7-11 700 Ranges in list format can take a stride argument: e.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2023/11/taskset-command/" class="postShorten-excerpt_link link" aria-label="Open the post: taskset command">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2020/09/taskset-command/" aria-label="Open the post: taskset command">
       
           taskset command

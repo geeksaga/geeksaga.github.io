@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sysstat on Try to write anyway</title>
+    <link>https://geeksaga.com/tags/sysstat/</link>
+    <description>Recent content in sysstat on Try to write anyway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geeksaga.com/tags/sysstat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sar command</title>
+      <link>https://geeksaga.com/2023/11/sar-command/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://geeksaga.com/2023/11/sar-command/</guid>
+      <description>linux의 sar 명령어(CLI)는 Linux 서브시스템의 성능을 모니터링 할 수 있는 명령어 입니다.
+기본 사용법 $&amp;gt; sar -V sysstat version 12.7.4 (C) Sebastien Godard (sysstat &amp;lt;at&amp;gt; orange.fr) # CPU 코어 0을 1초 단위로 1번 수집하기 $&amp;gt; sar -P 0 1 1 Linux 6.5.5-1-MANJARO (geeksaga) 11/02/2023 _x86_64_ (16 CPU) 03:49:45 PM CPU %user %nice %system %iowait %steal %idle 03:49:46 PM 0 3.06 0.00 1.02 0.00 0.00 95.92 Average: 0 3.06 0.00 1.02 0.</description>
+    </item>
+    
+  </channel>
+</rss>

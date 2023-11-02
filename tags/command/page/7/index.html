@@ -232,6 +232,239 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://geeksaga.com/2020/03/tmux/" aria-label="Open the post: tmux">
+      
+          tmux
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-03-23T00:00:00Z">
+        
+  March 23, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        {% include figure image_path=&quot;/assets/images/tmux-logo.png&quot; caption=&ldquo;tmux is a terminal multiplexer.&rdquo; %}
+tmux 설치 참고링크를 통해 설치를 완료하자.
+tmux 용어 Prefix : ctrl + b 와 단축키를 통해 지정된 동작을 수행한다. Session : tmux 실행 단위로 여러개의 Window로 구성된다. Window : Session 내의 화면으로 여러개의 Window를 가질 수 있다. Pane : 하나의 Window 내에서 화면을 분할 하여 사용할 때를 분할된 화면을 의미한다. 명령어 정리 ctrl + b, &lt;key&gt;
+명령어 모드의 키는 :(colon)이다. ctrl + b, :
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/03/tmux/" class="postShorten-excerpt_link link" aria-label="Open the post: tmux">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">
+      
+          Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-03-18T10:39:28Z">
+        
+  March 18, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        date 커맨드를 이용한 날짜를 변수로 변환하는 방법 $&gt; today=`date +%Y%m%d` $&gt; echo $today 20200318 $&gt; yesterday=`date +%Y%m%d -d &#39;-1days&#39;` $&gt; echo $yesterday 20200317 참고 링크 man-pages 
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/03/shell-script-date-%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%82%A0%EC%A7%9C%EB%A5%BC-%EB%B3%80%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/" class="postShorten-excerpt_link link" aria-label="Open the post: Shell Script date 커맨드를 이용한 날짜를 변수로 변환하는 방법">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/03/note/" aria-label="Open the post: note">
+      
+          note
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-03-17T14:51:26Z">
+        
+  March 17, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://geeksaga.com/categories/linux">linux</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        /etc/skel/ 새로운 유저가 생성되면 자동으로 /etc/skel 디렉토리내에 있는 파일들을 새로운 사용자의 홈디렉토리로 복사하는 과정을 거치게 된다.
+old kernels remove Debian 계열 리눅스.
+현재 적용중인 커널 버전 확인.
+$&gt; uname -r 4.15.0-88-generic 설치되어 있는 커널 확인.
+$&gt; dpkg --list | grep linux-image $&gt; dpkg --list | grep linux-headers ii linux-image-4.13.0-45-generic 4.13.0-45.50~16.04.1 amd64 Linux kernel image for version 4.13.0 on 64 bit x86 SMP ii linux-image-4.15.0-76-generic 4.15.0-76.86~16.04.1 amd64 Signed kernel image generic ii linux-image-4.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/03/note/" class="postShorten-excerpt_link link" aria-label="Open the post: note">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://geeksaga.com/2020/03/dig/" aria-label="Open the post: dig">
+      
+          dig
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-03-11T00:00:00Z">
+        
+  March 11, 2020
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        linux 의 dig 명령어는
+기본 사용법은 다음과 같다.
+$&gt;dig www.geeksaga.com ; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; www.geeksaga.com ;; global options: +cmd ;; Got answer: ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 29343 ;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1 ;; OPT PSEUDOSECTION: ; EDNS: version: 0, flags:; udp: 1452 ;; QUESTION SECTION: ;www.geeksaga.com.	IN	A ;; ANSWER SECTION: www.geeksaga.com.	10331	IN	A	185.199.109.153 www.geeksaga.com.	10331	IN	A	185.
+      
+      <p>
+        
+          <a href="https://geeksaga.com/2020/03/dig/" class="postShorten-excerpt_link link" aria-label="Open the post: dig">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://geeksaga.com/2018/06/less/" aria-label="Open the post: less">
       
           less
